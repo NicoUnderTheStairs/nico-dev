@@ -1,0 +1,44 @@
+changedFieldIndicator: 120610913
+field: 47fe1798-f313-486b-b362-d2d3687bb528 # Footer
+fieldLayouts:
+  2ff36057-ae7b-4198-991b-0f0d649802e9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 144bff5e-94b1-4971-a645-14a75b6c17ac # Slogan
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 03f033c7-8b25-4812-a725-0c8b0947a5d0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6d87ef98-46fd-43af-9b32-3f2f51a645c2
+        userCondition: null
+fields:
+  144bff5e-94b1-4971-a645-14a75b6c17ac: # Slogan
+    columnSuffix: pffzgtlk
+    contentColumnType: text
+    fieldGroup: null
+    handle: slogan
+    instructions: null
+    name: Slogan
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

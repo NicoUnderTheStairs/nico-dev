@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: website
+name: Website
+propagationMethod: all
+siteSettings:
+  39beb36f-cf9a-4ac5-8eb5-17da62ed4cfa: # Nico
+    enabledByDefault: true
+    hasUrls: true
+    template: website/_entry
+    uriFormat: '{slug}'
+structure:
+  maxLevels: null
+  uid: b8309faf-49e2-420e-afc7-6437950d7d84
+type: structure

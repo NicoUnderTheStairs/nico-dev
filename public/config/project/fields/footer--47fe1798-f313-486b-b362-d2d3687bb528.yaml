@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 20e41d9d-a586-4d1a-b5ad-ce3572aa2fa5 # Globals
+handle: footer
+instructions: null
+name: Footer
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 2090309436
+  contentTable: '{{%stc_footer}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

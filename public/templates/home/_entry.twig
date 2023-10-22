@@ -1,0 +1,7 @@
+{% extends "_layout" %}
+
+{% block main %}
+{% for block in entry.contentMatrix.all() %}
+    {% include "_blocks/_" ~ block.type ignore missing%}
+{% endfor %}
+{% endblock %}

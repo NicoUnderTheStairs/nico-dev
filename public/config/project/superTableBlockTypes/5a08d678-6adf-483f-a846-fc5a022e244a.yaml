@@ -1,0 +1,91 @@
+changedFieldIndicator: 518690795
+field: 87278682-c4ad-4783-9262-b4ad2533f76b # Header
+fieldLayouts:
+  86230929-2531-41d8-b3eb-98ce530cd0a9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f0bb9251-9d2c-4024-a994-8354d1ff8003 # Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 398b4a52-aa4e-46b9-9281-73865825647d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 227a9ae2-cd4d-4643-897f-d4ac6d783162 # Nav
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 65e51879-4e7c-414e-a4c6-0d7921c6b7e1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0da1502e-f3a2-4c65-9ed5-8a316a44da7c
+        userCondition: null
+fields:
+  227a9ae2-cd4d-4643-897f-d4ac6d783162: # Nav
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: nav
+    instructions: null
+    name: Nav
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Entry
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\entries\EntryCondition
+      selectionLabel: null
+      showSiteMenu: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  f0bb9251-9d2c-4024-a994-8354d1ff8003: # Logo
+    columnSuffix: yfqtithk
+    contentColumnType: text
+    fieldGroup: null
+    handle: logo
+    instructions: null
+    name: Logo
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

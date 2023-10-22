@@ -1,0 +1,75 @@
+field: 7d3a9466-67b6-48b0-aeb6-c83eec97c608 # Inhaltsblöcke
+fieldLayouts:
+  9da3ca26-ee6f-4759-87e4-7ebe4f0942af:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5f61f904-eaa5-4309-bbf5-f55e3cbaea15 # Phones
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2e4ab5dd-5d93-427e-84d8-9e8c3764a4fc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6c86dc54-5227-404a-88b7-03006b8acb4d
+        userCondition: null
+fields:
+  5f61f904-eaa5-4309-bbf5-f55e3cbaea15: # Phones
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: phones
+    instructions: null
+    name: Phones
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:5acbfce0-0c16-404d-bdf8-1b7185ed660a' # Uploads
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:5acbfce0-0c16-404d-bdf8-1b7185ed660a' # Uploads
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: hero
+name: Hero
+sortOrder: 1
