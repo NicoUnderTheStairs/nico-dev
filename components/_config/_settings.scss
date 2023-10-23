@@ -1,0 +1,131 @@
+html {
+  // important to set the html base to 10px
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s ease;
+}
+
+.row {
+  margin: 0;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+// Media queries
+// Phones
+$screen-sm-min: 25em;
+
+// Small tablets (portrait view)
+$screen-md-min: 40em;
+
+// Tablets and small desktops
+$screen-lg-min: 50em;
+
+// Large tablets and desktops
+$screen-xl-min: 64em;
+
+// Extra large screens
+$screen-xxl-min: 75em;
+
+//Section margin-top
+
+section.container.share + section.container {
+  margin-top: 0;
+}
+
+section.container,
+section.container-fluid {
+  margin-top: $container-margin-sm;
+
+  @include md-up {
+    margin-top: $container-margin;
+  }
+}
+
+section.container--small {
+  margin-top: $container-margin-sm;
+  max-width: 86.4rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2.4rem;
+
+  @include md-up {
+    margin-top: $container-margin;
+    padding: 0;
+  }
+}
+
+//selecting Text on website
+::-moz-selection { /* Code for Firefox */
+  color: #ffffff;
+  background: $primary;
+}
+
+::selection {
+  color: #ffffff;
+  background: $primary;
+}
+
+//custom scrollbar
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: $primary; 
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $secondary;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+$container-max-widths: (
+  sm: 54rem,
+  md: 72rem,
+  lg: 96rem,
+  xl: 114rem,
+  xxl: 144rem
+);
+
+#CybotCookiebotDialogPoweredByText {
+  display: none !important;
+}
+
+#CybotCookiebotDialogHeader {
+  display: none !important;
+}
+
+.CookiebotWidget-main-logo {
+  display: none !important;
+}
+
+.CookieDeclaration {
+  display: none !important;
+}

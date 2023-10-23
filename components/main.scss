@@ -1,0 +1,11 @@
+@import '_config/mixins';
+@import '~bootstrap/scss/functions';
+@import '_config/variables';
+
+@import '_config/utilities';
+@import 'bootstrap/scss/bootstrap-grid.scss';
+@import 'bootstrap/dist/css/bootstrap-utilities.min.css';
+@import '_config/settings';
+
+//NPM packages
+@import 'swiper/swiper-bundle';

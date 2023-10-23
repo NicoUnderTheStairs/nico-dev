@@ -1,0 +1,61 @@
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+
+// Background colors
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-secondary {
+  background-color: $secondary !important;
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-black {
+  background-color: $black !important;
+}
+
+.bg-gray-100 {
+  background-color: $gray-100 !important;
+}
+
+.bg-gray-200 {
+  background-color: $gray-200 !important;
+}
+
+.bg-gray-300 {
+  background-color: $gray-300 !important;
+}
+
+.bg-gray-400 {
+  background-color: $gray-400 !important;
+}
+
+// Text colors
+.color-primary {
+  color: $primary;
+}
+.color-secondary {
+  color: $secondary;
+}
+
+.link-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+// cursort pointer
+.c-p {
+  cursor: pointer;
+}
