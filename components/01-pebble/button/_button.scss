@@ -1,0 +1,33 @@
+.btn {
+	position: relative;
+	padding: 1.4rem 2.4rem;
+	transition: all 0.5s ease;
+	border: none;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.2rem;
+	min-width: fit-content;
+	max-width: fit-content;
+
+	&--default {
+		&::after {
+      content: '';
+      background: #E5AC01;
+      width: 75%;
+      height: 20px;
+      position: absolute;
+      border-radius: 2px;
+      z-index: -2;
+      transform: skew(-20deg) rotate(-20deg);
+      transition: all 0.3s ease;
+      opacity: 0.8;
+    }
+
+    &:hover {
+			&::after {
+				opacity: 1;
+			}
+    }
+  }
+}

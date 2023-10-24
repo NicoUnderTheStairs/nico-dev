@@ -1,4 +1,4 @@
-// import Button from './01-atoms/button/button';
+import Header from './03-boulder/header/header';
 
 require('./main.scss');
 
@@ -12,9 +12,9 @@ function ready(fn) {
 
 ready(() => {
   const html = document.querySelector('html');
-  // const Component = window.Streusel || {};
+  const Component = window.Streusel || {};
 
   html.classList.remove('no-js');
 
-  // Component.Button = Button.init();
+  Component.Header = Header.init();
 });

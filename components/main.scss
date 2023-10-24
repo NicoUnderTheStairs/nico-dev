@@ -9,3 +9,16 @@
 
 //NPM packages
 @import 'swiper/swiper-bundle';
+
+// 01-pebble
+@import '01-pebble/button/button';
+@import '01-pebble/icons/icon';
+@import '01-pebble/typography/typography';
+
+// 02-rock
+@import '02-rock/contact/contact';
+@import '02-rock/projectGrid/projectGrid';
+
+// 03-boulder
+@import '03-boulder/footer/footer';
+@import '03-boulder/header/header';

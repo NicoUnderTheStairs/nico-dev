@@ -1,0 +1,117 @@
+$h1-font-size: 2.8rem !default;
+$h2-font-size: 2.4rem !default;
+$h3-font-size: 2.1rem !default;
+$h4-font-size: 1.8rem !default;
+$h5-font-size: 1.6rem !default;
+
+body {
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  font-style: normal;
+  color: $body-color;
+}
+
+h1 {
+	font-weight: 700;
+  font-size: $h1-font-size;
+  line-height: 120%;
+
+  @include lg-up {
+    font-size: 4.8rem;
+  }
+}
+
+h2 {
+	font-weight: 700;
+  font-size: $h2-font-size;
+  line-height: 120%;
+
+  @include lg-up {
+    font-size: 4.8rem;
+  }
+}
+
+h3 {
+	font-weight: 700;
+  font-size: $h3-font-size;
+  line-height: 120%;
+
+  @include lg-up {
+    font-size: 4.8rem;
+  }
+}
+
+h4 {
+	font-weight: 700;
+  font-size: $h4-font-size;
+  line-height: 120%;
+
+  @include lg-up {
+    font-size: 4.8rem;
+  }
+}
+
+h5, h6 {
+	font-weight: 700;
+  font-size: $h5-font-size;
+  line-height: 120%;
+
+  @include lg-up {
+    font-size: 4.8rem;
+  }
+}
+
+p {
+  text-rendering: auto;
+  font-weight: 400;
+  font-size: $font-size-base;
+  line-height: 135%;
+  margin-top: 0;
+
+  & .section-title {
+    font-size: 2.1rem;
+    line-height: 120%;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $secondary;
+  font-weight: 500;
+}
+
+.text {
+  &-lead {
+    font-family: $font-family-base;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $lead-font-size;
+    line-height: 135%;
+  }
+
+  &-strong {
+    font-weight: 500;
+  }
+
+  &-large {
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 135%;
+    margin-bottom: 0;
+
+    @include lg-up {
+      font-size: 3.6rem; 
+    }
+  }
+
+  &-small {
+    font-weight: 400;
+    font-size: 1.44rem;
+    line-height: 135%;
+    margin-bottom: 0;
+    margin-top: 0.4rem;
+  }
+}
