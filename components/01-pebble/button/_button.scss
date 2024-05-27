@@ -1,7 +1,7 @@
 .btn {
 	position: relative;
-	padding: 1.4rem 2.4rem;
 	transition: all 0.5s ease;
+	margin-bottom: 1.2rem;
 	border: none;
 	display: inline-flex;
 	justify-content: center;
@@ -9,25 +9,28 @@
 	gap: 1.2rem;
 	min-width: fit-content;
 	max-width: fit-content;
+	font-family: $font-family-monospace;
+	font-size: 1.8rem;
 
 	&--default {
 		&::after {
-      content: '';
-      background: #E5AC01;
-      width: 75%;
-      height: 20px;
-      position: absolute;
-      border-radius: 2px;
-      z-index: -2;
-      transform: skew(-20deg) rotate(-20deg);
-      transition: all 0.3s ease;
-      opacity: 0.8;
-    }
+			content: '';
+			background: $primary;
+			width: 0%;
+			height: 20px;
+			position: absolute;
+			// left: 0%;
+			border-radius: 2px;
+			z-index: -2;
+			transform: skew(-15deg) rotate(-15deg);
+			transition: all 0.3s ease;
+			opacity: 0.6;
+		}
 
-    &:hover {
+		&:hover {
 			&::after {
-				opacity: 1;
+				width: 100%;
 			}
-    }
-  }
+		}
+  	}
 }

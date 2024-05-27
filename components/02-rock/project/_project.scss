@@ -1,0 +1,69 @@
+.project {
+    &__back {
+        color: $secondary;
+    }
+
+    &__website {
+        font-weight: 500;
+    }
+
+    &__company {
+        font-size: 1.8rem;
+    }
+
+    &__usp {
+        &__item {
+            padding: 0.8rem 0;
+
+            // if not first and last child, have border
+            &:not(:first-child):not(:last-child) {
+                border-top: 0.1rem solid #00000033;
+                border-bottom: 0.1rem solid #00000033;
+                padding: 0.8rem 0;
+            }
+        }
+        &__title {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__lead {
+        font-size: 1.8em;
+    }
+
+    &__visit {
+        font-size: 1.8rem;
+    }
+
+    &__galery {
+        &__item {
+            &:nth-child(3n+1) {
+                width: 100%;
+            }
+
+            &:nth-child(3n+2) {
+                width: 62%;
+            }
+
+            &:nth-child(3n+3) {
+                width: 32%;
+            }
+        }
+    }
+
+    &__lighthouse {
+        &__stat {
+            width: 50%;
+            text-align: center !important;
+            
+            &--title {
+                font-size: 7.8rem;
+            }
+            
+            &--description {
+                text-align: center !important;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

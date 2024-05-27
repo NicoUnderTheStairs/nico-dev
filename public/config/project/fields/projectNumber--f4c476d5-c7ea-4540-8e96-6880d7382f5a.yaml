@@ -1,0 +1,19 @@
+columnSuffix: yjpweizo
+contentColumnType: text
+fieldGroup: fe10ca1e-b9b0-4764-a8ce-9d11827b9828 # Common
+handle: projectNumber
+instructions: null
+name: 'Project Number'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

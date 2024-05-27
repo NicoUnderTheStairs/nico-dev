@@ -1,0 +1,36 @@
+{% set footer = footer.footer %}
+{% set header = header.header %}
+
+<footer class="footer bg-primary js-footer">
+    <div class="footer__inner p-3">
+        <h3 class="mt-0 mono">{{ footer.slogan }}</h3>
+
+        <div class="footer__listwrapper mb-5">
+            <ul class="footer__nav__list p-0">
+                {% for item in header.nav %}
+                    <li class="footer__nav__item mb-1">
+                        <a href="{{ item.url }}" class="footer__nav__link mono">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>   
+        </div>
+
+        <div class="footer__listwrapper">
+            <ul class="footer__socials__list p-0">
+                {% for item in footer.socials %}
+                    <li class="footer__socials__item mb-1">
+                        <a href="{{ item.sociallink }}" class="footer__socials__link mono">{{ item.titel }}</a>
+                    </li>
+                {% endfor %}
+            </ul>   
+        </div>
+    </div>
+    <div class="footer__legal d-flex justify-content-between px-3 pb-2">
+        <div class="d-flex justify-content-between">
+            <p class="mono text-small">© Nico</p>
+            {# <span class="mono text-small mx-1"> </span> #}
+        </div>
+            {# <a href="{{footer.imprint.one().url}}" class="mono text-small">{{footer.imprint.one().title}}</a> #}
+        <p class="mono text-small clock"></p>
+    </div>
+</footer>

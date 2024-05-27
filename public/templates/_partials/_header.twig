@@ -1,0 +1,28 @@
+{% set header = header.header %}
+<div class="header__bumper"></div>
+
+<header class="header js-header p-3 d-flex justify-content-between">
+    <a href="{{siteUrl}}" class="header__title mono m-0">Nico Fortino</a>
+
+    {% if header.nav|length >= 1 %}
+        <a class="header__hamburger">
+            <div class="header__hamburger__line line1"></div>
+            <div class="header__hamburger__line line2"></div>
+            <div class="header__hamburger__line line3"></div>
+        </a>
+
+        <nav class="header__nav bg-primary">
+            <ul class="p-0">
+                {% for item in header.nav %}
+                    <a href="{{ item.url }}" class="w-100 py-2 mono"><li>{{ item.title }}</li></a>
+                {% endfor %}
+            </ul>
+
+            <div class="header__nav__lang mt-5">
+                <a class="mono">EN</a>
+                <span class="mono mx-1">/</span>
+                <a class="mono">DE</a>
+            </div>
+        </nav>
+    {% endif %}
+</header>

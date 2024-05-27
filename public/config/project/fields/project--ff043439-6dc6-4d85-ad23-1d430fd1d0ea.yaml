@@ -1,0 +1,65 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: fe10ca1e-b9b0-4764-a8ce-9d11827b9828 # Common
+handle: project
+instructions: null
+name: Project
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1043210759
+  columns:
+    __assoc__:
+      -
+        - e8fcf4aa-1cdc-49ad-8048-46bed34d2778 # Website
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 80a1b328-51fc-4279-b100-81fa2a22fb1c # Company
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - c95eed35-ff61-47b8-b7da-6575c6cb70bf # Lead
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 0e3e5e64-bdfa-44a3-9ba6-e67c212ccb70 # Images
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - df5a9729-4d8c-4f3a-9c5e-e71e9a2b52d0 # Lighthouse
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - c085eb9c-a4ad-42d4-8d8b-b1bb67a1be5e # Lighthouse Doc
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_project}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

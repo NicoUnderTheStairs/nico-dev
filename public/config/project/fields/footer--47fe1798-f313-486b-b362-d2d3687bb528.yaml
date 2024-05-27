@@ -7,7 +7,16 @@ name: Footer
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 2090309436
+  changedFieldIndicator: 388125390
+  columns:
+    __assoc__:
+      -
+        - 144bff5e-94b1-4971-a645-14a75b6c17ac # Slogan
+        -
+          __assoc__:
+            -
+              - width
+              - ''
   contentTable: '{{%stc_footer}}'
   fieldLayout: row
   maxRows: null

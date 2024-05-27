@@ -1,0 +1,41 @@
+<div class="projectGrid projectGrid__mobile">
+    <div class="projectGrid__inner">
+        {% if entry.url == block.work.one().url %}
+            <h1 class="projectGrid__title mb-4 mt-0 mono">Projects I developed</h1>
+        {% else %}
+            <h2 class="projectGrid__title mb-4 mt-0 mono">Projects I developed</h2>
+        {% endif %}
+        <div class="projectGrid__wrapper">
+            {% for project in craft.entries.section('projects').all() %}
+                {% if project.moreButton is not null %}
+                    <div class="projectGrid__project">
+                        <a href="{{ project.url }}" class="projectGrid__project__link">
+                            <div class="projectGrid__project__img">
+                                <img src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}">
+                            </div>
+                            <div class="projectGrid__project__content">
+                                <p class="artifact">{{ project.projectNumber }}</p>
+                                <h3 class="projectGrid__project__title mono">{{ project.project.website }}</h3>
+                            </div>
+                        </a>
+                    </div>
+                {% else %}
+                    <div class="projectGrid__project">
+                        <a href="{{ project.url }}" class="projectGrid__project__link">
+                            <div class="projectGrid__project__img">
+                                <img src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}">
+                            </div>
+                            <div class="projectGrid__project__content">
+                                <p class="artifact">{{ project.projectNumber }}</p>
+                                <h3 class="projectGrid__project__title mono">{{ project.project.website }}</h3>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% if block.work.one().url is not null %}
+            <a href="{{block.work.one().url}}" class="btn btn--default">{{block.moreButton}}</a>
+        {% endif %}
+    </div>
+</div>

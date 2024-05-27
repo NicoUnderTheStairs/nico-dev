@@ -1,0 +1,29 @@
+<div class="projectGrid js-projectgrid projectGrid__desktop">
+    <div class="projectGrid__desktop__inner">
+        <div class="projectGrid__desktop__wrapper">
+            <div class="projectGrid__desktop__display">
+                {% for project in craft.entries.section('projects').all() %}
+                    <div class="projectGrid__desktop__img {% if loop.index == 1 %}projectGrid__desktop__img--active{% endif %}">
+                    {% for img in project.project.images.all() %}
+                        {% if loop.index <= 3 %}
+                            <img src="{{img.url}}">
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="projectGrid__desktop__list">
+                {% for project in craft.entries.section('projects').all() %}
+                    <a href="{{project.url}}" class="projectGrid__desktop__item d-flex">
+                        <p class="artifact me-3">{{ project.projectNumber }}</p>
+                        <div>
+                            <h4 class="projectGrid__desktop__item--website mono m-0">{{ project.project.website }}</h4>
+                            <p class="projectGrid__desktop__item--company mono m-0">{{project.project.company}}</p>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

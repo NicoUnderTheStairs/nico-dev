@@ -1,0 +1,20 @@
+defaultPlacement: end
+enableVersioning: true
+handle: projects
+name: Projects
+propagationMethod: all
+siteSettings:
+  3fcef9e7-61e0-496b-bb55-a3318f79c6c4: # Nico Fortino Deutsch
+    enabledByDefault: true
+    hasUrls: true
+    template: projects/_entry
+    uriFormat: 'projekte/{slug}'
+  39beb36f-cf9a-4ac5-8eb5-17da62ed4cfa: # Nico Fortino
+    enabledByDefault: true
+    hasUrls: true
+    template: projects/_entry
+    uriFormat: 'projects/{slug}'
+structure:
+  maxLevels: null
+  uid: 8977e228-b3c5-4d07-9384-f107161e1bb6
+type: structure

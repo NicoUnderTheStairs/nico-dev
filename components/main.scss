@@ -2,10 +2,10 @@
 @import '~bootstrap/scss/functions';
 @import '_config/variables';
 
+@import '_config/settings';
 @import '_config/utilities';
 @import 'bootstrap/scss/bootstrap-grid.scss';
 @import 'bootstrap/dist/css/bootstrap-utilities.min.css';
-@import '_config/settings';
 
 //NPM packages
 @import 'swiper/swiper-bundle';
@@ -16,8 +16,9 @@
 @import '01-pebble/typography/typography';
 
 // 02-rock
-@import '02-rock/contact/contact';
+@import '02-rock/hero/hero';
 @import '02-rock/projectGrid/projectGrid';
+@import '02-rock/project/project';
 
 // 03-boulder
 @import '03-boulder/footer/footer';

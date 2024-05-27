@@ -4,7 +4,7 @@ handle: website
 name: Website
 propagationMethod: all
 siteSettings:
-  39beb36f-cf9a-4ac5-8eb5-17da62ed4cfa: # Nico
+  39beb36f-cf9a-4ac5-8eb5-17da62ed4cfa: # Nico Fortino
     enabledByDefault: true
     hasUrls: true
     template: website/_entry

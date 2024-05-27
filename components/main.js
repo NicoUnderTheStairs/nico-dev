@@ -1,4 +1,7 @@
+import Hero from './02-rock/hero/hero';
+import ProjectGrid from './02-rock/projectGrid/projectGrid';
 import Header from './03-boulder/header/header';
+import Footer from './03-boulder/footer/footer';
 
 require('./main.scss');
 
@@ -17,4 +20,7 @@ ready(() => {
   html.classList.remove('no-js');
 
   Component.Header = Header.init();
+  Component.Footer = Footer.init();
+  Component.ProjectGrid = ProjectGrid.init();
+  Component.Hero = Hero.init();
 });

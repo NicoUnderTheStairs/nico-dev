@@ -1,4 +1,33 @@
-dateModified: 1697935405
+dateModified: 1716840043
+elementSources:
+  craft\elements\Entry:
+    -
+      key: '*'
+      type: native
+    -
+      key: singles
+      type: native
+    -
+      heading: Website
+      type: heading
+    -
+      key: 'section:6819ac29-167a-4d1e-960c-4e35b9e29e2c' # Website
+      type: native
+    -
+      heading: Projects
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:1c5bd7ca-883b-4808-b311-7425ff5d9b00' # Projects
+      tableAttributes:
+        - 'field:f4c476d5-c7ea-4540-8e96-6880d7382f5a' # Project Number
+        - postDate
+        - expiryDate
+        - link
+      type: native
 email:
   fromEmail: nico@fortino.ch
   fromName: Nico
@@ -8,30 +37,50 @@ fs:
     hasUrls: true
     name: Uploads
     settings:
-      path: /uploads
+      path: uploads
     type: craft\fs\Local
     url: '@web/uploads'
 meta:
   __names__:
     0a6a4808-0001-4bf3-9ee9-9b82be6e7da0: Header # Header
+    0e3e5e64-bdfa-44a3-9ba6-e67c212ccb70: Images # Images
+    1c5bd7ca-883b-4808-b311-7425ff5d9b00: Projects # Projects
+    2ad51318-063a-4905-a994-0bc1fb82d356: 'Public Schema' # Public Schema
+    2c5af258-38c5-4f55-a53f-51bfd3e8c429: USPS # USPS
     3d5edf3c-eda8-498e-ac75-94245e775112: Footer # Footer
     3e069843-7cda-4080-96c0-7d1ab55460a2: Nico # Nico
+    3ef06bed-e337-4554-9c87-36a4a4cdf5a7: Lead # Lead
+    3fcef9e7-61e0-496b-bb55-a3318f79c6c4: 'Nico Fortino Deutsch' # Nico Fortino Deutsch
+    4d9ad22a-71a4-486c-8a17-4aa06b7202fb: Work # Work
     5acbfce0-0c16-404d-bdf8-1b7185ed660a: Uploads # Uploads
+    05b1c09b-200c-4d6b-bfdb-bc4300f1b579: 'Project Grid' # Project Grid
     5f61f904-eaa5-4309-bbf5-f55e3cbaea15: Phones # Phones
     7d3a9466-67b6-48b0-aeb6-c83eec97c608: Inhaltsblöcke # Inhaltsblöcke
+    8ae538ff-e8e5-43c5-bd07-1aa86bfe1946: Imprint # Imprint
+    8f9812d2-2102-43ac-8ef1-21923dc442e7: Default # Default
     9f3d19d1-3b06-4cdf-8c6b-70c688ca8d69: Home # Home
     20e41d9d-a586-4d1a-b5ad-ce3572aa2fa5: Globals # Globals
-    39beb36f-cf9a-4ac5-8eb5-17da62ed4cfa: Nico # Nico
+    39beb36f-cf9a-4ac5-8eb5-17da62ed4cfa: 'Nico Fortino' # Nico Fortino
     47fe1798-f313-486b-b362-d2d3687bb528: Footer # Footer
+    51c6826d-9df2-4942-a2e4-4210c13a1782: 'Project Grid Desktop' # Project Grid Desktop
     66afba17-355c-41a0-b3f8-fc366a51ebf3: Hero # Hero
     66ff83f7-3ee7-4308-a0f3-e30bd3b3b32f: Home # Home
+    80a1b328-51fc-4279-b100-81fa2a22fb1c: Company # Company
+    86c14da8-48a5-4bc6-b2ba-be14d39644ea: 'More Button' # More Button
+    88b62b4d-d59b-44dd-a2ce-01633ea93cb9: Socials # Socials
     144bff5e-94b1-4971-a645-14a75b6c17ac: Slogan # Slogan
     227a9ae2-cd4d-4643-897f-d4ac6d783162: Nav # Nav
     6819ac29-167a-4d1e-960c-4e35b9e29e2c: Website # Website
     710978b0-e1c7-4e88-8836-01d9d5e1545b: Standard # Standard
     87278682-c4ad-4783-9262-b4ad2533f76b: Header # Header
+    c085eb9c-a4ad-42d4-8d8b-b1bb67a1be5e: 'Lighthouse Doc' # Lighthouse Doc
+    c95eed35-ff61-47b8-b7da-6575c6cb70bf: Lead # Lead
+    df5a9729-4d8c-4f3a-9c5e-e71e9a2b52d0: Lighthouse # Lighthouse
+    e8fcf4aa-1cdc-49ad-8048-46bed34d2778: Website # Website
     f0bb9251-9d2c-4024-a994-8354d1ff8003: Logo # Logo
+    f4c476d5-c7ea-4540-8e96-6880d7382f5a: 'Project Number' # Project Number
     fe10ca1e-b9b0-4764-a8ce-9d11827b9828: Common # Common
+    ff043439-6dc6-4d85-ad23-1d430fd1d0ea: Project # Project
 plugins:
   redactor:
     edition: standard

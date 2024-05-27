@@ -55,7 +55,32 @@
   display: block;
 }
 
+.no-scroll {
+  overflow: hidden !important
+}
+
 // cursort pointer
 .c-p {
   cursor: pointer;
+}
+
+.mono {
+  font-family: $font-family-monospace;
+}
+
+#main {
+  padding: 2.4rem;
+
+  @include md-up {
+    padding: 4.8rem;
+  }
+
+  @include lg-up {
+    padding: 4.8rem 7.2rem;
+  }
+
+  @include xl-up {
+    max-width: 144rem;
+    margin: 0 auto;
+  }
 }

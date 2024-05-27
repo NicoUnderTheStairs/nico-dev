@@ -1,0 +1,125 @@
+.projectGrid {
+    &__mobile {
+        @include md-up {
+            display: none;
+        }
+    }
+
+    &__desktop {
+        display: none;
+        height: 100vh;
+
+        @include md-up {
+            display: block;
+        }
+
+        &--fixed {
+            position: fixed;
+            top: 0;
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 45%;
+        }
+
+        &__img {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3.2rem;
+            position: absolute;
+            opacity: 0;
+            transform: translateY(10%);
+            transition: all 0.3s ease-in-out;
+            
+            &--active {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+
+            & img {
+                &:nth-child(3n+1) {
+                    width: 100%;
+                }
+    
+                &:nth-child(3n+2) {
+                    width: 62%;
+                }
+    
+                &:nth-child(3n+3) {
+                    width: 32%;
+                }
+            }
+        }
+
+        &__item {
+            padding: 1.8rem 0;
+            width: 100%;
+            
+            &--website {
+                font-size: 3.6rem;
+            }
+            
+            &--company {
+                font-size: 1.8rem;
+            }
+
+            // if not first and last child, have border
+            &:not(:first-child) {
+                border-top: 0.1rem solid #00000033;
+                padding: 1.8rem 0;
+            }
+        }
+
+        &__title {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 3.2rem;
+        
+        @include md-up {
+            // two columns
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__title {
+        font-size: 2.1rem;
+    }
+
+    &__project {
+        margin-bottom: 2rem;
+
+        &__img {
+            & img {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+        &__content {
+            display: flex;
+            padding: 1.2rem;
+
+            & .artifact {
+                margin-right: 1.2rem;
+            }
+
+            & h3 {
+                margin: 0;
+            }
+        }
+    }
+}

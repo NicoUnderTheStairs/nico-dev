@@ -17,10 +17,50 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 3ef06bed-e337-4554-9c87-36a4a4cdf5a7 # Lead
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c1cf27f2-b6e5-4664-b82f-cf725e243683
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 6c86dc54-5227-404a-88b7-03006b8acb4d
         userCondition: null
 fields:
+  3ef06bed-e337-4554-9c87-36a4a4cdf5a7: # Lead
+    columnSuffix: lcuwvryi
+    contentColumnType: text
+    fieldGroup: null
+    handle: lead
+    instructions: null
+    name: Lead
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
   5f61f904-eaa5-4309-bbf5-f55e3cbaea15: # Phones
     columnSuffix: null
     contentColumnType: string
@@ -48,19 +88,8 @@ fields:
       restrictedDefaultUploadSubpath: null
       restrictedLocationSource: 'volume:5acbfce0-0c16-404d-bdf8-1b7185ed660a' # Uploads
       restrictedLocationSubpath: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Asset
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\assets\AssetCondition
       selectionLabel: null
-      showSiteMenu: false
+      showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       sources: '*'

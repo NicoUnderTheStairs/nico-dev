@@ -1,0 +1,12 @@
+field: 7d3a9466-67b6-48b0-aeb6-c83eec97c608 # Inhaltsblöcke
+fieldLayouts:
+  a889f022-58ee-44a8-962b-9a55c810c59d:
+    tabs:
+      -
+        elementCondition: null
+        name: Content
+        uid: f574e8e2-6077-4da6-8799-b4cee150659b
+        userCondition: null
+handle: projectGridDesktop
+name: 'Project Grid Desktop'
+sortOrder: 3
