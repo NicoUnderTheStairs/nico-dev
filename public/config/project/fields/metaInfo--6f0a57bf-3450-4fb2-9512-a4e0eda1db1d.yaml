@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: fe10ca1e-b9b0-4764-a8ce-9d11827b9828 # Common
+handle: metaInfo
+instructions: null
+name: 'Meta Info'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1819567253
+  contentTable: '{{%stc_metainfo}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

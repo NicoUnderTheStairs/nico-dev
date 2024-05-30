@@ -1,0 +1,44 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: fe10ca1e-b9b0-4764-a8ce-9d11827b9828 # Common
+handle: notFound
+instructions: null
+name: 'Not Found'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 756643310
+  columns:
+    __assoc__:
+      -
+        - 218d8979-17f4-4679-b012-92e6ef852553 # Memes
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - c5b719bd-6f79-415b-92cb-9ec7d79dcfc3 # Titel
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - e487c058-76a1-41cc-af91-743b411e146b # Text
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_notfound}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

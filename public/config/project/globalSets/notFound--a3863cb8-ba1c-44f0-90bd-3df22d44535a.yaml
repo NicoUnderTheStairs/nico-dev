@@ -1,0 +1,24 @@
+fieldLayouts:
+  8d09694c-6dcc-45b7-b9dc-dc900881264c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e2f03771-3613-4b28-864c-b37abe512794 # Not Found
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b18527a2-7744-4d67-b17c-597118e6a225
+            userCondition: null
+            warning: null
+            width: 100
+        name: '404'
+        uid: c9ca7879-4a8b-4589-8abc-da50563d706c
+        userCondition: null
+handle: notFound
+name: 'Not Found'
+sortOrder: 3

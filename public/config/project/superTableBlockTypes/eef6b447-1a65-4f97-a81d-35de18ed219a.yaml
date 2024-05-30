@@ -1,4 +1,4 @@
-changedFieldIndicator: 2047813198
+changedFieldIndicator: 214186096
 field: ff043439-6dc6-4d85-ad23-1d430fd1d0ea # Project
 fieldLayouts:
   a7421637-2389-402d-a1a8-03d92b2d0bff:
@@ -209,7 +209,7 @@ fields:
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: craft\fields\PlainText
   c085eb9c-a4ad-42d4-8d8b-b1bb67a1be5e: # Lighthouse Doc
     columnSuffix: null
@@ -274,7 +274,7 @@ fields:
       showUnpermittedVolumes: false
       uiMode: enlarged
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: craft\redactor\Field
   df5a9729-4d8c-4f3a-9c5e-e71e9a2b52d0: # Lighthouse
     columnSuffix: myxpgfeu
@@ -372,7 +372,7 @@ fields:
       minRows: null
       staticRows: true
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: craft\fields\Table
   e8fcf4aa-1cdc-49ad-8048-46bed34d2778: # Website
     columnSuffix: cbaheixw
@@ -392,5 +392,5 @@ fields:
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: craft\fields\PlainText

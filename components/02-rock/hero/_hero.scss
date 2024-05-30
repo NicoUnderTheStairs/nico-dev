@@ -1,6 +1,23 @@
 .hero {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+
     @include xl-up {
         margin-bottom: 12rem;
+    }
+
+    &__intro {
+        opacity: 1;
+
+        & .hero__title {
+			&::after {
+                width: 100%;
+
+                @include lg-up {
+                    width: 69%;
+                }
+            }
+        }
     }
 
     &__title {
@@ -27,7 +44,7 @@
         @include xl-up {
             width: 35%;
             transform: translateX(100%);
-            margin-top: 35rem;
+            margin-top: 43rem;
         }
         
         & span {
@@ -42,7 +59,7 @@
         &::after {
 			content: '';
 			background: $primary;
-			width: 100%;
+			width: 0;
 			height: 10rem;
 			position: absolute;
 			left: 0%;
@@ -50,11 +67,11 @@
 			border-radius: 0.3rem;
 			z-index: -2;
 			transform: skew(-15deg) rotate(-15deg);
-			transition: all 0.3s ease;
+			transition: all 0.3s ease 0.3s;
 			opacity: 1;
 
             @include lg-up {
-                width: 69%;
+                width: 0;
                 height: 8rem;
                 right: 0%;
                 left: unset;
@@ -81,7 +98,7 @@
     &__phone {
         display: none;
 
-        @include lg-up {
+        @include xl-up {
             display: unset;
         }
 
@@ -92,9 +109,12 @@
             width: 20rem;
 
             @include xl-up {
-                width: 30rem;
                 top: 4.8rem;
                 right: 4.8rem;
+            }
+
+            @include xxl-up {
+                width: 30rem;
             }
         }
 
@@ -106,10 +126,14 @@
             transform: rotate(90deg);
 
             @include xl-up {
-                width: 30rem;
-                right: 20rem;
+                right: 15rem;
                 top: 55rem;
                 bottom: unset;
+            }
+            
+            @include xxl-up {
+                right: 20rem;
+                width: 30rem;
             }
         }
 
@@ -120,9 +144,12 @@
             width: 20rem;
 
             @include xl-up {
-                width: 30rem;
                 bottom: unset;
                 top: 70rem;
+            }
+
+            @include xxl-up {
+                width: 30rem;
             }
         }
 
@@ -133,6 +160,11 @@
             width: 20rem;
 
             @include xl-up {
+                bottom: unset;
+                top: 28rem;
+            }
+
+            @include xxl-up {
                 width: 30rem;
             }
         }
@@ -144,7 +176,7 @@
             width: 20rem;
             transform: rotate(-90deg);
 
-            @include xl-up {
+            @include xxl-up {
                 width: 28rem;
             }
         }
@@ -153,8 +185,9 @@
     &__lead {
         display: flex;
         justify-content: flex-end;
+        flex-wrap: wrap;
 
-        & p {
+        &__wrapper {
             width: 100%;
 
             @include md-up {
@@ -166,7 +199,7 @@
                 margin-top: 20rem;
             }
 
-            @include xl-up {
+            @include xxl-up {
                 width: 45%;
                 margin-top: 40rem;
             }

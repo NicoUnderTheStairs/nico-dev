@@ -4,6 +4,11 @@ handle: home
 name: Home
 propagationMethod: all
 siteSettings:
+  3fcef9e7-61e0-496b-bb55-a3318f79c6c4: # Nico Fortino Deutsch
+    enabledByDefault: true
+    hasUrls: true
+    template: home/_entry
+    uriFormat: __home__
   39beb36f-cf9a-4ac5-8eb5-17da62ed4cfa: # Nico Fortino
     enabledByDefault: true
     hasUrls: true

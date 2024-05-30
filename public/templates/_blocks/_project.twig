@@ -2,71 +2,89 @@
 
 <div class="project">
     <div class="project__inner">
-        {# button #}
-        <a href="{{ craft.app.request.referrer }}" class="project__back">
-            <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.825 7L36 7V9L3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7Z" fill="black"/>
-            </svg>
-        </a>
-
-        {# project #}
-        <h1 class="project__website mono mb-0">{{project.website}}</h1>
-        <h2 class="project__company mono mt-0">{{project.company}}</h2>
-
-        {# usps #}
-        <div class="project__usp">
-            {% for usp in project.usps %}
-                <div class="project__usp__item d-flex justify-content-between">
-                    <p class="project__usp__title mono m-0">{{usp.title}}</p>
-                    <h4 class="project__usp__text mono m-0">{{usp.item}}</h4>
-                </div>
-            {% endfor %}
-        </div>
-
-        {# lead #}
-        <div class="project__lead py-4">
-            {{project.lead}}
-            <a href="https://{{project.website}}" target="_blank" class="project__visit mono">
-                Visit Project
-                <svg width="18" height="13" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.9744 4.06861L1.6051 16.8198L0.122329 15.4056L13.4917 2.6544L5.18813 2.6544L5.20666 0.656821H17.0689V11.9705L14.9744 11.9882L14.9744 4.06861Z" fill="black"/>
+        <div class="d-flex flex-column flex-lg-row">
+            {# button #}
+            <a href="{{ siteUrl }}" class="project__back me-lg-5">
+                <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.825 7L36 7V9L3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7Z" fill="black"/>
                 </svg>
             </a>
+
+            <div>
+                {# project #}
+                <h1 class="project__website mono mb-0 mt-lg-0">{{project.website}}</h1>
+                <h2 class="project__company mono mt-0">{{project.company}}</h2>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center">
+            {# usps #}
+            <div class="project__usp">
+                {% for usp in project.usps %}
+                    <div class="project__usp__item d-flex justify-content-between">
+                        <p class="project__usp__title mono m-0">{{usp.title}}</p>
+                        <h4 class="project__usp__text mono m-0">{{usp.item}}</h4>
+                    </div>
+                {% endfor %}
+            </div>
+
+            {# lead #}
+            <div class="project__lead py-4">
+                {{project.lead}}
+                <a href="https://{{project.website}}" target="_blank" class="project__visit mono linkSmallCursor">
+                    Visit Project
+                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_697_135)">
+                        <path d="M-1.88488 24.0686L-14.636 36.8198L-16.0503 35.4056L-3.29909 22.6544L-11.2187 22.6544L-11.201 20.6568H0.112698V31.9705L-1.88488 31.9882L-1.88488 24.0686Z" fill="#202020"/>
+                        <path d="M15.1151 7.06861L2.36396 19.8198L0.949747 18.4056L13.7009 5.6544L5.78131 5.6544L5.79899 3.65682H17.1127V14.9705L15.1151 14.9882L15.1151 7.06861Z" fill="#202020"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_697_135">
+                        <rect width="22" height="20" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
         </div>
 
         {# galery #}
-        <div class="project__galery d-flex flex-wrap gap-4 mb-5">
+        <div class="project__galery mb-5">
             {% for img in project.images %}
                 <img src="{{img.url}}" alt="{{image.alt}}" class="project__galery__item">
             {% endfor %}
         </div>
         
         {# lighthouse #}
-        <div class="project__lighthouse">
-            <h4 class="project__lighthouse__title mono m-0">Lighthouse Report <span class="text-small mono">(Desktop)</span></h4>
-            <a href="{{project.lighthouseDoc.one().url}}" class="text-small mono">Download</a>
-            <div class="mt-4 d-flex flex-wrap">
-                {% for stat in project.lighthouse %}
-                    <div class="project__lighthouse__stat mb-3">
-                        <h4 class="project__lighthouse__stat--title mono m-0">{{stat.performance}}</h4>
-                        <p class="project__lighthouse__stat--description mono m-0">Performance</p>
-                    </div>
+        <div class="project__lighthouse d-flex flex-column align-items-center">
+            <div class="col-lg-6">
+                <div class="d-flex flex-column flex-lg-row justify-content-lg-between">
+                    <h4 class="project__lighthouse__title mono m-0">Lighthouse Report <span class="text-small mono">(Desktop)</span></h4>
+                    <a href="{{project.lighthouseDoc.one().url}}" target="_blank" class="text-small mono">Download</a>
+                </div>
+                <div class="mt-4 d-flex flex-wrap flex-lg-nowrap justify-content-lg-between">
+                    {% for stat in project.lighthouse %}
+                        <div class="project__lighthouse__stat mb-3">
+                            <h4 class="project__lighthouse__stat--title mono m-0">{{stat.performance}}</h4>
+                            <p class="project__lighthouse__stat--description mono m-0">Performance</p>
+                        </div>
 
-                    <div class="project__lighthouse__stat mb-3">
-                        <h4 class="project__lighthouse__stat--title mono m-0">{{stat.accesability}}</h4>
-                        <p class="project__lighthouse__stat--description mono m-0">Accesability</p>
-                    </div>
+                        <div class="project__lighthouse__stat mb-3">
+                            <h4 class="project__lighthouse__stat--title mono m-0">{{stat.accesability}}</h4>
+                            <p class="project__lighthouse__stat--description mono m-0">Accesability</p>
+                        </div>
 
-                    <div class="project__lighthouse__stat mb-3">
-                        <h4 class="project__lighthouse__stat--title mono m-0">{{stat.bestPractices}}</h4>
-                        <p class="project__lighthouse__stat--description mono m-0">Best Practices</p>
-                    </div>
+                        <div class="project__lighthouse__stat mb-3">
+                            <h4 class="project__lighthouse__stat--title mono m-0">{{stat.bestPractices}}</h4>
+                            <p class="project__lighthouse__stat--description mono m-0">Best Practices</p>
+                        </div>
 
-                    <div class="project__lighthouse__stat">
-                        <h4 class="project__lighthouse__stat--title mono m-0">{{stat.seo}}</h4>
-                        <p class="project__lighthouse__stat--description mono m-0">SEO</p>
-                    </div>
-                {% endfor %}
+                        <div class="project__lighthouse__stat">
+                            <h4 class="project__lighthouse__stat--title mono m-0">{{stat.seo}}</h4>
+                            <p class="project__lighthouse__stat--description mono m-0">SEO</p>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
 
@@ -74,22 +92,24 @@
         <div class="project__moreProjects">
             <h4 class="project__lighthouse__title mono mt-3">More Projects</h4>
             {% set shuffledProjects = shuffle(entry.siblings) %}
-            
-            {% for project in shuffledProjects %}
-                {% if loop.index <= 2 %}
-                    <div class="projectGrid__project">
-                        <a href="{{ project.url }}" class="projectGrid__project__link">
-                            <div class="projectGrid__project__img">
-                                <img src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}">
-                            </div>
-                            <div class="projectGrid__project__content">
-                                <p class="artifact">{{ project.projectNumber }}</p>
-                                <h3 class="projectGrid__project__title mono">{{ project.project.website }}</h3>
-                            </div>
-                        </a>
-                    </div>
-                {% endif %}
-            {% endfor %}
+
+            <div class="projectGrid__wrapper d-flex justify-content-between flex-wrap flex-lg-nowrap flex-direction-lg-row">
+                {% for project in shuffledProjects %}
+                    {% if loop.index <= 2 %}
+                        <div class="projectGrid__project col-12 col-lg-6">
+                            <a href="{{ project.url }}" class="projectGrid__project__link">
+                                <div class="projectGrid__project__img">
+                                    <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}">
+                                </div>
+                                <div class="projectGrid__project__content">
+                                    <p class="artifact">{{ project.projectNumber }}</p>
+                                    <h3 class="projectGrid__project__title mono">{{ project.project.website }}</h3>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
 
     </div>

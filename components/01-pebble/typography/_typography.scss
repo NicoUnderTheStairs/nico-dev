@@ -8,7 +8,6 @@ body {
   font-family: $font-family-sans-serif;
   font-weight: $font-weight-base;
   font-style: normal;
-  color: $body-color;
 }
 
 h1 {
@@ -37,7 +36,7 @@ h3 {
   line-height: 120%;
 
   @include lg-up {
-    font-size: 4.8rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -45,20 +44,12 @@ h4 {
 	font-weight: 400;
   font-size: 2.1rem;
   line-height: 120%;
-
-  @include lg-up {
-    font-size: 4.8rem;
-  }
 }
 
 h5, h6 {
 	font-weight: 400;
   font-size: $h5-font-size;
   line-height: 120%;
-
-  @include lg-up {
-    font-size: 4.8rem;
-  }
 }
 
 p {

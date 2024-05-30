@@ -7,7 +7,23 @@ name: Header
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1271780617
+  changedFieldIndicator: 329077897
+  columns:
+    __assoc__:
+      -
+        - f0bb9251-9d2c-4024-a994-8354d1ff8003 # Logo
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 227a9ae2-cd4d-4643-897f-d4ac6d783162 # Nav
+        -
+          __assoc__:
+            -
+              - width
+              - ''
   contentTable: '{{%stc_header}}'
   fieldLayout: row
   maxRows: null

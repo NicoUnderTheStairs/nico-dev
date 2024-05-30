@@ -1,4 +1,4 @@
-dateModified: 1716840043
+dateModified: 1717022680
 elementSources:
   craft\elements\Entry:
     -
@@ -6,12 +6,6 @@ elementSources:
       type: native
     -
       key: singles
-      type: native
-    -
-      heading: Website
-      type: heading
-    -
-      key: 'section:6819ac29-167a-4d1e-960c-4e35b9e29e2c' # Website
       type: native
     -
       heading: Projects
@@ -27,6 +21,12 @@ elementSources:
         - postDate
         - expiryDate
         - link
+      type: native
+    -
+      heading: Website
+      type: heading
+    -
+      key: 'section:6819ac29-167a-4d1e-960c-4e35b9e29e2c' # Website
       type: native
 email:
   fromEmail: nico@fortino.ch
@@ -54,7 +54,8 @@ meta:
     4d9ad22a-71a4-486c-8a17-4aa06b7202fb: Work # Work
     5acbfce0-0c16-404d-bdf8-1b7185ed660a: Uploads # Uploads
     05b1c09b-200c-4d6b-bfdb-bc4300f1b579: 'Project Grid' # Project Grid
-    5f61f904-eaa5-4309-bbf5-f55e3cbaea15: Phones # Phones
+    6f0a57bf-3450-4fb2-9512-a4e0eda1db1d: 'Meta Info' # Meta Info
+    6feb5671-1f19-4004-bd05-df4d3a45f04a: Beschreibung # Beschreibung
     7d3a9466-67b6-48b0-aeb6-c83eec97c608: Inhaltsblöcke # Inhaltsblöcke
     8ae538ff-e8e5-43c5-bd07-1aa86bfe1946: Imprint # Imprint
     8f9812d2-2102-43ac-8ef1-21923dc442e7: Default # Default
@@ -69,23 +70,78 @@ meta:
     86c14da8-48a5-4bc6-b2ba-be14d39644ea: 'More Button' # More Button
     88b62b4d-d59b-44dd-a2ce-01633ea93cb9: Socials # Socials
     144bff5e-94b1-4971-a645-14a75b6c17ac: Slogan # Slogan
+    218d8979-17f4-4679-b012-92e6ef852553: Memes # Memes
     227a9ae2-cd4d-4643-897f-d4ac6d783162: Nav # Nav
     6819ac29-167a-4d1e-960c-4e35b9e29e2c: Website # Website
     710978b0-e1c7-4e88-8836-01d9d5e1545b: Standard # Standard
+    929529d1-d267-49c7-84d4-aae762b8d3ce: 'Social Image' # Social Image
     87278682-c4ad-4783-9262-b4ad2533f76b: Header # Header
+    a3863cb8-ba1c-44f0-90bd-3df22d44535a: 'Not Found' # Not Found
+    bb1c7b43-4c8a-4e94-aad9-aec8f4c1a9e1: Keywords # Keywords
     c085eb9c-a4ad-42d4-8d8b-b1bb67a1be5e: 'Lighthouse Doc' # Lighthouse Doc
+    c5b719bd-6f79-415b-92cb-9ec7d79dcfc3: Titel # Titel
     c95eed35-ff61-47b8-b7da-6575c6cb70bf: Lead # Lead
+    d32f8599-4ed4-4a93-b822-1634f69b79fb: Titel # Titel
     df5a9729-4d8c-4f3a-9c5e-e71e9a2b52d0: Lighthouse # Lighthouse
+    e2f03771-3613-4b28-864c-b37abe512794: 'Not Found' # Not Found
     e8fcf4aa-1cdc-49ad-8048-46bed34d2778: Website # Website
+    e487c058-76a1-41cc-af91-743b411e146b: Text # Text
     f0bb9251-9d2c-4024-a994-8354d1ff8003: Logo # Logo
     f4c476d5-c7ea-4540-8e96-6880d7382f5a: 'Project Number' # Project Number
     fe10ca1e-b9b0-4764-a8ce-9d11827b9828: Common # Common
     ff043439-6dc6-4d85-ad23-1d430fd1d0ea: Project # Project
 plugins:
+  knock-knock:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.1.1
+    settings:
+      checkInvalidLogins: false
+      enableCpProtection: false
+      enabled: false
+      forcedRedirect: ''
+      invalidLoginWindowDuration: '3600'
+      loginPath: login
+      maxInvalidLogins: 10
+      password: 'bsj!209jdkn?'
+      siteSettings:
+        __assoc__:
+          -
+            - EN
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - ''
+                -
+                  - password
+                  - ''
+                -
+                  - template
+                  - ''
+          -
+            - DE
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - ''
+                -
+                  - password
+                  - ''
+                -
+                  - template
+                  - ''
+      template: ''
+      useRemoteIp: false
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
   super-table:
     edition: standard
     enabled: true

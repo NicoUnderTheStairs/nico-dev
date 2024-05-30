@@ -3,10 +3,10 @@
         <div class="projectGrid__desktop__wrapper">
             <div class="projectGrid__desktop__display">
                 {% for project in craft.entries.section('projects').all() %}
-                    <div class="projectGrid__desktop__img {% if loop.index == 1 %}projectGrid__desktop__img--active{% endif %}">
+                    <div class="projectGrid__desktop__img {% if loop.index0 == 0 %}projectGrid__desktop__img--active{% endif %}">
                     {% for img in project.project.images.all() %}
                         {% if loop.index <= 3 %}
-                            <img src="{{img.url}}">
+                            <img class="border-radius-6" src="{{img.url}}">
                         {% endif %}
                     {% endfor %}
                     </div>
@@ -14,12 +14,18 @@
             </div>
 
             <div class="projectGrid__desktop__list">
+                <h2 class="projectGrid__title mb-4 mt-0 mono">Projects I developed</h2>
                 {% for project in craft.entries.section('projects').all() %}
-                    <a href="{{project.url}}" class="projectGrid__desktop__item d-flex">
+                    <a href="{{project.url}}" class="projectGrid__desktop__item d-flex position-relative linkBigCursor">
                         <p class="artifact me-3">{{ project.projectNumber }}</p>
                         <div>
                             <h4 class="projectGrid__desktop__item--website mono m-0">{{ project.project.website }}</h4>
                             <p class="projectGrid__desktop__item--company mono m-0">{{project.project.company}}</p>
+                        </div>
+                        <div class="projectGrid__desktop__item--arrow d-flex align-items-center position-absolute">
+                            <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32.175 9H0L0 7H32.175L26.575 1.4L28 0L36 8L28 16L26.575 14.6L32.175 9Z" fill="#202020"/>
+                            </svg>
                         </div>
                     </a>
                 {% endfor %}

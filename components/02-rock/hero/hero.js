@@ -5,6 +5,11 @@ class Hero extends Base {
     super(el);
     const allPhones = [...el.querySelectorAll('.phone')];
 
+    window.onload = () => {
+      // add class to el
+      el.classList.add('hero__intro');
+    };
+
     allPhones.forEach((phone) => {
       // scroll event
       document.addEventListener('scroll', () => {

@@ -1,4 +1,4 @@
-changedFieldIndicator: 518690795
+changedFieldIndicator: 1053735802
 field: 87278682-c4ad-4783-9262-b4ad2533f76b # Header
 fieldLayouts:
   86230929-2531-41d8-b3eb-98ce530cd0a9:
@@ -49,17 +49,6 @@ fields:
       maintainHierarchy: false
       maxRelations: null
       minRelations: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Entry
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\entries\EntryCondition
       selectionLabel: null
       showSiteMenu: false
       sources: '*'
@@ -87,5 +76,5 @@ fields:
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: craft\fields\PlainText

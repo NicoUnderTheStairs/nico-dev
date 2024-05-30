@@ -2,14 +2,14 @@
 {% set header = header.header %}
 
 <footer class="footer bg-primary js-footer">
-    <div class="footer__inner p-3">
-        <h3 class="mt-0 mono">{{ footer.slogan }}</h3>
+    <div class="footer__inner p-3 p-lg-5">
+        <h3 class="ufo__suckable mt-0 mono">{{ footer.slogan }}</h3>
 
         <div class="footer__listwrapper mb-5">
             <ul class="footer__nav__list p-0">
                 {% for item in header.nav %}
                     <li class="footer__nav__item mb-1">
-                        <a href="{{ item.url }}" class="footer__nav__link mono">{{ item.title }}</a>
+                        <a href="{{ item.url }}" class="ufo__suckable footer__nav__link mono">{{ item.title }}</a>
                     </li>
                 {% endfor %}
             </ul>   
@@ -19,18 +19,60 @@
             <ul class="footer__socials__list p-0">
                 {% for item in footer.socials %}
                     <li class="footer__socials__item mb-1">
-                        <a href="{{ item.sociallink }}" class="footer__socials__link mono">{{ item.titel }}</a>
+                        <a href="{{ item.sociallink }}" target="_blank" class="footer__socials__link mono linkSmallCursor ufo__suckable">
+                            <svg width="18" height="16" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_697_135)">
+                                <path d="M-1.88488 24.0686L-14.636 36.8198L-16.0503 35.4056L-3.29909 22.6544L-11.2187 22.6544L-11.201 20.6568H0.112698V31.9705L-1.88488 31.9882L-1.88488 24.0686Z" fill="#202020"/>
+                                <path d="M15.1151 7.06861L2.36396 19.8198L0.949747 18.4056L13.7009 5.6544L5.78131 5.6544L5.79899 3.65682H17.1127V14.9705L15.1151 14.9882L15.1151 7.06861Z" fill="#202020"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_697_135">
+                                <rect width="22" height="20" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            {{ item.titel }}
+                        </a>
                     </li>
                 {% endfor %}
             </ul>   
         </div>
     </div>
-    <div class="footer__legal d-flex justify-content-between px-3 pb-2">
+    <div class="footer__legal d-flex align-items-center justify-content-between px-3 pb-2 px-lg-5 pb-lg-2">
         <div class="d-flex justify-content-between">
-            <p class="mono text-small">© Nico</p>
+            <p class="mono text-small ufo__suckable">© Nico</p>
             {# <span class="mono text-small mx-1"> </span> #}
+            <div class="footer__lang d-flex align-items-center">
+                {% for siteForEntry in entry.getSupportedSites %}
+                    {% set site = craft.app.getSites.getSiteById(siteForEntry.siteId) %}
+                    {% set entryForOtherSite = craft.entries.id(entry.id).site(site).one() %}
+                    {% if entryForOtherSite %}
+                        <a class="text-small footer__lang__active {{ site.id != entry.siteId ? ' footer__lang__inactive' }} ufo__suckable" href="{{ entryForOtherSite.getUrl() }}">
+                            {{site.handle|upper}}
+                        </a>
+
+                        {% if loop.index0 == 0 %}<span class="mono text-small mx-1"> / </span>{% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
+
             {# <a href="{{footer.imprint.one().url}}" class="mono text-small">{{footer.imprint.one().title}}</a> #}
-        <p class="mono text-small clock"></p>
+        {% if entry.title is not null %}    
+            <div class="footer__darklightmode c-p linkSmallCursor">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_713_27)">
+                    <path d="M16 5.81818C15.1967 5.81818 14.5455 5.16696 14.5455 4.36364V1.45455C14.5455 0.651223 15.1967 0 16 0C16.8033 0 17.4545 0.651222 17.4545 1.45455V4.36364C17.4545 5.16696 16.8033 5.81818 16 5.81818ZM25.2248 8.81157C24.6689 9.36751 23.7675 9.36751 23.2116 8.81157C22.6608 8.26083 22.6549 7.36973 23.1984 6.81175L25.2616 4.69325C25.8264 4.11336 26.7575 4.11133 27.3248 4.68875C27.8799 5.25372 27.8759 6.16048 27.3158 6.72052L25.2248 8.81157ZM27.6364 17.4545C26.833 17.4545 26.1818 16.8033 26.1818 16C26.1818 15.1967 26.833 14.5455 27.6364 14.5455H30.5455C31.3488 14.5455 32 15.1967 32 16C32 16.8033 31.3488 17.4545 30.5455 17.4545H27.6364ZM16 32C15.1967 32 14.5455 31.3488 14.5455 30.5455V27.6364C14.5455 26.833 15.1967 26.1818 16 26.1818C16.8033 26.1818 17.4545 26.833 17.4545 27.6364V30.5455C17.4545 31.3488 16.8033 32 16 32ZM8.7747 8.78803C8.22136 9.32161 7.34434 9.31949 6.79358 8.78323L4.69343 6.73834C4.11346 6.17363 4.11137 5.24241 4.68881 4.67511C5.25375 4.12008 6.16046 4.12409 6.72046 4.6841L8.79317 6.7568C9.35623 7.31986 9.34791 8.2353 8.7747 8.78803ZM27.3087 27.2725C26.7326 27.8689 25.7768 27.8686 25.2009 27.272L23.1826 25.1809C22.6472 24.6263 22.655 23.745 23.2001 23.1999C23.7451 22.6549 24.6263 22.647 25.1809 23.1822L27.2723 25.2003C27.8549 25.7623 27.8711 26.6903 27.3087 27.2725ZM1.45455 17.4545C0.651223 17.4545 0 16.8033 0 16C0 15.1967 0.651222 14.5455 1.45455 14.5455H4.36364C5.16696 14.5455 5.81818 15.1967 5.81818 16C5.81818 16.8033 5.16696 17.4545 4.36364 17.4545H1.45455ZM6.74549 27.3272C6.17459 27.8981 5.24772 27.894 4.6819 27.3181C4.12311 26.7493 4.12715 25.8365 4.69095 25.2727L6.72662 23.237C7.2951 22.6685 8.2116 22.6522 8.8 23.2C9.37939 23.7594 9.38751 24.6852 8.81802 25.2547L6.74549 27.3272ZM16 24.7273C13.5758 24.7273 11.5152 23.8788 9.81818 22.1818C8.12121 20.4849 7.27273 18.4242 7.27273 16C7.27273 13.5758 8.12121 11.5152 9.81818 9.81818C11.5152 8.12121 13.5758 7.27273 16 7.27273C18.4242 7.27273 20.4849 8.12121 22.1818 9.81818C23.8788 11.5152 24.7273 13.5758 24.7273 16C24.7273 18.4242 23.8788 20.4849 22.1818 22.1818C20.4849 23.8788 18.4242 24.7273 16 24.7273ZM16 21.8182C17.6 21.8182 18.9697 21.2485 20.1091 20.1091C21.2485 18.9697 21.8182 17.6 21.8182 16C21.8182 14.4 21.2485 13.0303 20.1091 11.8909C18.9697 10.7515 17.6 10.1818 16 10.1818C14.4 10.1818 13.0303 10.7515 11.8909 11.8909C10.7515 13.0303 10.1818 14.4 10.1818 16C10.1818 17.6 10.7515 18.9697 11.8909 20.1091C13.0303 21.2485 14.4 21.8182 16 21.8182Z" fill="#202020"/>
+                    <path d="M-11 60C-15.4444 60 -19.2222 58.4444 -22.3333 55.3333C-25.4444 52.2222 -27 48.4444 -27 44C-27 39.5556 -25.4444 35.7778 -22.3333 32.6667C-19.2222 29.5556 -15.4444 28 -11 28C-10.5852 28 -10.1778 28.0148 -9.77778 28.0444C-9.51855 28.0636 -9.3635 28.2729 -9.35086 28.5C-9.34254 28.6494 -9.39585 28.8065 -9.52166 28.9223C-10.3161 29.6534 -10.9792 30.5238 -11.5111 31.5333C-12.237 32.9111 -12.6 34.4 -12.6 36C-12.6 38.6667 -11.6667 40.9333 -9.8 42.8C-7.93333 44.6667 -5.66667 45.6 -3 45.6C-1.37037 45.6 0.125925 45.237 1.48889 44.5111C2.48726 43.9794 3.35049 43.3165 4.0786 42.5224C4.36983 42.2048 4.92372 42.348 4.95556 42.7778C4.98519 43.1778 5 43.5852 5 44C5 48.4444 3.44445 52.2222 0.333334 55.3333C-2.77778 58.4444 -6.55556 60 -11 60Z" fill="#202020"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_713_27">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+
+            </div>
+        {% endif %}
     </div>
 </footer>

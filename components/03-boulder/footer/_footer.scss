@@ -1,5 +1,17 @@
 .footer {
     border-radius: 0.9rem 0.9rem 0 0;
+    color: $secondary !important;
+
+    & svg path {
+        fill: $secondary !important;
+    }
+
+    & h3 {
+        @include lg-up {
+            font-size: 3.6rem;
+            width: 50%;
+        }
+    }
 
     &__listwrapper {
         & ul {
@@ -9,6 +21,49 @@
         & a {
             font-weight: 300;
             font-size: 1.8rem;
+            color: $secondary !important;
+      
+            & svg path {
+                transition: all 0.3s ease;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                & svg path {
+                    transform: translate(2.2rem, -2rem);
+                }
+            }
+        }
+    }
+
+    &__lang {
+        margin-left: 1.8rem;
+
+        &__active {
+            font-weight: 400 !important;
+            color: $secondary !important;
+        }
+        
+        &__inactive {
+            font-weight: 300 !important;
+            color: $secondary !important;
+        }
+    }
+
+    &__darklightmode {
+        & svg path {
+            transition: all 0.3s ease;
+        }
+
+        & .path-exeption {
+            fill: $primary !important;
+        }
+
+        &-true {
+            & svg path {
+                transform: translate(2.7rem, -2.8rem);
+            }
         }
     }
 }

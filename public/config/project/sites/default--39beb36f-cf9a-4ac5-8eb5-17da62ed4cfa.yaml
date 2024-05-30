@@ -1,9 +1,0 @@
-baseUrl: $PRIMARY_SITE_URL
-enabled: true
-handle: default
-hasUrls: true
-language: en
-name: 'Nico Fortino'
-primary: true
-siteGroup: 3e069843-7cda-4080-96c0-7d1ab55460a2 # Nico
-sortOrder: 1

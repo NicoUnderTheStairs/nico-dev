@@ -2,6 +2,8 @@
   "require": {
     "craftcms/cms": "4.9.5",
     "craftcms/redactor": "3.0.4",
+    "ether/seo": "4.2.2",
+    "verbb/knock-knock": "2.0.11",
     "verbb/super-table": "3.0.14",
     "vlucas/phpdotenv": "^5.4.0"
   },

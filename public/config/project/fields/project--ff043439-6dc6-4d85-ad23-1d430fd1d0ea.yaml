@@ -7,7 +7,7 @@ name: Project
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1043210759
+  changedFieldIndicator: 497461700
   columns:
     __assoc__:
       -
@@ -19,6 +19,13 @@ settings:
               - ''
       -
         - 80a1b328-51fc-4279-b100-81fa2a22fb1c # Company
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2c5af258-38c5-4f55-a53f-51bfd3e8c429 # USPS
         -
           __assoc__:
             -

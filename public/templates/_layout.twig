@@ -15,16 +15,16 @@
     {% include ('_essentials/_favicon') %}
 
   </head>
-  <body>
-
+  <body class="light-theme">
     {% include ('_partials/_header') %}
 
-    <main id="main">
-        {% block main %}{% endblock %}
+    <main id="main" class="js-animations">
+      {% block main %}{% endblock %}
     </main>
 
 
     {% include ('_partials/_footer') %}
+    {% include ('_partials/_cursors') %}
 
     <script src="/assets/js/polyfills.js"></script>
     <script src="/assets/js/main.js" async></script>

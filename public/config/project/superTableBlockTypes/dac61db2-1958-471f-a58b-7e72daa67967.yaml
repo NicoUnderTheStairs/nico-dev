@@ -1,0 +1,133 @@
+changedFieldIndicator: 1386903047
+field: e2f03771-3613-4b28-864c-b37abe512794 # Not Found
+fieldLayouts:
+  66001e6c-d998-4d60-ae92-efaa72c0eb88:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 218d8979-17f4-4679-b012-92e6ef852553 # Memes
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 122764d6-e559-4669-85c0-88f142c41f3f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c5b719bd-6f79-415b-92cb-9ec7d79dcfc3 # Titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5f4ccee4-1315-4a08-a639-d83cbaadd49c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e487c058-76a1-41cc-af91-743b411e146b # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a18acbf6-b9c3-49e4-9de1-25c8c9af75c1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: eb354b5d-ade3-424e-9ea1-a644df706455
+        userCondition: null
+fields:
+  218d8979-17f4-4679-b012-92e6ef852553: # Memes
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: memes
+    instructions: null
+    name: Memes
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:5acbfce0-0c16-404d-bdf8-1b7185ed660a' # Uploads
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:5acbfce0-0c16-404d-bdf8-1b7185ed660a' # Uploads
+      restrictedLocationSubpath: null
+      selectionLabel: null
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  c5b719bd-6f79-415b-92cb-9ec7d79dcfc3: # Titel
+    columnSuffix: pzfjpxcj
+    contentColumnType: text
+    fieldGroup: null
+    handle: titel
+    instructions: null
+    name: Titel
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  e487c058-76a1-41cc-af91-743b411e146b: # Text
+    columnSuffix: velumgfl
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field

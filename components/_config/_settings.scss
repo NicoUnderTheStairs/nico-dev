@@ -12,7 +12,7 @@ body {
   font-size: 1.6rem;
   margin: 0;
   padding: 0;
-  transition: all 0.5s ease;
+  // transition: all 0.5s ease;
 }
 
 .row {
@@ -106,13 +106,13 @@ img {
   -ms-user-select: none;
 }
 
-$container-max-widths: (
-  sm: 54rem,
-  md: 72rem,
-  lg: 96rem,
-  xl: 114rem,
-  xxl: 144rem
-);
+// $container-max-widths: (
+//   sm: 54rem,
+//   md: 72rem,
+//   lg: 96rem,
+//   xl: 114rem,
+//   xxl: 144rem
+// );
 
 #CybotCookiebotDialogPoweredByText {
   display: none !important;

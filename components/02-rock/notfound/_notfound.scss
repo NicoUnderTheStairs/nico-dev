@@ -1,0 +1,51 @@
+.notfound {
+    height: 80vh;
+
+    &__wrapper {
+        padding: 2.4rem;
+        position: relative;
+        overflow-x: hidden;
+      
+        @include md-up {
+          padding: 4.8rem;
+        }
+      
+        @include lg-up {
+          padding: 4.8rem 7.2rem;
+        }
+    }
+}
+
+.ufo {
+    width: 20rem;
+    height: 20rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+
+    & svg {
+        transform: translate(-12rem, -6rem);
+    }
+}
+
+.cow {
+    width: fit-content;
+
+    & svg {
+        animation: whip 0.4s infinite;
+    }
+}
+
+// animation whip element back and forth
+@keyframes whip {
+    0% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}

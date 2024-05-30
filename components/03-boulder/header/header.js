@@ -4,6 +4,7 @@ class Header extends Base {
   constructor(el) {
     super(el);
     const hamburger = el.querySelector('.header__hamburger');
+
     if (hamburger === null) return;
 
     const nav = el.querySelector('.header__nav');

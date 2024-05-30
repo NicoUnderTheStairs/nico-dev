@@ -1,4 +1,4 @@
-changedFieldIndicator: 214832152
+changedFieldIndicator: 1618558888
 field: 47fe1798-f313-486b-b362-d2d3687bb528 # Footer
 fieldLayouts:
   2ff36057-ae7b-4198-991b-0f0d649802e9:
@@ -128,7 +128,7 @@ fields:
       minRows: null
       staticRows: false
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: craft\fields\Table
   144bff5e-94b1-4971-a645-14a75b6c17ac: # Slogan
     columnSuffix: pffzgtlk
@@ -148,5 +148,5 @@ fields:
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: craft\fields\PlainText

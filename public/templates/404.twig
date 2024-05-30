@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    {% set seo = getSeoField() %}
+    {% if seo is null or seo.title == '' %}{% set seo = craft.seo.custom(siteName, '', false) %}{% endif %}
+
+    {% set seoExtras = seoExtras.seoFields %}
+    {% set metaInfo = entry.metaInfo %}
+
+    <title>Nico Fortino - 404</title>
+    <link rel="home" href="{{ siteUrl }}"/>
+    <link rel="canonical" href="{{ seo.canonical }}">
+    <meta property="og:url" content="{{ siteUrl }}">
+    <meta property="og:type" content="website">
+
+    {% if seo.robots %}<meta name="robots" content="{{ seo.robots }}"/>{% endif %}
+
+    {% if metaInfo.beschreibung is not null %}
+      <meta name='description' content='{{ metaInfo.beschreibung }}'/>
+    {% else %}
+      <meta name='description' content='{{ seoExtras.beschreibung }}'/>
+    {% endif %}
+
+    {% if metaInfo.titel is not null %}
+      <meta property='og:title' content='{{ metaInfo.titel }}'/>
+    {% else %}
+      <meta property='og:title' content='{{ seoExtras.titel }}'/>
+    {% endif %}
+
+    {% if metaInfo.socialImage.one() is not null %}
+      <meta property='og:image' content='{{ metaInfo.socialImage.one().url }}'/>
+    {% else %}
+      <meta property='og:image' content='{{ seoExtras.socialImage.one().url }}'/>
+    {% endif %}
+
+    {% if metaInfo.beschreibung is not null %}
+      <meta property='og:description' content='{{ metaInfo.beschreibung }}'/>
+    {% else %}
+      <meta property='og:description' content='{{ seoExtras.beschreibung }}'/>
+    {% endif %}
+
+    {% if metaInfo.keywords is not null %}
+      <meta name="keywords" content="{{ metaInfo.keywords }}">
+    {% else %}
+      <meta name="keywords" content="{{ seoExtras.keywords }}">
+    {% endif %}
+
+    {% if craft.app.config.env == 'production' %}
+      {% header "X-Robots-Tag: all" %}
+    {% else %}
+      {% header "X-Robots-Tag: noindex, nofollow, none" %}
+    {% endif %}
+
+    {% include ('_essentials/_favicon') %}
+
+  </head>
+  <body class="404">
+    {% include ('_partials/_header') %}
+
+    <div class="notfound__wrapper js-animations">
+      {% include ('_partials/_notfound') %}
+    </div>
+
+
+    {% include ('_partials/_footer') %}
+
+    <script src="/assets/js/polyfills.js"></script>
+    <script src="/assets/js/main.js" async></script>
+  </body>
+</html>

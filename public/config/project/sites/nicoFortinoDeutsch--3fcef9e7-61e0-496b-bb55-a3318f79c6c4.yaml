@@ -1,9 +1,0 @@
-baseUrl: '@web/de'
-enabled: '1'
-handle: nicoFortinoDeutsch
-hasUrls: true
-language: de
-name: 'Nico Fortino Deutsch'
-primary: false
-siteGroup: 3e069843-7cda-4080-96c0-7d1ab55460a2 # Nico
-sortOrder: 2

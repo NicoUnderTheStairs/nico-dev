@@ -17,6 +17,27 @@
         position: absolute;
         left: 0;
         top: 0;
+
+        &::after {
+            content: "";
+            background: #E5AC01;
+            width: 75%;
+            height: 2rem;
+            position: absolute;
+            border-radius: 0.2rem;
+            left: 50%;
+            top: 50%;
+            z-index: -2;
+            transform: translate(-50%, -50%) skew(-15deg) rotate(-15deg);
+            transition: all 0.3s ease;
+            opacity: 0.5;
+		}
+
+		&:hover {
+			&::after {
+                opacity: 1;
+			}
+		}
     }
 
     &__hamburger {
@@ -66,10 +87,6 @@
             left: 0;
         }
 
-        &__lang {
-
-        }
-
         & ul {
             list-style: none;
             margin-top: 10rem;
@@ -78,5 +95,13 @@
                 font-size: 4.4rem;
             }
         }
+    }
+}
+
+.header__buffer {
+    margin-top: 9rem;
+
+    @include md-up {
+        margin-top: 0;
     }
 }
