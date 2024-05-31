@@ -1,0 +1,79 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: fe10ca1e-b9b0-4764-a8ce-9d11827b9828 # Common
+handle: systemTranslations
+instructions: null
+name: 'System Translations'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 333086373
+  columns:
+    __assoc__:
+      -
+        - 3e4a020a-8ec6-4ab7-a4d8-6ad3cb08f660 # Hi, I am
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - eb53d36d-66e7-4ac1-b4e8-61f7ec736021 # ProjectsDeveloped
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - ee08378b-d81d-4a46-9a80-eb29a6a5e660 # Lighthouse Report
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 78334100-b3bd-4b9f-aa08-b3b24f027447 # More Projects
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 028c7152-a72a-4eeb-9873-2a588c93ac15 # Performance
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 96634e98-38ff-4af4-be4d-a8239d1aed6b # Accesability
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - c65316b9-b426-4343-ac32-6a571787a8c9 # Best Practices
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 13b9bb0a-95e4-4c8c-a153-c137213cbcc6 # SEO
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_systemtranslations}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

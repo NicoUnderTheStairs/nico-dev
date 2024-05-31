@@ -1,0 +1,24 @@
+fieldLayouts:
+  ce1aefa1-416f-497e-9c59-fc27bdb682f9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0fe360b3-6a5c-40b5-82ad-1a7b95e24bb1 # System Translations
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d65ea48-a9a9-4d3c-aeb0-b104d1bd1466
+            userCondition: null
+            warning: null
+            width: 100
+        name: Translations
+        uid: cbcb9c5c-7db1-4603-ac2b-ed46bef6eed7
+        userCondition: null
+handle: systemTranslations
+name: 'System Translations'
+sortOrder: 4

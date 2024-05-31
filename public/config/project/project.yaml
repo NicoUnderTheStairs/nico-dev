@@ -1,4 +1,4 @@
-dateModified: 1717022680
+dateModified: 1717076301
 elementSources:
   craft\elements\Entry:
     -
@@ -44,11 +44,13 @@ meta:
   __names__:
     0a6a4808-0001-4bf3-9ee9-9b82be6e7da0: Header # Header
     0e3e5e64-bdfa-44a3-9ba6-e67c212ccb70: Images # Images
+    0fe360b3-6a5c-40b5-82ad-1a7b95e24bb1: 'System Translations' # System Translations
     1c5bd7ca-883b-4808-b311-7425ff5d9b00: Projects # Projects
     2ad51318-063a-4905-a994-0bc1fb82d356: 'Public Schema' # Public Schema
     2c5af258-38c5-4f55-a53f-51bfd3e8c429: USPS # USPS
     3d5edf3c-eda8-498e-ac75-94245e775112: Footer # Footer
     3e069843-7cda-4080-96c0-7d1ab55460a2: Nico # Nico
+    3e4a020a-8ec6-4ab7-a4d8-6ad3cb08f660: 'Hi, I am' # Hi, I am
     3ef06bed-e337-4554-9c87-36a4a4cdf5a7: Lead # Lead
     3fcef9e7-61e0-496b-bb55-a3318f79c6c4: 'Nico Fortino Deutsch' # Nico Fortino Deutsch
     4d9ad22a-71a4-486c-8a17-4aa06b7202fb: Work # Work
@@ -60,7 +62,9 @@ meta:
     8ae538ff-e8e5-43c5-bd07-1aa86bfe1946: Imprint # Imprint
     8f9812d2-2102-43ac-8ef1-21923dc442e7: Default # Default
     9f3d19d1-3b06-4cdf-8c6b-70c688ca8d69: Home # Home
+    13b9bb0a-95e4-4c8c-a153-c137213cbcc6: SEO # SEO
     20e41d9d-a586-4d1a-b5ad-ce3572aa2fa5: Globals # Globals
+    028c7152-a72a-4eeb-9873-2a588c93ac15: Performance # Performance
     39beb36f-cf9a-4ac5-8eb5-17da62ed4cfa: 'Nico Fortino' # Nico Fortino
     47fe1798-f313-486b-b362-d2d3687bb528: Footer # Footer
     51c6826d-9df2-4942-a2e4-4210c13a1782: 'Project Grid Desktop' # Project Grid Desktop
@@ -73,19 +77,26 @@ meta:
     218d8979-17f4-4679-b012-92e6ef852553: Memes # Memes
     227a9ae2-cd4d-4643-897f-d4ac6d783162: Nav # Nav
     6819ac29-167a-4d1e-960c-4e35b9e29e2c: Website # Website
+    96634e98-38ff-4af4-be4d-a8239d1aed6b: Accesability # Accesability
     710978b0-e1c7-4e88-8836-01d9d5e1545b: Standard # Standard
     929529d1-d267-49c7-84d4-aae762b8d3ce: 'Social Image' # Social Image
+    78334100-b3bd-4b9f-aa08-b3b24f027447: 'More Projects' # More Projects
     87278682-c4ad-4783-9262-b4ad2533f76b: Header # Header
     a3863cb8-ba1c-44f0-90bd-3df22d44535a: 'Not Found' # Not Found
     bb1c7b43-4c8a-4e94-aad9-aec8f4c1a9e1: Keywords # Keywords
     c085eb9c-a4ad-42d4-8d8b-b1bb67a1be5e: 'Lighthouse Doc' # Lighthouse Doc
     c5b719bd-6f79-415b-92cb-9ec7d79dcfc3: Titel # Titel
     c95eed35-ff61-47b8-b7da-6575c6cb70bf: Lead # Lead
+    c65316b9-b426-4343-ac32-6a571787a8c9: 'Best Practices' # Best Practices
     d32f8599-4ed4-4a93-b822-1634f69b79fb: Titel # Titel
+    d548142e-cce6-4a62-af0e-119193fd33be: 'System Translations' # System Translations
     df5a9729-4d8c-4f3a-9c5e-e71e9a2b52d0: Lighthouse # Lighthouse
     e2f03771-3613-4b28-864c-b37abe512794: 'Not Found' # Not Found
+    e3af7e87-51b6-40d5-abc7-360c475923ee: 'Visit Project' # Visit Project
     e8fcf4aa-1cdc-49ad-8048-46bed34d2778: Website # Website
     e487c058-76a1-41cc-af91-743b411e146b: Text # Text
+    eb53d36d-66e7-4ac1-b4e8-61f7ec736021: ProjectsDeveloped # ProjectsDeveloped
+    ee08378b-d81d-4a46-9a80-eb29a6a5e660: 'Lighthouse Report' # Lighthouse Report
     f0bb9251-9d2c-4024-a994-8354d1ff8003: Logo # Logo
     f4c476d5-c7ea-4540-8e96-6880d7382f5a: 'Project Number' # Project Number
     fe10ca1e-b9b0-4764-a8ce-9d11827b9828: Common # Common

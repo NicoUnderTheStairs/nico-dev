@@ -1,3 +1,5 @@
+{% set systemTranslations = systemTranslations.systemTranslations %}
+
 <div class="projectGrid js-projectgrid projectGrid__desktop">
     <div class="projectGrid__desktop__inner">
         <div class="projectGrid__desktop__wrapper">
@@ -14,7 +16,7 @@
             </div>
 
             <div class="projectGrid__desktop__list">
-                <h2 class="projectGrid__title mb-4 mt-0 mono">Projects I developed</h2>
+                <h2 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsdeveloped}}</h2>
                 {% for project in craft.entries.section('projects').all() %}
                     <a href="{{project.url}}" class="projectGrid__desktop__item d-flex position-relative linkBigCursor">
                         <p class="artifact me-3">{{ project.projectNumber }}</p>

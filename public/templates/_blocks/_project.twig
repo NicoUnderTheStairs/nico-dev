@@ -1,4 +1,5 @@
 {% set project = entry.project %}
+{% set systemTranslations = systemTranslations.systemTranslations %}
 
 <div class="project">
     <div class="project__inner">
@@ -32,7 +33,7 @@
             <div class="project__lead py-4">
                 {{project.lead}}
                 <a href="https://{{project.website}}" target="_blank" class="project__visit mono linkSmallCursor">
-                    Visit Project
+                    {{systemTranslations.visitProject}}
                     <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_697_135)">
                         <path d="M-1.88488 24.0686L-14.636 36.8198L-16.0503 35.4056L-3.29909 22.6544L-11.2187 22.6544L-11.201 20.6568H0.112698V31.9705L-1.88488 31.9882L-1.88488 24.0686Z" fill="#202020"/>
@@ -59,29 +60,29 @@
         <div class="project__lighthouse d-flex flex-column align-items-center">
             <div class="col-lg-6">
                 <div class="d-flex flex-column flex-lg-row justify-content-lg-between">
-                    <h4 class="project__lighthouse__title mono m-0">Lighthouse Report <span class="text-small mono">(Desktop)</span></h4>
+                    <h4 class="project__lighthouse__title mono m-0">{{systemTranslations.lighthouseReport}} <span class="text-small mono">(Desktop)</span></h4>
                     <a href="{{project.lighthouseDoc.one().url}}" target="_blank" class="text-small mono">Download</a>
                 </div>
                 <div class="mt-4 d-flex flex-wrap flex-lg-nowrap justify-content-lg-between">
                     {% for stat in project.lighthouse %}
                         <div class="project__lighthouse__stat mb-3">
                             <h4 class="project__lighthouse__stat--title mono m-0">{{stat.performance}}</h4>
-                            <p class="project__lighthouse__stat--description mono m-0">Performance</p>
+                            <p class="project__lighthouse__stat--description mono m-0">{{systemTranslations.performance}}</p>
                         </div>
 
                         <div class="project__lighthouse__stat mb-3">
                             <h4 class="project__lighthouse__stat--title mono m-0">{{stat.accesability}}</h4>
-                            <p class="project__lighthouse__stat--description mono m-0">Accesability</p>
+                            <p class="project__lighthouse__stat--description mono m-0">{{systemTranslations.accesability}}</p>
                         </div>
 
                         <div class="project__lighthouse__stat mb-3">
                             <h4 class="project__lighthouse__stat--title mono m-0">{{stat.bestPractices}}</h4>
-                            <p class="project__lighthouse__stat--description mono m-0">Best Practices</p>
+                            <p class="project__lighthouse__stat--description mono m-0">{{systemTranslations.bestPractices}}</p>
                         </div>
 
                         <div class="project__lighthouse__stat">
                             <h4 class="project__lighthouse__stat--title mono m-0">{{stat.seo}}</h4>
-                            <p class="project__lighthouse__stat--description mono m-0">SEO</p>
+                            <p class="project__lighthouse__stat--description mono m-0">{{systemTranslations.seo}}</p>
                         </div>
                     {% endfor %}
                 </div>
@@ -90,7 +91,7 @@
 
         {# more Projects #}
         <div class="project__moreProjects">
-            <h4 class="project__lighthouse__title mono mt-3">More Projects</h4>
+            <h4 class="project__lighthouse__title mono mt-3">{{systemTranslations.moreProjects}}</h4>
             {% set shuffledProjects = shuffle(entry.siblings) %}
 
             <div class="projectGrid__wrapper d-flex justify-content-between flex-wrap flex-lg-nowrap flex-direction-lg-row">

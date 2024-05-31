@@ -14,7 +14,7 @@ class Animations extends Base {
       return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
     }
 
-    if (isMobileOrTablet()) {
+    if (isMobileOrTablet() || window.innerWidth < 1024) {
       document.querySelector('.cursor-big').style.display = 'none';
       document.querySelector('.cursor-small').style.display = 'none';
       return;

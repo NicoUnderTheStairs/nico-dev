@@ -42,7 +42,7 @@
         <div class="d-flex justify-content-between">
             <p class="mono text-small ufo__suckable">© Nico</p>
             {# <span class="mono text-small mx-1"> </span> #}
-            <div class="footer__lang d-flex align-items-center">
+            <div class="footer__lang d-flex align-items-center linkSmallCursor">
                 {% for siteForEntry in entry.getSupportedSites %}
                     {% set site = craft.app.getSites.getSiteById(siteForEntry.siteId) %}
                     {% set entryForOtherSite = craft.entries.id(entry.id).site(site).one() %}

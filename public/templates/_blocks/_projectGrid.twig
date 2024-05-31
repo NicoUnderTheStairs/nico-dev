@@ -1,9 +1,11 @@
+{% set systemTranslations = systemTranslations.systemTranslations %}
+
 <div class="projectGrid projectGrid__mobile">
     <div class="projectGrid__inner">
         {% if entry.url == block.work.one().url %}
-            <h1 class="projectGrid__title mb-4 mt-0 mono">Projects I developed</h1>
+            <h1 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsdeveloped}}</h1>
         {% else %}
-            <h2 class="projectGrid__title mb-4 mt-0 mono">Projects I developed</h2>
+            <h2 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsdeveloped}}</h2>
         {% endif %}
         <div class="projectGrid__wrapper d-flex justify-content-between flex-direction-lg-row flex-wrap flex-lg-nowrap">
             {% for project in craft.entries.section('projects').all() %}

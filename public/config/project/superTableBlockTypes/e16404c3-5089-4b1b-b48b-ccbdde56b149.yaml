@@ -1,0 +1,300 @@
+changedFieldIndicator: 1902471112
+field: 0fe360b3-6a5c-40b5-82ad-1a7b95e24bb1 # System Translations
+fieldLayouts:
+  4fb9ed76-d895-4b61-9e44-627f3408197f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3e4a020a-8ec6-4ab7-a4d8-6ad3cb08f660 # Hi, I am
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 33ddc267-ba58-424c-8e82-4b2490b7da64
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: eb53d36d-66e7-4ac1-b4e8-61f7ec736021 # ProjectsDeveloped
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 632dd7f8-132c-4432-8db0-d104e1668b9c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e3af7e87-51b6-40d5-abc7-360c475923ee # Visit Project
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 27f078e5-126b-4e6a-ba37-47256d5c4aa8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ee08378b-d81d-4a46-9a80-eb29a6a5e660 # Lighthouse Report
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ddd2f18d-18e4-47c6-8658-1f2bef0a6996
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 78334100-b3bd-4b9f-aa08-b3b24f027447 # More Projects
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d06bce1-1967-4683-a4a7-4cf5a5252f21
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 028c7152-a72a-4eeb-9873-2a588c93ac15 # Performance
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bfc15445-3ae0-43a8-acaf-069cc59b6e97
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 96634e98-38ff-4af4-be4d-a8239d1aed6b # Accesability
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8ec183e6-419e-483c-bd9b-689679ee7ad0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c65316b9-b426-4343-ac32-6a571787a8c9 # Best Practices
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 01ec2b27-19ae-4c7a-8778-2e086d4cb90f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 13b9bb0a-95e4-4c8c-a153-c137213cbcc6 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 54a5b787-98af-4a80-be2c-fb4422f5a264
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a6c75cce-f9d8-43a1-82e4-44928c35600d
+        userCondition: null
+fields:
+  3e4a020a-8ec6-4ab7-a4d8-6ad3cb08f660: # Hi, I am
+    columnSuffix: aehxdsil
+    contentColumnType: text
+    fieldGroup: null
+    handle: hiIAm
+    instructions: null
+    name: 'Hi, I am'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  13b9bb0a-95e4-4c8c-a153-c137213cbcc6: # SEO
+    columnSuffix: nhtjyldh
+    contentColumnType: text
+    fieldGroup: null
+    handle: seo
+    instructions: null
+    name: SEO
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  028c7152-a72a-4eeb-9873-2a588c93ac15: # Performance
+    columnSuffix: syhfigkw
+    contentColumnType: text
+    fieldGroup: null
+    handle: performance
+    instructions: null
+    name: Performance
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  96634e98-38ff-4af4-be4d-a8239d1aed6b: # Accesability
+    columnSuffix: wxvapvje
+    contentColumnType: text
+    fieldGroup: null
+    handle: accesability
+    instructions: null
+    name: Accesability
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  78334100-b3bd-4b9f-aa08-b3b24f027447: # More Projects
+    columnSuffix: zjxqpkpp
+    contentColumnType: text
+    fieldGroup: null
+    handle: moreProjects
+    instructions: null
+    name: 'More Projects'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  c65316b9-b426-4343-ac32-6a571787a8c9: # Best Practices
+    columnSuffix: ogmqlsso
+    contentColumnType: text
+    fieldGroup: null
+    handle: bestPractices
+    instructions: null
+    name: 'Best Practices'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  e3af7e87-51b6-40d5-abc7-360c475923ee: # Visit Project
+    columnSuffix: ueawvyia
+    contentColumnType: text
+    fieldGroup: null
+    handle: visitProject
+    instructions: null
+    name: 'Visit Project'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  eb53d36d-66e7-4ac1-b4e8-61f7ec736021: # ProjectsDeveloped
+    columnSuffix: lxvdliky
+    contentColumnType: text
+    fieldGroup: null
+    handle: projectsdeveloped
+    instructions: null
+    name: ProjectsDeveloped
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  ee08378b-d81d-4a46-9a80-eb29a6a5e660: # Lighthouse Report
+    columnSuffix: kpzwqjiw
+    contentColumnType: text
+    fieldGroup: null
+    handle: lighthouseReport
+    instructions: null
+    name: 'Lighthouse Report'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
