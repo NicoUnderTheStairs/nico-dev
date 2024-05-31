@@ -4,6 +4,7 @@ import Notfound from './02-rock/notfound/notfound';
 import Header from './03-boulder/header/header';
 import Footer from './03-boulder/footer/footer';
 import Animations from './03-boulder/animations/animations';
+import Project from './02-rock/project/project';
 
 require('./main.scss');
 
@@ -25,6 +26,7 @@ ready(() => {
   Component.Animations = Animations.init();
   Component.Footer = Footer.init();
   Component.ProjectGrid = ProjectGrid.init();
+  Component.Project = Project.init();
   Component.Hero = Hero.init();
   Component.Notfound = Notfound.init();
 });
