@@ -35,18 +35,6 @@ class Footer extends Base {
         body.classList.add('light-theme');
         body.classList.remove('dark-theme');
         darkmodeToggle.classList.remove('footer__darklightmode-true');
-        // check local time and display according theme
-        const date = new Date();
-        const hour = date.getHours();
-        if (hour >= 18 || hour < 6) {
-          body.classList.add('dark-theme');
-          body.classList.remove('light-theme');
-          darkmodeToggle.classList.add('footer__darklightmode-true');
-        } else {
-          body.classList.add('light-theme');
-          body.classList.remove('dark-theme');
-          darkmodeToggle.classList.remove('footer__darklightmode-true');
-        }
       }
     }
   }
