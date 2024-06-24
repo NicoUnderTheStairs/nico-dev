@@ -4,7 +4,7 @@
     <div class="notfound__inner">
         {% set randomImage = shuffle(notFound.memes) | first %}
         <div class="d-flex flex-column flex-lg-row justify-content-between">
-            <img class="col-12 col-lg-6 ufo__suckable" src="{{ randomImage.url }}" alt="{{ randomImage.title }}" class="notfound__image">
+            <img class="col-12 col-lg-6 ufo__suckable border-radius-6" src="{{ randomImage.url }}" alt="{{ randomImage.title }}" class="notfound__image">
             <div class="col-12 col-lg-6 p-3">
                 <h1 class="notfound__title mono ufo__suckable">{{ notFound.titel }}</h1>
                 <div class="notfound__text mono text-lead ufo__suckable">{{ notFound.text }}</div>

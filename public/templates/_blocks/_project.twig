@@ -1,11 +1,11 @@
 {% set project = entry.project %}
 {% set systemTranslations = systemTranslations.systemTranslations %}
 
-<div class="project js-project">
+<div class="project imageToggles__wrapper js-project">
     <div class="project__inner">
         <div class="d-flex flex-column flex-lg-row">
             {# button #}
-            <a href="{{ siteUrl }}" class="project__back me-lg-5">
+            <a href="{{ siteUrl }}" class="project__back me-lg-5" alt="Back">
                 <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.825 7L36 7V9L3.825 9L9.425 14.6L8 16L0 8L8 0L9.425 1.4L3.825 7Z" fill="black"/>
                 </svg>
@@ -32,25 +32,35 @@
             {# lead #}
             <div class="project__lead py-4">
                 {{project.lead}}
-                <a href="https://{{project.website}}" target="_blank" class="project__visit mono linkSmallCursor">
-                    {{systemTranslations.visitProject}}
-                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_697_135)">
-                        <path d="M-1.88488 24.0686L-14.636 36.8198L-16.0503 35.4056L-3.29909 22.6544L-11.2187 22.6544L-11.201 20.6568H0.112698V31.9705L-1.88488 31.9882L-1.88488 24.0686Z" fill="#202020"/>
-                        <path d="M15.1151 7.06861L2.36396 19.8198L0.949747 18.4056L13.7009 5.6544L5.78131 5.6544L5.79899 3.65682H17.1127V14.9705L15.1151 14.9882L15.1151 7.06861Z" fill="#202020"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_697_135">
-                        <rect width="22" height="20" fill="white"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
-                </a>
+                {% if project.visitProjectOn %}
+                    <a href="https://{{project.website}}" target="_blank" class="project__visit mono linkSmallCursor">
+                        {{systemTranslations.visitProject}}
+                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_697_135)">
+                            <path d="M-1.88488 24.0686L-14.636 36.8198L-16.0503 35.4056L-3.29909 22.6544L-11.2187 22.6544L-11.201 20.6568H0.112698V31.9705L-1.88488 31.9882L-1.88488 24.0686Z" fill="#202020"/>
+                            <path d="M15.1151 7.06861L2.36396 19.8198L0.949747 18.4056L13.7009 5.6544L5.78131 5.6544L5.79899 3.65682H17.1127V14.9705L15.1151 14.9882L15.1151 7.06861Z" fill="#202020"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_697_135">
+                            <rect width="22" height="20" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                {% endif %}
             </div>
         </div>
 
         {# galery #}
-        <div class="project__galery mb-5">
+        {% if project.imagesDarkmode.one() is not null %}
+            <div class="project__galery imageToggles__dark mb-5">
+                {% for img in project.imagesDarkmode %}
+                    <img src="{{img.url}}" alt="{{image.alt}}" class="project__galery__item">
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="project__galery {% if project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %} mb-5">
             {% for img in project.images %}
                 <img src="{{img.url}}" alt="{{image.alt}}" class="project__galery__item">
             {% endfor %}
@@ -99,7 +109,13 @@
                     {% if loop.index <= 2 %}
                         <div class="projectGrid__project col-12 col-lg-6">
                             <a href="{{ project.url }}" class="projectGrid__project__link">
-                                <div class="projectGrid__project__img">
+                                {% if project.project.imagesDarkmode.one() is not null %}
+                                    <div class="projectGrid__project__img imageToggles__dark">
+                                        <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}">
+                                    </div>
+                                {% endif %}
+
+                                <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %}">
                                     <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}">
                                 </div>
                                 <div class="projectGrid__project__content">

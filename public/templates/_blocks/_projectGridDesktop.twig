@@ -5,12 +5,21 @@
         <div class="projectGrid__desktop__wrapper">
             <div class="projectGrid__desktop__display">
                 {% for project in craft.entries.section('projects').all() %}
-                    <div class="projectGrid__desktop__img {% if loop.index0 == 0 %}projectGrid__desktop__img--active{% endif %}">
-                    {% for img in project.project.images.all() %}
-                        {% if loop.index <= 3 %}
-                            <img class="border-radius-6" src="{{img.url}}">
+                    <div class="projectGrid__desktop__img imageToggles__wrapper {% if loop.index0 == 0 %}projectGrid__desktop__img--active{% endif %}">
+                        {% if project.project.imagesDarkmode.one() is not null %}
+                            {% for img in project.project.imagesDarkmode.all() %}
+                                {% if loop.index <= 3 %}
+                                    <img class="border-radius-6 imageToggles__dark" src="{{img.url}}">                                    
+                                {% endif %}
+                            {% endfor %}
+                            <img class="border-radius-6 imageToggles__dark">                                    
                         {% endif %}
-                    {% endfor %}
+
+                        {% for img in project.project.images.all() %}
+                            {% if loop.index <= 3 %}
+                                <img class="{% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %} border-radius-6" src="{{img.url}}">
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 {% endfor %}
             </div>

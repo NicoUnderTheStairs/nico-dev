@@ -1,0 +1,48 @@
+<div class="loading">
+    <div class="loading__backlogo">
+        <svg width="300" height="139" viewBox="0 0 447 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 196.565C0 201.262 4.53461 204.626 9.02987 203.264L221.271 138.955L343.675 101.866L442.03 72.0641C444.981 71.1698 447 68.449 447 65.3649V7.47039C447 2.76292 442.447 -0.60266 437.946 0.778413L226.327 65.7209L104.287 101.843L5.19702 128.256C2.13242 129.073 0 131.849 0 135.02V196.565Z" fill="#E5AC01" fill-opacity="0.5"/>
+        </svg>
+    </div>
+    <div class="loading__frontlogo">
+        <svg width="300" height="139" viewBox="0 0 447 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_895_7)">
+            <path d="M0 198.565C0 203.262 4.53461 206.626 9.02987 205.264L221.271 140.955L343.675 103.866L442.03 74.0641C444.981 73.1698 447 70.449 447 67.3649V9.47039C447 4.76292 442.447 1.39734 437.946 2.77841L226.327 67.7209L104.287 103.843L5.19702 130.256C2.13242 131.073 0 133.849 0 137.02V198.565Z" fill="#E5AC01"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_895_7">
+            <rect class="loading__progress" width="0" height="208" fill="white"/>
+            </clipPath>
+            </defs>
+        </svg>
+    </div>
+</div>
+
+
+<script>
+    const loading = document.querySelector('.loading');
+    const body = document.querySelector('body');
+
+    if (localStorage.getItem('loaded') === 'true') {
+        loading.classList.add('loading--hidden');
+        body.classList.remove('overflow-hidden');
+    } else {
+        const progress = document.querySelector('.loading__progress');
+        let currentWidth = 0;
+        // take random time, between 3s to 5s to simulate loading
+        const randomTime = Math.floor(Math.random() * (5000 - 3000 + 1)) + 3000;
+        const interval = setInterval(() => {
+            currentWidth += 1;
+            progress.style.width = `${currentWidth}px`;
+            if (currentWidth >= 447) {
+                clearInterval(interval);
+                setTimeout(() => {
+                    body.classList.remove('overflow-hidden');
+                    loading.classList.add('loading--hidden');
+                }, 1000);
+            }
+        }, randomTime / 447);
+
+        localStorage.setItem('loaded', 'true');
+    }
+</script>

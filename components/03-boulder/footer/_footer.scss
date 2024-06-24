@@ -67,3 +67,29 @@
         }
     }
 }
+
+.imageToggles {
+    &__light {
+        display: none;
+
+        &-unavilable {
+            display: grid;
+        }
+    }
+
+    &__dark {
+        &-unavilable {
+            display: none;
+        }
+    }
+
+    &-dark {
+        & .imageToggles__dark {
+            display: none;
+        }
+
+        & .imageToggles__light {
+            display: grid;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-dateModified: 1717076301
+dateModified: 1719265415
 elementSources:
   craft\elements\Entry:
     -
@@ -80,6 +80,7 @@ meta:
     96634e98-38ff-4af4-be4d-a8239d1aed6b: Accesability # Accesability
     710978b0-e1c7-4e88-8836-01d9d5e1545b: Standard # Standard
     929529d1-d267-49c7-84d4-aae762b8d3ce: 'Social Image' # Social Image
+    03256383-6fd4-4177-8a2f-21f8ed132eaf: 'Visit Project Toggle' # Visit Project Toggle
     78334100-b3bd-4b9f-aa08-b3b24f027447: 'More Projects' # More Projects
     87278682-c4ad-4783-9262-b4ad2533f76b: Header # Header
     a3863cb8-ba1c-44f0-90bd-3df22d44535a: 'Not Found' # Not Found
@@ -91,6 +92,7 @@ meta:
     d32f8599-4ed4-4a93-b822-1634f69b79fb: Titel # Titel
     d548142e-cce6-4a62-af0e-119193fd33be: 'System Translations' # System Translations
     df5a9729-4d8c-4f3a-9c5e-e71e9a2b52d0: Lighthouse # Lighthouse
+    e0e7f238-8f75-4da6-9e88-6cd94e2d2f85: 'Images Darkmode' # Images Darkmode
     e2f03771-3613-4b28-864c-b37abe512794: 'Not Found' # Not Found
     e3af7e87-51b6-40d5-abc7-360c475923ee: 'Visit Project' # Visit Project
     e8fcf4aa-1cdc-49ad-8048-46bed34d2778: Website # Website

@@ -15,8 +15,9 @@
     {% include ('_essentials/_favicon') %}
 
   </head>
-  <body class="light-theme">
+  <body class="light-theme js-loading overflow-hidden">
     {% include ('_partials/_header') %}
+    {% include ('_partials/_loading') %}
 
     <main id="main" class="js-animations">
       {% block main %}{% endblock %}

@@ -91,10 +91,14 @@
             margin-top: 12.4rem;
         }
 
+        &__dark {
+            display: none;
+        }
+
         &__item {
             object-fit: contain;
             object-position: top;
-            border-radius: 1.6rem;
+            border-radius: 0.6rem;
             width: 100%;
 
             &:nth-child(4n+1) {

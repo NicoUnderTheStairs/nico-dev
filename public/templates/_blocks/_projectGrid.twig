@@ -1,6 +1,6 @@
 {% set systemTranslations = systemTranslations.systemTranslations %}
 
-<div class="projectGrid projectGrid__mobile">
+<div class="projectGrid projectGrid__mobile imageToggles__wrapper">
     <div class="projectGrid__inner">
         {% if entry.url == block.work.one().url %}
             <h1 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsdeveloped}}</h1>
@@ -12,9 +12,16 @@
                 {% if project.moreButton is not null %}
                     <div class="projectGrid__project col-lg-6">
                         <a href="{{ project.url }}" class="projectGrid__project__link">
-                            <div class="projectGrid__project__img">
+                            {% if project.project.imagesDarkmode.one() is not null %}
+                                <div class="projectGrid__project__img imageToggles__dark">
+                                    <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}">
+                                </div>
+                            {% endif %}
+
+                            <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %}">
                                 <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}">
                             </div>
+
                             <div class="projectGrid__project__content">
                                 <p class="artifact">{{ project.projectNumber }}</p>
                                 <h3 class="projectGrid__project__title mono">{{ project.project.website }}</h3>
@@ -24,9 +31,14 @@
                 {% else %}
                     <div class="projectGrid__project">
                         <a href="{{ project.url }}" class="projectGrid__project__link">
-                            <div class="projectGrid__project__img">
+                            <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__dark{% else %}imageToggles__dark-unavilable{% endif %}">
+                                <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}">
+                            </div>
+
+                            <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %}">
                                 <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}">
                             </div>
+
                             <div class="projectGrid__project__content">
                                 <p class="artifact">{{ project.projectNumber }}</p>
                                 <h3 class="projectGrid__project__title mono">{{ project.project.website }}</h3>

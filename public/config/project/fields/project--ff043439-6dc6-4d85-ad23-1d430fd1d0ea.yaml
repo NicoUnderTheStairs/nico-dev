@@ -7,7 +7,7 @@ name: Project
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 497461700
+  changedFieldIndicator: 701600886
   columns:
     __assoc__:
       -
@@ -40,6 +40,13 @@ settings:
               - ''
       -
         - 0e3e5e64-bdfa-44a3-9ba6-e67c212ccb70 # Images
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - e0e7f238-8f75-4da6-9e88-6cd94e2d2f85 # Images Darkmode
         -
           __assoc__:
             -

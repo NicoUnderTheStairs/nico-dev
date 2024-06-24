@@ -1,4 +1,4 @@
-changedFieldIndicator: 214186096
+changedFieldIndicator: 1771011417
 field: ff043439-6dc6-4d85-ad23-1d430fd1d0ea # Project
 fieldLayouts:
   a7421637-2389-402d-a1a8-03d92b2d0bff:
@@ -27,6 +27,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 80fd3817-4068-43b7-b547-310ffc3b5ef3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 03256383-6fd4-4177-8a2f-21f8ed132eaf # Visit Project Toggle
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bde75423-7eb7-4461-a18d-5ea35cf39e0e
             userCondition: null
             warning: null
             width: 100
@@ -63,6 +75,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: a8b359e0-1d3f-4974-98a2-ff4f83d63cef
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e0e7f238-8f75-4da6-9e88-6cd94e2d2f85 # Images Darkmode
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8ccc6d8d-6b92-4190-8d84-92f8d9820a23
             userCondition: null
             warning: null
             width: 100
@@ -211,6 +235,21 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\PlainText
+  03256383-6fd4-4177-8a2f-21f8ed132eaf: # Visit Project Toggle
+    columnSuffix: qoercirb
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: visitProjectOn
+    instructions: null
+    name: 'Visit Project Toggle'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Lightswitch
   c085eb9c-a4ad-42d4-8d8b-b1bb67a1be5e: # Lighthouse Doc
     columnSuffix: null
     contentColumnType: string
@@ -374,6 +413,43 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Table
+  e0e7f238-8f75-4da6-9e88-6cd94e2d2f85: # Images Darkmode
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: imagesDarkmode
+    instructions: null
+    name: 'Images Darkmode'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:5acbfce0-0c16-404d-bdf8-1b7185ed660a' # Uploads
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:5acbfce0-0c16-404d-bdf8-1b7185ed660a' # Uploads
+      restrictedLocationSubpath: null
+      selectionLabel: null
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
   e8fcf4aa-1cdc-49ad-8048-46bed34d2778: # Website
     columnSuffix: cbaheixw
     contentColumnType: text

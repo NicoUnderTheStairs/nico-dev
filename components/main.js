@@ -3,8 +3,8 @@ import ProjectGrid from './02-rock/projectGrid/projectGrid';
 import Notfound from './02-rock/notfound/notfound';
 import Header from './03-boulder/header/header';
 import Footer from './03-boulder/footer/footer';
-import Animations from './03-boulder/animations/animations';
 import Project from './02-rock/project/project';
+import Animations from './03-boulder/animations/animations';
 
 require('./main.scss');
 
