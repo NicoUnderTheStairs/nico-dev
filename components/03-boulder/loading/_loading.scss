@@ -27,6 +27,16 @@
         }
     }
 
+    &__text {
+        width: fit-content;
+        position: absolute;
+        left: 50%;
+        bottom: 13.6rem;
+        font-style: italic;
+        font-family: 'Roboto Mono';
+        transform: translateX(-50%);
+    }
+
     &__frontlogo {
         position: absolute;
         top: 50%;
