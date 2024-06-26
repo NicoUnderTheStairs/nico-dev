@@ -1,4 +1,4 @@
-changedFieldIndicator: 1771011417
+changedFieldIndicator: 1474098728
 field: ff043439-6dc6-4d85-ad23-1d430fd1d0ea # Project
 fieldLayouts:
   a7421637-2389-402d-a1a8-03d92b2d0bff:
@@ -6,6 +6,18 @@ fieldLayouts:
       -
         elementCondition: null
         elements:
+          -
+            elementCondition: null
+            fieldUid: 4b0c469d-a3d8-458d-94ec-a4d75e7d5113 # Project Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e44b7721-267d-43c0-9d95-f4ec4ddf4c3b
+            userCondition: null
+            warning: null
+            width: 100
           -
             elementCondition: null
             fieldUid: e8fcf4aa-1cdc-49ad-8048-46bed34d2778 # Website
@@ -215,6 +227,42 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Table
+  4b0c469d-a3d8-458d-94ec-a4d75e7d5113: # Project Type
+    columnSuffix: ifuyeapi
+    contentColumnType: string(18)
+    fieldGroup: null
+    handle: projectType
+    instructions: null
+    name: 'Project Type'
+    searchable: false
+    settings:
+      columnType: null
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Developed
+            -
+              - value
+              - developed
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - 'Improved & Maintained'
+            -
+              - value
+              - improvedMaintained
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Dropdown
   80a1b328-51fc-4279-b100-81fa2a22fb1c: # Company
     columnSuffix: hkmsiejb
     contentColumnType: text

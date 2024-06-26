@@ -1,4 +1,4 @@
-changedFieldIndicator: 1902471112
+changedFieldIndicator: 1771530970
 field: 0fe360b3-6a5c-40b5-82ad-1a7b95e24bb1 # System Translations
 fieldLayouts:
   4fb9ed76-d895-4b61-9e44-627f3408197f:
@@ -27,6 +27,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 632dd7f8-132c-4432-8db0-d104e1668b9c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d36d8b9e-25bd-4ad0-b272-3f6a873eae3f # ProjectsMaintained
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a6b7771e-ad7f-4305-b39c-10e63453b273
             userCondition: null
             warning: null
             width: 100
@@ -225,6 +237,26 @@ fields:
     handle: bestPractices
     instructions: null
     name: 'Best Practices'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  d36d8b9e-25bd-4ad0-b272-3f6a873eae3f: # ProjectsMaintained
+    columnSuffix: rskduiuo
+    contentColumnType: text
+    fieldGroup: null
+    handle: projectsmaintained
+    instructions: null
+    name: ProjectsMaintained
     searchable: false
     settings:
       byteLimit: null

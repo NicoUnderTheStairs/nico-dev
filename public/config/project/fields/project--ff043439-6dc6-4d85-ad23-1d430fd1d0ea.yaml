@@ -7,7 +7,7 @@ name: Project
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 701600886
+  changedFieldIndicator: 135870018
   columns:
     __assoc__:
       -
@@ -19,6 +19,13 @@ settings:
               - ''
       -
         - 80a1b328-51fc-4279-b100-81fa2a22fb1c # Company
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 03256383-6fd4-4177-8a2f-21f8ed132eaf # Visit Project Toggle
         -
           __assoc__:
             -

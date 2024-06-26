@@ -1,4 +1,4 @@
-dateModified: 1719265415
+dateModified: 1719392777
 elementSources:
   craft\elements\Entry:
     -
@@ -53,6 +53,7 @@ meta:
     3e4a020a-8ec6-4ab7-a4d8-6ad3cb08f660: 'Hi, I am' # Hi, I am
     3ef06bed-e337-4554-9c87-36a4a4cdf5a7: Lead # Lead
     3fcef9e7-61e0-496b-bb55-a3318f79c6c4: 'Nico Fortino Deutsch' # Nico Fortino Deutsch
+    4b0c469d-a3d8-458d-94ec-a4d75e7d5113: 'Project Type' # Project Type
     4d9ad22a-71a4-486c-8a17-4aa06b7202fb: Work # Work
     5acbfce0-0c16-404d-bdf8-1b7185ed660a: Uploads # Uploads
     05b1c09b-200c-4d6b-bfdb-bc4300f1b579: 'Project Grid' # Project Grid
@@ -77,6 +78,7 @@ meta:
     218d8979-17f4-4679-b012-92e6ef852553: Memes # Memes
     227a9ae2-cd4d-4643-897f-d4ac6d783162: Nav # Nav
     6819ac29-167a-4d1e-960c-4e35b9e29e2c: Website # Website
+    77280f8b-c780-4d41-aa2a-5700ff4dd464: 'Project Type' # Project Type
     96634e98-38ff-4af4-be4d-a8239d1aed6b: Accesability # Accesability
     710978b0-e1c7-4e88-8836-01d9d5e1545b: Standard # Standard
     929529d1-d267-49c7-84d4-aae762b8d3ce: 'Social Image' # Social Image
@@ -84,12 +86,14 @@ meta:
     78334100-b3bd-4b9f-aa08-b3b24f027447: 'More Projects' # More Projects
     87278682-c4ad-4783-9262-b4ad2533f76b: Header # Header
     a3863cb8-ba1c-44f0-90bd-3df22d44535a: 'Not Found' # Not Found
+    a8185f13-7020-488b-99ea-9b4d59c18c42: 'Project Type' # Project Type
     bb1c7b43-4c8a-4e94-aad9-aec8f4c1a9e1: Keywords # Keywords
     c085eb9c-a4ad-42d4-8d8b-b1bb67a1be5e: 'Lighthouse Doc' # Lighthouse Doc
     c5b719bd-6f79-415b-92cb-9ec7d79dcfc3: Titel # Titel
     c95eed35-ff61-47b8-b7da-6575c6cb70bf: Lead # Lead
     c65316b9-b426-4343-ac32-6a571787a8c9: 'Best Practices' # Best Practices
     d32f8599-4ed4-4a93-b822-1634f69b79fb: Titel # Titel
+    d36d8b9e-25bd-4ad0-b272-3f6a873eae3f: ProjectsMaintained # ProjectsMaintained
     d548142e-cce6-4a62-af0e-119193fd33be: 'System Translations' # System Translations
     df5a9729-4d8c-4f3a-9c5e-e71e9a2b52d0: Lighthouse # Lighthouse
     e0e7f238-8f75-4da6-9e88-6cd94e2d2f85: 'Images Darkmode' # Images Darkmode

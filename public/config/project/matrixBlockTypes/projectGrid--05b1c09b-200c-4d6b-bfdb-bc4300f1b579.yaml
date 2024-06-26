@@ -7,6 +7,18 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
+            fieldUid: a8185f13-7020-488b-99ea-9b4d59c18c42 # Project Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d6847c6c-01fc-44a9-ba16-0c127c6cd329
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 86c14da8-48a5-4bc6-b2ba-be14d39644ea # More Button
             instructions: null
             label: null
@@ -77,6 +89,21 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\PlainText
+  a8185f13-7020-488b-99ea-9b4d59c18c42: # Project Type
+    columnSuffix: qbqehbrg
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: projectType
+    instructions: null
+    name: 'Project Type'
+    searchable: false
+    settings:
+      default: false
+      offLabel: Developed
+      onLabel: Maintained
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
 handle: projectGrid
 name: 'Project Grid'
 sortOrder: 2
