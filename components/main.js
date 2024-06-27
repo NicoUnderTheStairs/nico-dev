@@ -1,3 +1,4 @@
+import Scrollsmoother from './01-pebble/scrollsmoother/scrollsmoother';
 import Hero from './02-rock/hero/hero';
 import ProjectGrid from './02-rock/projectGrid/projectGrid';
 import Notfound from './02-rock/notfound/notfound';
@@ -29,4 +30,5 @@ ready(() => {
   Component.Project = Project.init();
   Component.Hero = Hero.init();
   Component.Notfound = Notfound.init();
+  Component.Scrollsmoother = Scrollsmoother.init();
 });

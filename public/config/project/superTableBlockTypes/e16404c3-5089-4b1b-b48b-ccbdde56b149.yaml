@@ -1,4 +1,4 @@
-changedFieldIndicator: 1771530970
+changedFieldIndicator: 844693056
 field: 0fe360b3-6a5c-40b5-82ad-1a7b95e24bb1 # System Translations
 fieldLayouts:
   4fb9ed76-d895-4b61-9e44-627f3408197f:
@@ -126,6 +126,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 5480a795-1e8a-4a68-bdcc-1828da84ac66 # Loading Message
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7e492513-6034-453e-9e9b-5aa3d6f7b970
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: a6c75cce-f9d8-43a1-82e4-44928c35600d
         userCondition: null
@@ -190,6 +202,47 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\PlainText
+  5480a795-1e8a-4a68-bdcc-1828da84ac66: # Loading Message
+    columnSuffix: plobptuk
+    contentColumnType: text
+    fieldGroup: null
+    handle: loadingMessage
+    instructions: null
+    name: 'Loading Message'
+    searchable: false
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - 'Loading Message'
+                -
+                  - handle
+                  - loadingMessage
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+      maxRows: 5
+      minRows: 1
+      staticRows: false
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Table
   96634e98-38ff-4af4-be4d-a8239d1aed6b: # Accesability
     columnSuffix: wxvapvje
     contentColumnType: text

@@ -7,7 +7,7 @@ name: 'System Translations'
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 495451462
+  changedFieldIndicator: 786484522
   columns:
     __assoc__:
       -
@@ -19,6 +19,13 @@ settings:
               - ''
       -
         - eb53d36d-66e7-4ac1-b4e8-61f7ec736021 # ProjectsDeveloped
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - d36d8b9e-25bd-4ad0-b272-3f6a873eae3f # ProjectsMaintained
         -
           __assoc__:
             -
