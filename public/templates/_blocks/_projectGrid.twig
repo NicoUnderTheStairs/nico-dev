@@ -36,7 +36,7 @@
             {% for project in craft.entries.section('projects').all() %}
                 {% if project.project.projectType == 'improvedMaintained' %}
                     <div class="projectGrid__project">
-                        <a href="https://{{ project.project.website }}" class="projectGrid__project__link projectGrid__project__link--improvedMaintained" target="_blank">
+                        <a href="{{ project.url }}" class="projectGrid__project__link">
                             <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__dark{% else %}imageToggles__dark-unavilable{% endif %}">
                                 <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}">
                             </div>

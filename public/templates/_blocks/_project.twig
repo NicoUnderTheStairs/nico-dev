@@ -67,37 +67,39 @@
         </div>
         
         {# lighthouse #}
-        <div class="project__lighthouse d-flex flex-column align-items-center">
-            <div class="col-lg-6">
-                <div class="d-flex flex-column flex-lg-row justify-content-lg-between">
-                    <h4 class="project__lighthouse__title mono m-0">{{systemTranslations.lighthouseReport}} <span class="text-small mono">(Desktop)</span></h4>
-                    <a href="{{project.lighthouseDoc.one().url}}" target="_blank" class="text-small mono">Download</a>
-                </div>
-                <div class="mt-4 d-flex flex-wrap flex-lg-nowrap justify-content-lg-between">
-                    {% for stat in project.lighthouse %}
-                        <div class="project__lighthouse__stat mb-3">
-                            <h4 class="project__lighthouse__stat--title mono m-0">{{stat.performance}}</h4>
-                            <p class="project__lighthouse__stat--description mono m-0">{{systemTranslations.performance}}</p>
-                        </div>
+        {% if roject.lighthouseDoc.one().url is not null %}
+            <div class="project__lighthouse d-flex flex-column align-items-center">
+                <div class="col-lg-6">
+                    <div class="d-flex flex-column flex-lg-row justify-content-lg-between">
+                        <h4 class="project__lighthouse__title mono m-0">{{systemTranslations.lighthouseReport}} <span class="text-small mono">(Desktop)</span></h4>
+                        <a href="{{project.lighthouseDoc.one().url}}" target="_blank" class="text-small mono">Download</a>
+                    </div>
+                    <div class="mt-4 d-flex flex-wrap flex-lg-nowrap justify-content-lg-between">
+                        {% for stat in project.lighthouse %}
+                            <div class="project__lighthouse__stat mb-3">
+                                <h4 class="project__lighthouse__stat--title mono m-0">{{stat.performance}}</h4>
+                                <p class="project__lighthouse__stat--description mono m-0">{{systemTranslations.performance}}</p>
+                            </div>
 
-                        <div class="project__lighthouse__stat mb-3">
-                            <h4 class="project__lighthouse__stat--title mono m-0">{{stat.accesability}}</h4>
-                            <p class="project__lighthouse__stat--description mono m-0">{{systemTranslations.accesability}}</p>
-                        </div>
+                            <div class="project__lighthouse__stat mb-3">
+                                <h4 class="project__lighthouse__stat--title mono m-0">{{stat.accesability}}</h4>
+                                <p class="project__lighthouse__stat--description mono m-0">{{systemTranslations.accesability}}</p>
+                            </div>
 
-                        <div class="project__lighthouse__stat mb-3">
-                            <h4 class="project__lighthouse__stat--title mono m-0">{{stat.bestPractices}}</h4>
-                            <p class="project__lighthouse__stat--description mono m-0">{{systemTranslations.bestPractices}}</p>
-                        </div>
+                            <div class="project__lighthouse__stat mb-3">
+                                <h4 class="project__lighthouse__stat--title mono m-0">{{stat.bestPractices}}</h4>
+                                <p class="project__lighthouse__stat--description mono m-0">{{systemTranslations.bestPractices}}</p>
+                            </div>
 
-                        <div class="project__lighthouse__stat">
-                            <h4 class="project__lighthouse__stat--title mono m-0">{{stat.seo}}</h4>
-                            <p class="project__lighthouse__stat--description mono m-0">{{systemTranslations.seo}}</p>
-                        </div>
-                    {% endfor %}
+                            <div class="project__lighthouse__stat">
+                                <h4 class="project__lighthouse__stat--title mono m-0">{{stat.seo}}</h4>
+                                <p class="project__lighthouse__stat--description mono m-0">{{systemTranslations.seo}}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
-        </div>
+        {% endif %}
 
         {# more Projects #}
         <div class="project__moreProjects">
