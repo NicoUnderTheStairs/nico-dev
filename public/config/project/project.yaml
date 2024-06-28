@@ -1,4 +1,4 @@
-dateModified: 1719402998
+dateModified: 1719557973
 elementSources:
   craft\elements\Entry:
     -
@@ -79,7 +79,6 @@ meta:
     227a9ae2-cd4d-4643-897f-d4ac6d783162: Nav # Nav
     5480a795-1e8a-4a68-bdcc-1828da84ac66: 'Loading Message' # Loading Message
     6819ac29-167a-4d1e-960c-4e35b9e29e2c: Website # Website
-    77280f8b-c780-4d41-aa2a-5700ff4dd464: 'Project Type' # Project Type
     96634e98-38ff-4af4-be4d-a8239d1aed6b: Accesability # Accesability
     710978b0-e1c7-4e88-8836-01d9d5e1545b: Standard # Standard
     929529d1-d267-49c7-84d4-aae762b8d3ce: 'Social Image' # Social Image
@@ -87,7 +86,6 @@ meta:
     78334100-b3bd-4b9f-aa08-b3b24f027447: 'More Projects' # More Projects
     87278682-c4ad-4783-9262-b4ad2533f76b: Header # Header
     a3863cb8-ba1c-44f0-90bd-3df22d44535a: 'Not Found' # Not Found
-    a8185f13-7020-488b-99ea-9b4d59c18c42: 'Project Type' # Project Type
     bb1c7b43-4c8a-4e94-aad9-aec8f4c1a9e1: Keywords # Keywords
     c085eb9c-a4ad-42d4-8d8b-b1bb67a1be5e: 'Lighthouse Doc' # Lighthouse Doc
     c5b719bd-6f79-415b-92cb-9ec7d79dcfc3: Titel # Titel

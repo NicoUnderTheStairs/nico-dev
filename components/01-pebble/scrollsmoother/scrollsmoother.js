@@ -9,7 +9,7 @@ class Scrollsmoother extends Base {
     gsap.registerPlugin(ScrollSmoother);
 
     ScrollSmoother.create({
-      smooth: 0.5,
+      smooth: 2,
       effects: true,
     });
   }

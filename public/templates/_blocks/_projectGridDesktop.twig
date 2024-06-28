@@ -1,111 +1,65 @@
 {% set systemTranslations = systemTranslations.systemTranslations %}
 
-{% if block.projectType %}
-    <div class="projectGrid js-projectgrid projectGrid__desktop">
-        <div class="projectGrid__desktop__inner">
-            {% if entry.url == block.work.one().url %}
-                <h1 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsdeveloped}}</h1>
-            {% else %}
+<div class="projectGrid js-projectgrid projectGrid__desktop">
+    <div class="projectGrid__desktop__inner">
+        <div class="projectGrid__desktop__wrapper">
+            <div class="projectGrid__desktop__display">
+                {% for project in craft.entries.section('projects').all() %}
+                    <div class="projectGrid__desktop__img imageToggles__wrapper {% if loop.index0 == 0 %}projectGrid__desktop__img--active{% endif %}">
+                        {% if project.project.imagesDarkmode.one() is not null %}
+                            {% for img in project.project.imagesDarkmode.all() %}
+                                {% if loop.index <= 3 %}
+                                    <img class="border-radius-6 imageToggles__dark" src="{{img.url}}">                                    
+                                {% endif %}
+                            {% endfor %}
+                            <img class="border-radius-6 imageToggles__dark">                                    
+                        {% endif %}
+
+                        {% for img in project.project.images.all() %}
+                            {% if loop.index <= 3 %}
+                                <img class="{% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %} border-radius-6" src="{{img.url}}">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="projectGrid__desktop__list">
                 <h2 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsdeveloped}}</h2>
-            {% endif %}
-            <div class="projectGrid__desktop__wrapper">
-                <div class="projectGrid__desktop__display">
-                    {% for project in craft.entries.section('projects').all() %}
-                        {% if project.project.projectType == 'developed' %}
-                            <div class="projectGrid__desktop__img imageToggles__wrapper {% if loop.index0 == 0 %}projectGrid__desktop__img--active{% endif %}">
-                                {% if project.project.imagesDarkmode.one() is not null %}
-                                    {% for img in project.project.imagesDarkmode.all() %}
-                                        {% if loop.index <= 3 %}
-                                            <img class="border-radius-6 imageToggles__dark" src="{{img.url}}">                                    
-                                        {% endif %}
-                                    {% endfor %}
-                                    <img class="border-radius-6 imageToggles__dark">                                    
-                                {% endif %}
-
-                                {% for img in project.project.images.all() %}
-                                    {% if loop.index <= 3 %}
-                                        <img class="{% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %} border-radius-6" src="{{img.url}}">
-                                    {% endif %}
-                                {% endfor %}
+                {% for project in craft.entries.section('projects').all() %}
+                    {% if project.project.projectType == 'developed' %}
+                        <a href="{{project.url}}" class="projectGrid__desktop__item d-flex position-relative linkBigCursor">
+                            <p class="artifact me-3">{{ project.projectNumber }}</p>
+                            <div>
+                                <h4 class="projectGrid__desktop__item--website mono m-0">{{ project.project.website }}</h4>
+                                <p class="projectGrid__desktop__item--company mono m-0">{{project.project.company}}</p>
                             </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-
-                <div class="projectGrid__desktop__list">
-                    <h2 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsdeveloped}}</h2>
-                    {% for project in craft.entries.section('projects').all() %}
-                        {% if project.project.projectType == 'developed' %}
-                            <a href="{{project.url}}" class="projectGrid__desktop__item d-flex position-relative linkBigCursor">
-                                <p class="artifact me-3">{{ project.projectNumber }}</p>
-                                <div>
-                                    <h4 class="projectGrid__desktop__item--website mono m-0">{{ project.project.website }}</h4>
-                                    <p class="projectGrid__desktop__item--company mono m-0">{{project.project.company}}</p>
-                                </div>
-                                <div class="projectGrid__desktop__item--arrow d-flex align-items-center position-absolute">
-                                    <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M32.175 9H0L0 7H32.175L26.575 1.4L28 0L36 8L28 16L26.575 14.6L32.175 9Z" fill="#202020"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
+                            <div class="projectGrid__desktop__item--arrow d-flex align-items-center position-absolute">
+                                <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32.175 9H0L0 7H32.175L26.575 1.4L28 0L36 8L28 16L26.575 14.6L32.175 9Z" fill="#202020"/>
+                                </svg>
+                            </div>
+                        </a>
+                    {% endif %}
+                {% endfor %}
+                <h2 class="projectGrid__title mb-4 mt-6 mono">{{systemTranslations.projectsmaintained}}</h2>
+                {% for project in craft.entries.section('projects').all() %}
+                    {% if project.project.projectType == 'improvedMaintained' %}
+                        <a href="https://{{project.project.website}}" target="_blank" class="projectGrid__desktop__item projectGrid__desktop__item--improvedMaintained d-flex position-relative linkBigCursor">
+                            <p class="artifact me-3">{{ project.projectNumber }}</p>
+                            <div>
+                                <h4 class="projectGrid__desktop__item--website mono m-0">{{ project.project.website }}</h4>
+                                <p class="projectGrid__desktop__item--company mono m-0">{{project.project.company}}</p>
+                            </div>
+                            <div class="projectGrid__desktop__item--arrow d-flex align-items-center position-absolute">
+                                <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32.175 9H0L0 7H32.175L26.575 1.4L28 0L36 8L28 16L26.575 14.6L32.175 9Z" fill="#202020"/>
+                                </svg>
+                            </div>
+                        </a>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>
-{% else %}
-    <div class="projectGrid js-projectgrid projectGrid__desktop">
-        <div class="projectGrid__desktop__inner">
-            {% if entry.url == block.work.one().url %}
-                <h1 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsmaintained}}</h1>
-            {% else %}
-                <h2 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsmaintained}}</h2>
-            {% endif %}
-            <div class="projectGrid__desktop__wrapper">
-                <div class="projectGrid__desktop__display">
-                    {% for project in craft.entries.section('projects').all() %}
-                        {% if project.project.projectType == 'improvedMaintained' %}
-                            <div class="projectGrid__desktop__img imageToggles__wrapper {% if loop.index0 == 0 %}projectGrid__desktop__img--active{% endif %}">
-                                {% if project.project.imagesDarkmode.one() is not null %}
-                                    {% for img in project.project.imagesDarkmode.all() %}
-                                        {% if loop.index <= 3 %}
-                                            <img class="border-radius-6 imageToggles__dark" src="{{img.url}}">                                    
-                                        {% endif %}
-                                    {% endfor %}
-                                    <img class="border-radius-6 imageToggles__dark">                                    
-                                {% endif %}
-
-                                {% for img in project.project.images.all() %}
-                                    {% if loop.index <= 3 %}
-                                        <img class="{% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %} border-radius-6" src="{{img.url}}">
-                                    {% endif %}
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-
-                <div class="projectGrid__desktop__list">
-                    <h2 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsdeveloped}}</h2>
-                    {% for project in craft.entries.section('projects').all() %}
-                        {% if project.project.projectType == 'improvedMaintained' %}
-                            <a href="{{project.url}}" class="projectGrid__desktop__item d-flex position-relative linkBigCursor">
-                                <p class="artifact me-3">{{ project.projectNumber }}</p>
-                                <div>
-                                    <h4 class="projectGrid__desktop__item--website mono m-0">{{ project.project.website }}</h4>
-                                    <p class="projectGrid__desktop__item--company mono m-0">{{project.project.company}}</p>
-                                </div>
-                                <div class="projectGrid__desktop__item--arrow d-flex align-items-center position-absolute">
-                                    <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M32.175 9H0L0 7H32.175L26.575 1.4L28 0L36 8L28 16L26.575 14.6L32.175 9Z" fill="#202020"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-{% endif %}
+</div>

@@ -39,6 +39,12 @@
                     opacity: 0.3;
                 }
             }
+
+            &--improvedMaintained {
+                & svg {
+                    transform: rotate(-45deg);
+                }
+            }
         }
 
         &__img {
@@ -87,6 +93,12 @@
             width: 100%;
             transition: all 0.3s ease;
             border-top: 0.1rem solid #00000000;
+
+            &--improvedMaintained {
+                & svg {
+                    transform: rotate(-45deg);
+                }
+            }
 
             &:first-child {
                 border-top: 0.1rem solid #00000000 !important;

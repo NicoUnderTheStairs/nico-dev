@@ -5930,6 +5930,9 @@ a {
 .projectGrid__desktop__list:hover > .projectGrid__desktop__item {
   opacity: 0.3;
 }
+.projectGrid__desktop__list--improvedMaintained svg {
+  transform: rotate(-45deg);
+}
 .projectGrid__desktop__img {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -5971,6 +5974,9 @@ a {
   width: 100%;
   transition: all 0.3s ease;
   border-top: 0.1rem solid rgba(0, 0, 0, 0);
+}
+.projectGrid__desktop__item--improvedMaintained svg {
+  transform: rotate(-45deg);
 }
 .projectGrid__desktop__item:first-child {
   border-top: 0.1rem solid rgba(0, 0, 0, 0) !important;
@@ -6418,6 +6424,16 @@ a {
 .loading__backlogo svg path {
   fill: #E5AC01 !important;
   opacity: 0.5;
+}
+.loading__text {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: 13.6rem;
+  font-style: italic;
+  font-family: "Roboto Mono";
+  transform: translateX(-50%);
 }
 .loading__frontlogo {
   position: absolute;

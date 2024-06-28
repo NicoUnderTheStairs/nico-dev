@@ -18,7 +18,9 @@
             </defs>
         </svg>
     </div>
-    <p class="loading__text">{{systemTranslations.loadingMessage}}</p>
+    {% set shuffledMsg = shuffle(systemTranslations.loadingMessage) %}
+    {# display first msg #}
+    <p class="loading__text">{{ shuffledMsg[0].loadingMessage }}</p>
 </div>
 
 
