@@ -5789,6 +5789,9 @@ a {
   right: 6.2rem;
   width: 20rem;
 }
+.hero__phone--1 rect {
+  transition: all 0.4s ease;
+}
 @media (min-width: 64em) {
   .hero__phone--1 {
     top: 4.8rem;
@@ -5806,6 +5809,9 @@ a {
   right: 17.2rem;
   width: 20rem;
   transform: rotate(90deg);
+}
+.hero__phone--2 rect {
+  transition: all 0.4s ease;
 }
 @media (min-width: 64em) {
   .hero__phone--2 {
@@ -5826,6 +5832,9 @@ a {
   right: 50%;
   width: 20rem;
 }
+.hero__phone--3 rect {
+  transition: all 0.4s ease;
+}
 @media (min-width: 64em) {
   .hero__phone--3 {
     bottom: unset;
@@ -5842,6 +5851,9 @@ a {
   bottom: 10rem;
   left: 6.2rem;
   width: 20rem;
+}
+.hero__phone--4 rect {
+  transition: all 0.4s ease;
 }
 @media (min-width: 64em) {
   .hero__phone--4 {
@@ -5860,6 +5872,9 @@ a {
   left: 40%;
   width: 20rem;
   transform: rotate(-90deg);
+}
+.hero__phone--5 rect {
+  transition: all 0.4s ease;
 }
 @media (min-width: 75em) {
   .hero__phone--5 {

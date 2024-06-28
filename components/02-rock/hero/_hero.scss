@@ -108,6 +108,10 @@
             right: 6.2rem;
             width: 20rem;
 
+            & rect {
+                transition: all 0.4s ease;
+            }
+
             @include xl-up {
                 top: 4.8rem;
                 right: 4.8rem;
@@ -124,6 +128,10 @@
             right: 17.2rem;
             width: 20rem;
             transform: rotate(90deg);
+
+            & rect {
+                transition: all 0.4s ease;
+            }
 
             @include xl-up {
                 right: 15rem;
@@ -143,6 +151,10 @@
             right: 50%;
             width: 20rem;
 
+            & rect {
+                transition: all 0.4s ease;
+            }
+
             @include xl-up {
                 bottom: unset;
                 top: 70rem;
@@ -158,6 +170,10 @@
             bottom: 10rem;
             left: 6.2rem;
             width: 20rem;
+
+            & rect {
+                transition: all 0.4s ease;
+            }
 
             @include xl-up {
                 bottom: unset;
@@ -175,6 +191,10 @@
             left: 40%;
             width: 20rem;
             transform: rotate(-90deg);
+
+            & rect {
+                transition: all 0.4s ease;
+            }
 
             @include xxl-up {
                 width: 28rem;
@@ -204,6 +224,5 @@
                 margin-top: 40rem;
             }
         }
-
     }
 }
