@@ -9,6 +9,7 @@ class Project extends Base {
   constructor(el) {
     super(el);
     const allLighthouseNumbers = [...el.querySelectorAll('.project__lighthouse__stat--title')];
+    const shareButton = el.querySelector('.project__share');
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -34,6 +35,25 @@ class Project extends Base {
           });
         },
       });
+    });
+
+    shareButton.addEventListener('click', () => {
+      const shareUrl = window.location.href;
+      const shareTitle = shareButton.getAttribute('data-shareTitle');
+      const shareText = shareButton.getAttribute('data-shareText');
+      if (navigator.share) {
+        navigator.share({
+          title: shareTitle,
+          text: shareText,
+          url: shareUrl,
+        });
+      } else {
+        shareButton.classList.add('project__share--desktop');
+        setTimeout(() => {
+          shareButton.classList.remove('project__share--desktop');
+        }, 5000);
+        navigator.clipboard.writeText(window.location.href);
+      }
     });
   }
 }

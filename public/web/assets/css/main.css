@@ -6078,6 +6078,38 @@ a {
     align-items: center;
   }
 }
+.project__share {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.project__share--desktop span {
+  display: unset;
+  animation: desktopAnim 4s ease;
+}
+@keyframes desktopAnim {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.project__share--label {
+  font-family: "Roboto Mono", monospace;
+  opacity: 0;
+  display: none;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  text-wrap: nowrap;
+}
 .project__company {
   font-size: 1.8rem;
 }
