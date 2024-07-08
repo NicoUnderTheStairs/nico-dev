@@ -1,0 +1,22 @@
+.easteregg {
+    &__scoreboard {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        background-color: #000;
+        color: rgb(16, 190, 0);
+        font-family: monospace;
+    }
+
+    &__quit {
+        color: red;
+    }
+
+    &__herotext {
+        position: absolute;
+        top: 10rem;
+        left: 0;
+        width: 25%;
+    }
+}

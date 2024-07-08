@@ -5,11 +5,6 @@ class Hero extends Base {
     super(el);
     const allPhones = [...el.querySelectorAll('.phone')];
 
-    window.onload = () => {
-      // add class to el
-      el.classList.add('hero__intro');
-    };
-
     allPhones.forEach((phone) => {
       // scroll event
       document.addEventListener('scroll', () => {
@@ -19,6 +14,11 @@ class Hero extends Base {
         phone.querySelector('.phonerect').style.transform = `translateY(-${y * 0.15}px)`;
       });
     });
+
+    if (localStorage.getItem('cowHint') === 'true') {
+      el.querySelector('.easteregg__herotext').classList.remove('d-none');
+      localStorage.setItem('heroHint', 'true');
+    }
   }
 }
 

@@ -1,21 +1,12 @@
 .hero {
-    transition: opacity 0.3s ease;
-    opacity: 0;
-
     @include xl-up {
         margin-bottom: 12rem;
     }
 
     &__intro {
-        opacity: 1;
-
         & .hero__title {
 			&::after {
-                width: 100%;
 
-                @include lg-up {
-                    width: 69%;
-                }
             }
         }
     }
@@ -69,9 +60,10 @@
 			transform: skew(-15deg) rotate(-15deg);
 			transition: all 0.3s ease 0.3s;
 			opacity: 1;
-
+            width: 100%;
+            
             @include lg-up {
-                width: 0;
+                width: 69%;
                 height: 8rem;
                 right: 0%;
                 left: unset;

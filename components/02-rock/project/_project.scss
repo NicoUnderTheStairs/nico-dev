@@ -70,12 +70,11 @@
 
         &__item {
             padding: 0.8rem 0;
+            border-bottom: 0.1rem solid #00000033;
 
             // if not first and last child, have border
-            &:not(:first-child):not(:last-child) {
-                border-top: 0.1rem solid #00000033;
-                border-bottom: 0.1rem solid #00000033;
-                padding: 0.8rem 0;
+            &:last-child {
+                border-bottom: 0;
             }
         }
         &__title {

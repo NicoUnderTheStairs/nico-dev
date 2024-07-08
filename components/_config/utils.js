@@ -18,6 +18,20 @@ export function isTouchable() {
   return false;
 }
 
+// Easteregg
+export function playerScoreUpdate(plusPoints) {
+  let playerScore = localStorage.getItem('playerScore');
+  if (playerScore === null) {
+    localStorage.setItem('playerScore', 0);
+  }
+  playerScore = localStorage.getItem('playerScore');
+  const playerScoreText = document.querySelector('.easteregg__scoreboard--score');
+  playerScore = parseInt(playerScore, 10);
+  playerScore += plusPoints;
+  localStorage.setItem('playerScore', playerScore);
+  playerScoreText.textContent = playerScore;
+}
+
 // set a Cookie with identifier, value and timestamp
 export function setCookie(cname, cvalue, time) {
   const d = new Date();

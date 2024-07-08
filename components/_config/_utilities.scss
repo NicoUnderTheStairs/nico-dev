@@ -79,12 +79,20 @@
   .cursor-small {
     background-color: #202020;
   }
+
+  .easteregg__herotext {
+    color: #faf9f6 !important;
+  }
 }
 
 .dark-theme {
   background-color: $secondary;
   color: $background-color;
   border-color: $background-color !important;
+
+  .easteregg__herotext {
+    color: $secondary !important;
+  }
   
   & div {
     border-color: $background-color !important;

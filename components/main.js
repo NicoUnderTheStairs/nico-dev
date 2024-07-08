@@ -1,5 +1,6 @@
 import Scrollsmoother from './01-pebble/scrollsmoother/scrollsmoother';
 import Hero from './02-rock/hero/hero';
+import Easteregg from './02-rock/easteregg/easteregg';
 import ProjectGrid from './02-rock/projectGrid/projectGrid';
 import Notfound from './02-rock/notfound/notfound';
 import Header from './03-boulder/header/header';
@@ -23,6 +24,8 @@ ready(() => {
 
   html.classList.remove('no-js');
 
+  Component.Scrollsmoother = Scrollsmoother.init();
+  Component.Easteregg = Easteregg.init();
   Component.Header = Header.init();
   Component.Animations = Animations.init();
   Component.Footer = Footer.init();
@@ -30,5 +33,4 @@ ready(() => {
   Component.Project = Project.init();
   Component.Hero = Hero.init();
   Component.Notfound = Notfound.init();
-  Component.Scrollsmoother = Scrollsmoother.init();
 });

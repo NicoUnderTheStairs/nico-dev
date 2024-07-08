@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { gsap } from 'gsap';
+import { playerScoreUpdate } from '../../_config/utils';
 import Base from '../../_config/base';
 
 class Notfound extends Base {
@@ -54,6 +55,26 @@ class Notfound extends Base {
       yToUfo(e.clientY);
     });
 
+    let eastereggtriggered = false;
+
+    const triggerEasteregg = () => {
+      eastereggtriggered = true;
+      setTimeout(() => {
+        if (localStorage.getItem('copperTreasure') === 'open' && localStorage.getItem('cowHint') !== 'true') {
+          // eslint-disable-next-line no-alert
+          alert('On your ship, the abducted cow gives you a piercing look. Then it holds out her hoots. You give it one of the two quarters, then it speaks load and clear: "Within the lines of code and light, A secret text hides, plain in sight. Near the phones, waiting there, on the first page, with curious care."  The cow then smiles, and with a wink, dissapears. Where the cow stood, a new key appears. You have found the jade key!');
+          localStorage.setItem('cowHint', 'true');
+          localStorage.setItem('jadeKey', 'true');
+          playerScoreUpdate(5250);
+          // reload page
+          window.location.reload();
+        } else if (localStorage.getItem('cowHint') === 'true') {
+          // eslint-disable-next-line no-alert
+          alert('The cow stares at you angrily. You have already been given the hint. Now let her go in peace.');
+        }
+      }, 3000);
+    };
+
     // function that runs on every frame
     function frame() {
       const ufoX = gsap.getProperty('.ufo', 'x');
@@ -74,6 +95,10 @@ class Notfound extends Base {
               opacity: 0,
               duration: 2,
             });
+
+            if (eastereggtriggered === false) {
+              triggerEasteregg();
+            }
           }
 
           gsap.set(suckable, { xPercent: -50, yPercent: -50 });
