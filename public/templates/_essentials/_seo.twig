@@ -4,7 +4,12 @@
 {% set seoExtras = seoExtras.seoFields %}
 {% set metaInfo = entry.metaInfo %}
 
-<title>Nico Fortino - {{entry.title}}</title>
+{% if entry.url == 'https://nico.fortino.ch/' %}
+  <title>Hi, I am Nico</title>
+{% else %}
+  <title>{{entry.title}} by Nico</title>
+{% endif %}
+
 <link rel="home" href="{{ siteUrl }}"/>
 <link rel="canonical" href="{{ seo.canonical }}">
 <meta property="og:url" content="{{ siteUrl }}">
@@ -42,8 +47,4 @@
   <meta name="keywords" content="{{ seoExtras.keywords }}">
 {% endif %}
 
-{% if craft.app.config.env == 'production' %}
-  {% header "X-Robots-Tag: all" %}
-{% else %}
-  {% header "X-Robots-Tag: noindex, nofollow, none" %}
-{% endif %}
+{% header "X-Robots-Tag: all" %}
