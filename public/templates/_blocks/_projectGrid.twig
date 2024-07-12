@@ -16,9 +16,9 @@
     <div class="projectGrid__inner">
         <div class="projectGrid__wrapper d-flex justify-content-between flex-direction-lg-row flex-wrap flex-lg-nowrap">
             {% if entry.url == block.work.one().url %}
-                <h1 class="projectGrid__title mb-0 mt-0 mono">{{systemTranslations.projectsdeveloped}}<span class="text-small mono"> / {% if countProjectDeveloped <= 9 %}0{% endif %}{{countProjectDeveloped}} Projects</span></h1>
+                <h1 class="projectGrid__title mb-0 mt-0 mono">{{systemTranslations.projectsdeveloped}}<span class="text-small mono"> // {% if countProjectDeveloped <= 9 %}0{% endif %}{{countProjectDeveloped}} Projects</span></h1>
             {% else %}
-                <h2 class="projectGrid__title mb-0 mt-0 mono">{{systemTranslations.projectsdeveloped}}<span class="text-small mono"> / {% if countProjectDeveloped <= 9 %}0{% endif %}{{countProjectDeveloped}} Projects</span></h2>
+                <h2 class="projectGrid__title mb-0 mt-0 mono">{{systemTranslations.projectsdeveloped}}<span class="text-small mono"> // {% if countProjectDeveloped <= 9 %}0{% endif %}{{countProjectDeveloped}} Projects</span></h2>
             {% endif %}
             {% for project in craft.entries.section('projects').all() %}
                 {% if project.project.projectType == 'developed' %}
