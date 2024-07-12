@@ -1,4 +1,4 @@
-changedFieldIndicator: 1618558888
+changedFieldIndicator: 1117430136
 field: 47fe1798-f313-486b-b362-d2d3687bb528 # Footer
 fieldLayouts:
   2ff36057-ae7b-4198-991b-0f0d649802e9:
@@ -100,6 +100,22 @@ fields:
                   - type
                   - singleline
           -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Message
+                -
+                  - handle
+                  - message
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
             - col2
             -
               __assoc__:
@@ -120,6 +136,9 @@ fields:
           __assoc__:
             -
               - col1
+              - ''
+            -
+              - col3
               - ''
             -
               - col2

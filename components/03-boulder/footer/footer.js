@@ -72,7 +72,7 @@ class Footer extends Base {
       }
     }
 
-    if (localStorage.getItem('questState') === 'true' && currentPage === '/projects/nico.fortino.ch') {
+    if (localStorage.getItem('questState') === 'true' && currentPage === '/projects/nicofortino.ch') {
       footerEasterEgg.classList.remove('d-none');
     }
 

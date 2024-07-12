@@ -7,7 +7,7 @@
 
     &__back {
         color: $secondary;
-        transition: all 0.3s ease;
+        transition: .5s cubic-bezier(.34,1.56,.48,1.19);
 
         &:hover {
             cursor: pointer;
@@ -54,7 +54,7 @@
             opacity: 0;
             display: none;
             overflow: hidden;
-            transition: all 0.4s ease;
+            transition: .5s cubic-bezier(.34,1.56,.48,1.19);
             text-wrap: nowrap;
         }
     }

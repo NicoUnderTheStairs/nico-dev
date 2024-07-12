@@ -1,0 +1,24 @@
+fieldLayouts:
+  6ba9b6f0-9bb5-4bad-a9b3-efb56d7412eb:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 6f0a57bf-3450-4fb2-9512-a4e0eda1db1d # Meta Info
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a9146fe0-a409-43a5-b716-2d67f88ffa22
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'SEO Default'
+        uid: bf3e8835-bbcd-475e-950e-4e1b0b18eca4
+        userCondition: null
+handle: seoDefault
+name: 'SEO Default'
+sortOrder: 5

@@ -37,6 +37,23 @@
         }
     }
 
+    &__socials {
+        &__item {
+            &:hover {
+                & .footer__socials__item--msg {
+                    opacity: 1;
+                    margin-left: 0;
+                }
+            }
+
+            &--msg {
+                transition: .5s cubic-bezier(.34,1.56,.48,1.19);
+                opacity: 0;
+                margin-left: 1rem;
+            }
+        }
+    }
+
     &__lang {
         margin-left: 1.8rem;
 

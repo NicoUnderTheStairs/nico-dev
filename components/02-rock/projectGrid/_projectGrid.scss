@@ -54,7 +54,7 @@
             grid-row-gap: 1.8rem;
             position: absolute;
             opacity: 0;
-            transition: opacity 0.2s, transform 0.4s ease-in;
+            transition: .5s cubic-bezier(.34,1.56,.48,1.19);
             transform: translateY(-10rem);
             width: 40rem;
 
@@ -64,7 +64,7 @@
             
             &--active {
                 opacity: 1;
-                transition: opacity 0.4s ease, transform 0.7s ease;
+                transition: .5s cubic-bezier(.34,1.56,.48,1.19);
                 transform: translateY(0);
             }
 
@@ -91,7 +91,7 @@
         &__item {
             padding: 1.8rem 0;
             width: 100%;
-            transition: all 0.3s ease;
+            transition: .5s cubic-bezier(.34,1.56,.48,1.19);
             border-top: 0.1rem solid #00000000;
 
             &--improvedMaintained {
@@ -135,7 +135,7 @@
                 top: 50%;
                 right: 2.1rem;
                 transform: translateY(-50%);
-                transition: all 0.3s ease;
+                transition: .5s cubic-bezier(.34,1.56,.48,1.19);
             }
         }
 

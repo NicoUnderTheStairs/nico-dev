@@ -1,4 +1,15 @@
 {% set systemTranslations = systemTranslations.systemTranslations %}
+{% set countProjectDeveloped = 0 %}
+{% set countProjectImprovedMaintained = 0 %}
+{% for project in craft.entries.section('projects').all() %}
+    {% if project.project.projectType == 'developed' %}
+        {% set countProjectDeveloped = countProjectDeveloped + 1 %}
+    {% endif %}
+    {% if project.project.projectType == 'improvedMaintained' %}
+        {% set countProjectImprovedMaintained = countProjectImprovedMaintained + 1 %}
+    {% endif %}
+{% endfor %}
+
 
 <div class="projectGrid js-projectgrid projectGrid__desktop">
     <div class="projectGrid__desktop__inner">
@@ -25,7 +36,7 @@
             </div>
 
             <div class="projectGrid__desktop__list">
-                <h2 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsdeveloped}}</h2>
+                <h2 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsdeveloped}}<span class="text-small mono"> // {% if countProjectDeveloped <= 9 %}0{% endif %}{{countProjectDeveloped}} Projects</span></h2>
                 {% for project in craft.entries.section('projects').all() %}
                     {% if project.project.projectType == 'developed' %}
                         <a href="{{project.url}}" class="projectGrid__desktop__item d-flex position-relative linkBigCursor">
@@ -42,7 +53,7 @@
                         </a>
                     {% endif %}
                 {% endfor %}
-                <h2 class="projectGrid__title mb-4 mt-6 mono">{{systemTranslations.projectsmaintained}}</h2>
+                <h2 class="projectGrid__title mb-4 mt-6 mono">{{systemTranslations.projectsmaintained}}<span class="text-small mono"> // {% if countProjectImprovedMaintained <= 9 %}0{% endif %}{{countProjectImprovedMaintained}} Projects</span></h2>
                 {% for project in craft.entries.section('projects').all() %}
                     {% if project.project.projectType == 'improvedMaintained' %}
                         <a href="{{project.url}}" class="projectGrid__desktop__item d-flex position-relative linkBigCursor">

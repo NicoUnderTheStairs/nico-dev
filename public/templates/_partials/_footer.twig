@@ -18,7 +18,7 @@
         <div class="footer__listwrapper">
             <ul class="footer__socials__list p-0">
                 {% for item in footer.socials %}
-                    <li class="footer__socials__item mb-1">
+                    <li class="footer__socials__item mb-1 c-p">
                         <a href="{{ item.sociallink }}" target="_blank" class="footer__socials__link mono linkSmallCursor ufo__suckable">
                             <svg width="18" height="16" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_697_135)">
@@ -32,6 +32,7 @@
                                 </defs>
                             </svg>
                             {{ item.titel }}
+                            <span class="footer__socials__item--msg text-small mono">{{ item.message }}</span>
                         </a>
                     </li>
                 {% endfor %}
@@ -42,19 +43,22 @@
         <div class="d-flex justify-content-between">
             <p class="mono text-small ufo__suckable">© Nico</p>
             {# <span class="mono text-small mx-1"> </span> #}
-            <div class="footer__lang d-flex align-items-center linkSmallCursor">
-                {% for siteForEntry in entry.getSupportedSites %}
-                    {% set site = craft.app.getSites.getSiteById(siteForEntry.siteId) %}
-                    {% set entryForOtherSite = craft.entries.id(entry.id).site(site).one() %}
-                    {% if entryForOtherSite %}
-                        <a class="text-small footer__lang__active {{ site.id != entry.siteId ? ' footer__lang__inactive' }} ufo__suckable" href="{{ entryForOtherSite.getUrl() }}">
-                            {{site.handle|upper}}
-                        </a>
+            {% set sites = craft.app.sites.getAllSites() %}
+            {% if sites|length > 1 %}
+                <div class="footer__lang d-flex align-items-center linkSmallCursor">
+                    {% for siteForEntry in entry.getSupportedSites %}
+                        {% set site = craft.app.getSites.getSiteById(siteForEntry.siteId) %}
+                        {% set entryForOtherSite = craft.entries.id(entry.id).site(site).one() %}
+                        {% if entryForOtherSite %}
+                            <a class="text-small footer__lang__active {{ site.id != entry.siteId ? ' footer__lang__inactive' }} ufo__suckable" href="{{ entryForOtherSite.getUrl() }}">
+                                {{site.handle|upper}}
+                            </a>
 
-                        {% if loop.index0 == 0 %}<span class="mono text-small mx-1"> / </span>{% endif %}
-                    {% endif %}
-                {% endfor %}
-            </div>
+                            {% if loop.index0 == 0 %}<span class="mono text-small mx-1"> / </span>{% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
 
             {# <a href="{{footer.imprint.one().url}}" class="mono text-small">{{footer.imprint.one().title}}</a> #}
@@ -71,7 +75,6 @@
                     </clipPath>
                     </defs>
                 </svg>
-
             </div>
         {% endif %}
     </div>
