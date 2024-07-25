@@ -10,6 +10,8 @@ class Project extends Base {
     super(el);
     const allLighthouseNumbers = [...el.querySelectorAll('.project__lighthouse__stat--title')];
     const shareButton = el.querySelector('.project__share');
+    const allProjectsMobile = [...el.querySelectorAll('.projectGrid__project')];
+    const allProjectImg = [...el.querySelectorAll('.project__galery__item')];
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -54,6 +56,41 @@ class Project extends Base {
         }, 5000);
         navigator.clipboard.writeText(window.location.href);
       }
+    });
+
+    // if mouse is over the project, change the perspective of the image
+    allProjectImg.forEach((item) => {
+      item.onmousemove = (e) => {
+        // based on mouseposition relative to the image, change perspective of img
+        const x = e.clientX;
+        const y = e.clientY;
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        const offsetX = 0.5 - (x / w);
+        const offsetY = 0.5 - (y / h);
+        item.style.transform = `perspective(1000px) rotateX(${offsetY * 15}deg) rotateY(${offsetX * 15}deg) translateZ(10px)`;
+      };
+
+      item.onmouseleave = () => {
+        item.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+      };
+    });
+
+    allProjectsMobile.forEach((item) => {
+      item.onmousemove = (e) => {
+        // based on mouseposition relative to the image, change perspective of img
+        const x = e.clientX;
+        const y = e.clientY;
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        const offsetX = 0.5 - (x / w);
+        const offsetY = 0.5 - (y / h);
+        item.style.transform = `perspective(1000px) rotateX(${offsetY * 15}deg) rotateY(${offsetX * 15}deg) translateZ(10px)`;
+      };
+
+      item.onmouseleave = () => {
+        item.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+      };
     });
   }
 }

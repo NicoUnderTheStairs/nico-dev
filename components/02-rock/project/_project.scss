@@ -30,21 +30,25 @@
         &--desktop {
             & span {
                 display: unset;
-                animation: desktopAnim 4s ease;
+                animation: desktopAnim 4s cubic-bezier(.34,1.56,.48,1.19);
             }
         }
 
         @keyframes desktopAnim {
             0% {
                 opacity: 0;
+                margin-left: 1rem;
             }
             10% {
+                margin-left: 1rem;
                 opacity: 1;
             }
             90% {
+                margin-left: 1rem;
                 opacity: 1;
             }
             100% {
+                margin-left: 0;
                 opacity: 0;
             }
         }
@@ -137,6 +141,7 @@
             object-position: top;
             border-radius: 0.6rem;
             width: 100%;
+            transition: .5s cubic-bezier(.34,1.56,.48,1.19);
 
             &:nth-child(4n+1) {
                 grid-area: 1 / 1 / 2 / 4;
@@ -183,6 +188,10 @@
     &__moreProjects {
         @include lg-up {
             margin-top: 12.4rem;
+        }
+
+        & .projectGrid__project {
+            transition: .5s cubic-bezier(.34,1.56,.48,1.19);
         }
     }
 }

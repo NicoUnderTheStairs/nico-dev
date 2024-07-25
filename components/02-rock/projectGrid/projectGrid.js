@@ -39,6 +39,19 @@ class ProjectGrid extends Base {
         allProjectsImg[i].classList.add('projectGrid__desktop__img--active');
       });
     }
+
+    window.onmousemove = (e) => {
+      // based on mouseposition relative to the image, change perspective of img
+      const x = e.clientX;
+      const y = e.clientY;
+      const w = window.innerWidth * 0.6;
+      const h = window.innerHeight * 0.6;
+      const offsetX = 0.5 - (x / w);
+      const offsetY = 0.5 - (y / h);
+      allProjectsImg.forEach((item) => {
+        item.style.transform = `perspective(1000px) rotateX(${offsetY * 25}deg) rotateY(${offsetX * 25}deg) translateZ(10px)`;
+      });
+    };
   }
 }
 
