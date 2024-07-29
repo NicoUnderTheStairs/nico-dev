@@ -1,0 +1,270 @@
+field: 7d3a9466-67b6-48b0-aeb6-c83eec97c608 # Inhaltsblöcke
+fieldLayouts:
+  07dde202-c8bc-4eec-9d28-635f4385043c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f2b3f032-5c1a-4c64-8d26-a10ecbfe33d2 # Let's Talk
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1f2fc01b-3e03-4f26-8c0c-84f69bc3e318
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bc2e72bc-09fb-4792-90eb-95db2a0f0d15 # Contact Open
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b430d4cc-ca4c-4955-bace-4e4f1a4c9acb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 24595093-d773-46cb-8e2d-94fa3047e696 # Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 879bcfca-5480-433c-8508-101cd3f14e17
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1b87bb8c-7437-45cd-ba6c-dda757010806 # E-Mail
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1616bcba-ff34-4e4d-a4ed-9c58035601a7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2a4e471b-0a46-4344-91b4-8f8ea1f2d816 # Message
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 279307fb-2668-481c-ad0e-a273d3e46df3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 36bcb1ac-1912-493b-bdfc-3ea2c89e5567 # Send
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3f0e1a09-c61e-44de-a585-7be240584e02
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2c2e56d1-e9c7-44fd-ab6a-3d2fe9755ac9 # Success
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ddd1187c-31d9-4bf9-804c-6730bcd2818a
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 79561ee7-69e1-4376-9ff6-845290991754 # Error
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 015f71af-1f8d-438b-ad86-3d80ef4879a1
+            userCondition: null
+            warning: null
+            width: 50
+        name: Content
+        uid: 516b6ab1-1d91-432d-b7f8-5d89bc2a2da3
+        userCondition: null
+fields:
+  1b87bb8c-7437-45cd-ba6c-dda757010806: # E-Mail
+    columnSuffix: dabzsmjh
+    contentColumnType: text
+    fieldGroup: null
+    handle: eMail
+    instructions: null
+    name: E-Mail
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  2a4e471b-0a46-4344-91b4-8f8ea1f2d816: # Message
+    columnSuffix: zxjgtnmf
+    contentColumnType: text
+    fieldGroup: null
+    handle: message
+    instructions: null
+    name: Message
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  2c2e56d1-e9c7-44fd-ab6a-3d2fe9755ac9: # Success
+    columnSuffix: bayutcvi
+    contentColumnType: text
+    fieldGroup: null
+    handle: success
+    instructions: null
+    name: Success
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  36bcb1ac-1912-493b-bdfc-3ea2c89e5567: # Send
+    columnSuffix: xnaxbxeg
+    contentColumnType: text
+    fieldGroup: null
+    handle: send
+    instructions: null
+    name: Send
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  79561ee7-69e1-4376-9ff6-845290991754: # Error
+    columnSuffix: ovdysdum
+    contentColumnType: text
+    fieldGroup: null
+    handle: errorMsg
+    instructions: null
+    name: Error
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  24595093-d773-46cb-8e2d-94fa3047e696: # Name
+    columnSuffix: qpnlwrbq
+    contentColumnType: text
+    fieldGroup: null
+    handle: nname
+    instructions: null
+    name: Name
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  bc2e72bc-09fb-4792-90eb-95db2a0f0d15: # Contact Open
+    columnSuffix: suwbhhwy
+    contentColumnType: text
+    fieldGroup: null
+    handle: contactOpen
+    instructions: null
+    name: 'Contact Open'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  f2b3f032-5c1a-4c64-8d26-a10ecbfe33d2: # Let's Talk
+    columnSuffix: kfnzychs
+    contentColumnType: text
+    fieldGroup: null
+    handle: letsTalk
+    instructions: null
+    name: 'Let''s Talk'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: contact
+name: Contact
+sortOrder: 4

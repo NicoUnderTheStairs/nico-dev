@@ -1,5 +1,10 @@
 .project {
     margin-top: 2.4rem;
+    
+    @include xl-up {
+        max-width: 144rem;
+        margin: 0 auto;
+    }
 
     @include lg-up {
         margin-top: 12.4rem;

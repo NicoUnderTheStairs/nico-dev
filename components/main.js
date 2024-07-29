@@ -6,6 +6,7 @@ import Notfound from './02-rock/notfound/notfound';
 import Header from './03-boulder/header/header';
 import Footer from './03-boulder/footer/footer';
 import Project from './02-rock/project/project';
+import Contact from './02-rock/contact/contact';
 import Animations from './03-boulder/animations/animations';
 
 require('./main.scss');
@@ -27,6 +28,7 @@ ready(() => {
   Component.Scrollsmoother = Scrollsmoother.init();
   Component.Easteregg = Easteregg.init();
   Component.Header = Header.init();
+  Component.Contact = Contact.init();
   Component.Animations = Animations.init();
   Component.Footer = Footer.init();
   Component.ProjectGrid = ProjectGrid.init();

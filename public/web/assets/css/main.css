@@ -5506,8 +5506,8 @@ swiper-container .swiper-notification {
 .btn--default::after {
   content: "";
   background: #E5AC01;
-  width: 0%;
-  height: 20px;
+  width: 100%;
+  height: 35%;
   position: absolute;
   border-radius: 2px;
   z-index: -2;
@@ -5516,7 +5516,7 @@ swiper-container .swiper-notification {
   opacity: 0.6;
 }
 .btn--default:hover::after {
-  width: 100%;
+  opacity: 1;
 }
 
 .icon {
@@ -5668,6 +5668,10 @@ a {
   font-size: 1.6rem;
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
+}
+
+input, label {
+  font-family: "Roboto Mono";
 }
 
 @media (min-width: 64em) {
@@ -5876,9 +5880,23 @@ a {
     display: none;
   }
 }
+@media (min-width: 64em) {
+  .projectGrid__mobile {
+    max-width: 144rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .projectGrid__desktop {
   display: none;
   margin-bottom: 24.4rem;
+}
+@media (min-width: 64em) {
+  .projectGrid__desktop {
+    max-width: 144rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media (min-width: 50em) {
   .projectGrid__desktop {
@@ -6018,6 +6036,12 @@ a {
 
 .project {
   margin-top: 2.4rem;
+}
+@media (min-width: 64em) {
+  .project {
+    max-width: 144rem;
+    margin: 0 auto;
+  }
 }
 @media (min-width: 50em) {
   .project {
@@ -6189,6 +6213,12 @@ a {
 .notfound {
   height: 80vh;
 }
+@media (min-width: 64em) {
+  .notfound {
+    max-width: 144rem;
+    margin: 0 auto;
+  }
+}
 .notfound__wrapper {
   padding: 2.4rem;
   position: relative;
@@ -6252,6 +6282,102 @@ a {
   top: 10rem;
   left: 0;
   width: 25%;
+}
+
+.contact {
+  margin-top: 10vh;
+  margin-bottom: 4.8rem;
+}
+@media (min-width: 50em) {
+  .contact {
+    margin-top: 50vh;
+    margin-bottom: 4.8rem;
+  }
+}
+.contact__talk h2 {
+  font-size: 10.2rem;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -5.1px;
+  font-family: "Roboto Mono";
+  font-weight: 700;
+  white-space: nowrap;
+}
+@media (min-width: 50em) {
+  .contact__talk h2 {
+    font-size: 20.2rem;
+  }
+}
+.contact__open a {
+  font-size: 4.2rem;
+}
+.contact__form {
+  margin: 0 auto;
+}
+.contact__form__success {
+  font-size: 5.2rem;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -5.1px;
+  font-family: "Roboto Mono";
+  font-weight: 700;
+  white-space: nowrap;
+}
+.contact__form__error {
+  font-size: 5.2rem;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -5.1px;
+  font-family: "Roboto Mono";
+  font-weight: 700;
+  white-space: nowrap;
+}
+@media (min-width: 64em) {
+  .contact__form {
+    max-width: 144rem;
+    margin: 0 auto;
+  }
+}
+.contact__form__inputfield {
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .contact__form__inputfield {
+    width: 50%;
+  }
+}
+.contact__form__inputfield textarea {
+  height: 10.5rem;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 40rem;
+  min-height: 5.5rem;
+}
+.contact__form__inputfield input, .contact__form__inputfield textarea {
+  width: 100%;
+  padding: 2rem 0 0.5rem 0;
+  border: none;
+  border-bottom: 0.1rem solid #202020;
+  outline: none;
+  background: transparent;
+  font-size: 2.2rem;
+}
+.contact__form__inputfield input:focus ~ label, .contact__form__inputfield input:valid ~ label, .contact__form__inputfield textarea:focus ~ label, .contact__form__inputfield textarea:valid ~ label {
+  top: 0;
+  font-size: 1.6rem;
+}
+.contact__form__inputfield label {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  color: #202020;
+  transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+  font-size: 2.2rem;
+}
+.contact__form__send {
+  font-size: 4.2rem;
+  background: none;
 }
 
 .footer {

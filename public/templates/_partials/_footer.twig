@@ -41,7 +41,7 @@
     </div>
     <div class="footer__legal d-flex align-items-center justify-content-between px-3 pb-2 px-lg-5 pb-lg-2">
         <div class="d-flex justify-content-between">
-            <p class="mono text-small ufo__suckable">© Nico</p>
+            <p class="mono text-small ufo__suckable">{{footer.copyright}}</p>
             {# <span class="mono text-small mx-1"> </span> #}
             {% set sites = craft.app.sites.getAllSites() %}
             {% if sites|length > 1 %}

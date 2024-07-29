@@ -1,4 +1,4 @@
-changedFieldIndicator: 1117430136
+changedFieldIndicator: 1587622550
 field: 47fe1798-f313-486b-b362-d2d3687bb528 # Footer
 fieldLayouts:
   2ff36057-ae7b-4198-991b-0f0d649802e9:
@@ -27,6 +27,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 5584753f-949b-403c-a059-1496959cc88b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2823bcc1-a5ed-4a7e-9701-93851c22fc89 # Copyright
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 909a1a75-2aab-44d0-b848-1e81596cb793
             userCondition: null
             warning: null
             width: 100
@@ -156,6 +168,26 @@ fields:
     handle: slogan
     instructions: null
     name: Slogan
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  2823bcc1-a5ed-4a7e-9701-93851c22fc89: # Copyright
+    columnSuffix: uctskgro
+    contentColumnType: text
+    fieldGroup: null
+    handle: copyright
+    instructions: null
+    name: Copyright
     searchable: false
     settings:
       byteLimit: null

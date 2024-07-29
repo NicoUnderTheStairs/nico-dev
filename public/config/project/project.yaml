@@ -1,4 +1,4 @@
-dateModified: 1720773342
+dateModified: 1722005952
 elementSources:
   craft\elements\Entry:
     -
@@ -45,8 +45,11 @@ meta:
     0a6a4808-0001-4bf3-9ee9-9b82be6e7da0: Header # Header
     0e3e5e64-bdfa-44a3-9ba6-e67c212ccb70: Images # Images
     0fe360b3-6a5c-40b5-82ad-1a7b95e24bb1: 'System Translations' # System Translations
+    1b87bb8c-7437-45cd-ba6c-dda757010806: E-Mail # E-Mail
     1c5bd7ca-883b-4808-b311-7425ff5d9b00: Projects # Projects
+    2a4e471b-0a46-4344-91b4-8f8ea1f2d816: Message # Message
     2ad51318-063a-4905-a994-0bc1fb82d356: 'Public Schema' # Public Schema
+    2c2e56d1-e9c7-44fd-ab6a-3d2fe9755ac9: Success # Success
     2c5af258-38c5-4f55-a53f-51bfd3e8c429: USPS # USPS
     3d5edf3c-eda8-498e-ac75-94245e775112: Footer # Footer
     3e069843-7cda-4080-96c0-7d1ab55460a2: Nico # Nico
@@ -66,7 +69,9 @@ meta:
     9f3d19d1-3b06-4cdf-8c6b-70c688ca8d69: Home # Home
     13b9bb0a-95e4-4c8c-a153-c137213cbcc6: SEO # SEO
     20e41d9d-a586-4d1a-b5ad-ce3572aa2fa5: Globals # Globals
+    27cc7330-872f-4020-834b-ba69bd1d14a0: Contact # Contact
     028c7152-a72a-4eeb-9873-2a588c93ac15: Performance # Performance
+    36bcb1ac-1912-493b-bdfc-3ea2c89e5567: Send # Send
     39beb36f-cf9a-4ac5-8eb5-17da62ed4cfa: 'Nico Fortino' # Nico Fortino
     47fe1798-f313-486b-b362-d2d3687bb528: Footer # Footer
     51c6826d-9df2-4942-a2e4-4210c13a1782: 'Project Grid Desktop' # Project Grid Desktop
@@ -78,16 +83,20 @@ meta:
     144bff5e-94b1-4971-a645-14a75b6c17ac: Slogan # Slogan
     218d8979-17f4-4679-b012-92e6ef852553: Memes # Memes
     227a9ae2-cd4d-4643-897f-d4ac6d783162: Nav # Nav
+    2823bcc1-a5ed-4a7e-9701-93851c22fc89: Copyright # Copyright
     5480a795-1e8a-4a68-bdcc-1828da84ac66: 'Loading Message' # Loading Message
     6819ac29-167a-4d1e-960c-4e35b9e29e2c: Website # Website
+    79561ee7-69e1-4376-9ff6-845290991754: Error # Error
     96634e98-38ff-4af4-be4d-a8239d1aed6b: Accesability # Accesability
     710978b0-e1c7-4e88-8836-01d9d5e1545b: Standard # Standard
     929529d1-d267-49c7-84d4-aae762b8d3ce: 'Social Image' # Social Image
     03256383-6fd4-4177-8a2f-21f8ed132eaf: 'Visit Project Toggle' # Visit Project Toggle
+    24595093-d773-46cb-8e2d-94fa3047e696: Name # Name
     78334100-b3bd-4b9f-aa08-b3b24f027447: 'More Projects' # More Projects
     87278682-c4ad-4783-9262-b4ad2533f76b: Header # Header
     a3863cb8-ba1c-44f0-90bd-3df22d44535a: 'Not Found' # Not Found
     bb1c7b43-4c8a-4e94-aad9-aec8f4c1a9e1: Keywords # Keywords
+    bc2e72bc-09fb-4792-90eb-95db2a0f0d15: 'Contact Open' # Contact Open
     c085eb9c-a4ad-42d4-8d8b-b1bb67a1be5e: 'Lighthouse Doc' # Lighthouse Doc
     c5b719bd-6f79-415b-92cb-9ec7d79dcfc3: Titel # Titel
     c95eed35-ff61-47b8-b7da-6575c6cb70bf: Lead # Lead
@@ -105,10 +114,45 @@ meta:
     eb53d36d-66e7-4ac1-b4e8-61f7ec736021: ProjectsDeveloped # ProjectsDeveloped
     ee08378b-d81d-4a46-9a80-eb29a6a5e660: 'Lighthouse Report' # Lighthouse Report
     f0bb9251-9d2c-4024-a994-8354d1ff8003: Logo # Logo
+    f2b3f032-5c1a-4c64-8d26-a10ecbfe33d2: 'Let''s Talk' # Let's Talk
     f4c476d5-c7ea-4540-8e96-6880d7382f5a: 'Project Number' # Project Number
     fe10ca1e-b9b0-4764-a8ce-9d11827b9828: Common # Common
     ff043439-6dc6-4d85-ad23-1d430fd1d0ea: Project # Project
 plugins:
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      allowedMessageFields: null
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from nicofortino.ch'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: nico@fortino.ch
+  contact-form-extensions:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+    settings:
+      confirmationSubject: ''
+      confirmationTemplate: ''
+      enableConfirmationEmail: ''
+      enableDatabase: '1'
+      enableRecaptchaOverride: ''
+      enableTemplateOverwrite: ''
+      notificationTemplate: ''
+      recaptcha: ''
+      recaptchaDataBadge: bottomright
+      recaptchaDebug: ''
+      recaptchaHideBadge: ''
+      recaptchaSecretKey: ''
+      recaptchaSiteKey: ''
+      recaptchaThreshold: '0.5'
+      recaptchaTimeout: '5'
+      recaptchaUrl: ''
+      recaptchaVerificationUrl: ''
+      recaptchaVersion: ''
   knock-knock:
     edition: standard
     enabled: true

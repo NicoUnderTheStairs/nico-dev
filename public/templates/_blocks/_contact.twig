@@ -1,0 +1,74 @@
+<div class="contact js-contact">
+    <div class="contact__inner">
+        <div class="contact__talk mb-6 {% if craft.app.session.hasFlash('success') %}d-none{% elseif craft.app.session.hasFlash('error') %}d-none{% endif %}">
+            <h2 class="contact__talk--1">{{block.letsTalk}}</h2>
+            <h2 class="contact__talk--2">{{block.letsTalk}}</h2>
+        </div>
+
+        {% if craft.app.session.hasFlash('success') %}
+            <h2 class="contact__form__success">{{block.success }}</h2>
+        {% elseif craft.app.session.hasFlash('error') %}
+            <h2 class="contact__form__error">{{ block.error }}</h2>
+        {% endif %}
+
+        <div class="contact__form mt-lg-6 pt-lg-6 col-12 col-lg-10 {% if craft.app.session.hasFlash('success') %}d-none{% elseif craft.app.session.hasFlash('error') %}d-none{% endif %}">
+            {% macro errorList(errors) %}
+                {% if errors %}
+                    {{ ul(errors, {class: 'errors'}) }}
+                {% endif %}
+            {% endmacro %}
+
+            {% set submission = submission ?? null %}
+
+            <form method="post" action="" accept-charset="UTF-8" id="form">
+                {{ csrfInput() }}
+                {{ actionInput('contact-form/send') }}
+                {{ redirectInput('#form') }}
+                
+                <div class="d-flex flex-wrap">
+                    <div class="contact__form__inputfield mt-3">
+                        {{ input('text', 'fromName', submission.fromName ?? '', {
+                            id: block.nname,
+                            autocomplete: 'name',
+                            placeholder: ' ',
+                            required: true,
+                        }) }}
+                        {{ submission ? _self.errorList(submission.getErrors('fromName')) }}
+                        <label for="{{block.nname}}">{{block.nname}}*</label>
+                    </div>
+
+                    <div class="contact__form__inputfield mt-3">
+                        {{ input('email', 'fromEmail', submission.fromEmail ?? '', {
+                            id: block.eMail,
+                            autocomplete: 'name',
+                            placeholder: ' ',
+                            required: true,
+                            autocomplete: 'email',
+                        }) }}
+                        {{ submission ? _self.errorList(submission.getErrors('fromEmail')) }}
+                        <label for="{{block.eMail}}">{{block.eMail}}*</label>
+                    </div>
+
+                    <div class="contact__form__inputfield w-100 mt-3">
+                        {{ tag('textarea', {
+                            text: submission.message ?? '',
+                            id: block.message,
+                            name: 'message',
+                            rows: 10,
+                            cols: 10,
+                            placeholder: ' ',
+                            required: true,
+                        }) }}
+                        {{ submission ? _self.errorList(submission.getErrors('message')) }}
+                        <label for="{{block.message}}">{{block.message}}*</label>
+                    </div>
+                </div>
+
+                <div class="contact__open w-100 d-flex justify-content-center mt-2">
+                    <button type="submit" class="btn btn--default contact__form__send contact__open--btn py-2 c-p">{{block.contactOpen}}</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
