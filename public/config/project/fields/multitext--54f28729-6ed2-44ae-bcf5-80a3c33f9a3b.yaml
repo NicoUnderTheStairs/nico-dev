@@ -1,0 +1,30 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: fe10ca1e-b9b0-4764-a8ce-9d11827b9828 # Common
+handle: multitext
+instructions: null
+name: Multitext
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 1113559972
+  columns:
+    __assoc__:
+      -
+        - 43177c04-ef38-4ad1-9145-e7f6846de1ad # Textblock
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_multitext}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: 1
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

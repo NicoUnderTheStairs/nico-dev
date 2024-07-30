@@ -1,11 +1,17 @@
-dateModified: 1722005952
+dateModified: 1722343426
 elementSources:
   craft\elements\Entry:
     -
       key: '*'
       type: native
     -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
       key: singles
+      tableAttributes:
+        - link
       type: native
     -
       heading: Projects
@@ -27,6 +33,12 @@ elementSources:
       type: heading
     -
       key: 'section:6819ac29-167a-4d1e-960c-4e35b9e29e2c' # Website
+      type: native
+    -
+      heading: 'Legal Section'
+      type: heading
+    -
+      key: 'section:09f0f218-7f4b-43e5-8430-79e3f9cfdb4c' # Legal
       type: native
 email:
   fromEmail: nico@fortino.ch
@@ -64,8 +76,8 @@ meta:
     6f0a57bf-3450-4fb2-9512-a4e0eda1db1d: 'Meta Info' # Meta Info
     6feb5671-1f19-4004-bd05-df4d3a45f04a: Beschreibung # Beschreibung
     7d3a9466-67b6-48b0-aeb6-c83eec97c608: Inhaltsblöcke # Inhaltsblöcke
-    8ae538ff-e8e5-43c5-bd07-1aa86bfe1946: Imprint # Imprint
     8f9812d2-2102-43ac-8ef1-21923dc442e7: Default # Default
+    09f0f218-7f4b-43e5-8430-79e3f9cfdb4c: Legal # Legal
     9f3d19d1-3b06-4cdf-8c6b-70c688ca8d69: Home # Home
     13b9bb0a-95e4-4c8c-a153-c137213cbcc6: SEO # SEO
     20e41d9d-a586-4d1a-b5ad-ce3572aa2fa5: Globals # Globals
@@ -75,6 +87,7 @@ meta:
     39beb36f-cf9a-4ac5-8eb5-17da62ed4cfa: 'Nico Fortino' # Nico Fortino
     47fe1798-f313-486b-b362-d2d3687bb528: Footer # Footer
     51c6826d-9df2-4942-a2e4-4210c13a1782: 'Project Grid Desktop' # Project Grid Desktop
+    54f28729-6ed2-44ae-bcf5-80a3c33f9a3b: Multitext # Multitext
     66afba17-355c-41a0-b3f8-fc366a51ebf3: Hero # Hero
     66ff83f7-3ee7-4308-a0f3-e30bd3b3b32f: Home # Home
     80a1b328-51fc-4279-b100-81fa2a22fb1c: Company # Company
@@ -86,6 +99,7 @@ meta:
     2823bcc1-a5ed-4a7e-9701-93851c22fc89: Copyright # Copyright
     5480a795-1e8a-4a68-bdcc-1828da84ac66: 'Loading Message' # Loading Message
     6819ac29-167a-4d1e-960c-4e35b9e29e2c: Website # Website
+    43177c04-ef38-4ad1-9145-e7f6846de1ad: Textblock # Textblock
     79561ee7-69e1-4376-9ff6-845290991754: Error # Error
     96634e98-38ff-4af4-be4d-a8239d1aed6b: Accesability # Accesability
     710978b0-e1c7-4e88-8836-01d9d5e1545b: Standard # Standard
@@ -101,8 +115,10 @@ meta:
     c5b719bd-6f79-415b-92cb-9ec7d79dcfc3: Titel # Titel
     c95eed35-ff61-47b8-b7da-6575c6cb70bf: Lead # Lead
     c65316b9-b426-4343-ac32-6a571787a8c9: 'Best Practices' # Best Practices
+    d24a29e6-d389-4d74-a3e9-0d4ea6c70f79: Default # Default
     d32f8599-4ed4-4a93-b822-1634f69b79fb: Titel # Titel
     d36d8b9e-25bd-4ad0-b272-3f6a873eae3f: ProjectsMaintained # ProjectsMaintained
+    d417dac4-c9bd-468c-a793-615fd214ef64: Legallinks # Legallinks
     d548142e-cce6-4a62-af0e-119193fd33be: 'System Translations' # System Translations
     df5a9729-4d8c-4f3a-9c5e-e71e9a2b52d0: Lighthouse # Lighthouse
     e0e7f238-8f75-4da6-9e88-6cd94e2d2f85: 'Images Darkmode' # Images Darkmode

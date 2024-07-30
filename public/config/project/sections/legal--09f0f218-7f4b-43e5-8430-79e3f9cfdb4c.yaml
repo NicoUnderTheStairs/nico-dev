@@ -1,0 +1,20 @@
+defaultPlacement: end
+enableVersioning: true
+handle: legal
+name: Legal
+propagationMethod: all
+siteSettings:
+  3fcef9e7-61e0-496b-bb55-a3318f79c6c4: # Nico Fortino Deutsch
+    enabledByDefault: true
+    hasUrls: true
+    template: other/_entry
+    uriFormat: '{slug}'
+  39beb36f-cf9a-4ac5-8eb5-17da62ed4cfa: # Nico Fortino
+    enabledByDefault: true
+    hasUrls: true
+    template: other/_entry
+    uriFormat: '{slug}'
+structure:
+  maxLevels: null
+  uid: 9cf07ecf-690d-4bc0-ab8c-15a226326693
+type: structure

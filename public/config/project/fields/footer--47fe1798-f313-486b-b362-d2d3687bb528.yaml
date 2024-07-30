@@ -7,7 +7,7 @@ name: Footer
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 85950362
+  changedFieldIndicator: 1465847648
   columns:
     __assoc__:
       -
@@ -25,7 +25,7 @@ settings:
               - width
               - ''
       -
-        - 8ae538ff-e8e5-43c5-bd07-1aa86bfe1946 # Imprint
+        - 2823bcc1-a5ed-4a7e-9701-93851c22fc89 # Copyright
         -
           __assoc__:
             -

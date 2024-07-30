@@ -1,4 +1,4 @@
-changedFieldIndicator: 1587622550
+changedFieldIndicator: 1440228753
 field: 47fe1798-f313-486b-b362-d2d3687bb528 # Footer
 fieldLayouts:
   2ff36057-ae7b-4198-991b-0f0d649802e9:
@@ -44,13 +44,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 8ae538ff-e8e5-43c5-bd07-1aa86bfe1946 # Imprint
+            fieldUid: d417dac4-c9bd-468c-a793-615fd214ef64 # Legallinks
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 74f165d4-53bd-4fa2-9990-ad194853b6b9
+            uid: d467dd65-2268-4a5e-bf18-6987fe237837
             userCondition: null
             warning: null
             width: 100
@@ -58,30 +58,6 @@ fieldLayouts:
         uid: 6d87ef98-46fd-43af-9b32-3f2f51a645c2
         userCondition: null
 fields:
-  8ae538ff-e8e5-43c5-bd07-1aa86bfe1946: # Imprint
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: imprint
-    instructions: null
-    name: Imprint
-    searchable: false
-    settings:
-      allowSelfRelations: false
-      branchLimit: null
-      localizeRelations: false
-      maintainHierarchy: false
-      maxRelations: 1
-      minRelations: null
-      selectionLabel: null
-      showSiteMenu: false
-      sources: '*'
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: null
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Entries
   88b62b4d-d59b-44dd-a2ce-01633ea93cb9: # Socials
     columnSuffix: qkvnjuya
     contentColumnType: text
@@ -201,3 +177,28 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\PlainText
+  d417dac4-c9bd-468c-a793-615fd214ef64: # Legallinks
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: legallinks
+    instructions: null
+    name: Legallinks
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: null
+      selectionLabel: null
+      showSiteMenu: false
+      sources:
+        - 'section:09f0f218-7f4b-43e5-8430-79e3f9cfdb4c' # Legal
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
