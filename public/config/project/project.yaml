@@ -1,4 +1,4 @@
-dateModified: 1722343426
+dateModified: 1722347628
 elementSources:
   craft\elements\Entry:
     -
@@ -96,6 +96,7 @@ meta:
     144bff5e-94b1-4971-a645-14a75b6c17ac: Slogan # Slogan
     218d8979-17f4-4679-b012-92e6ef852553: Memes # Memes
     227a9ae2-cd4d-4643-897f-d4ac6d783162: Nav # Nav
+    888e7c4a-d544-4e74-816c-7c66f17111b2: Subject # Subject
     2823bcc1-a5ed-4a7e-9701-93851c22fc89: Copyright # Copyright
     5480a795-1e8a-4a68-bdcc-1828da84ac66: 'Loading Message' # Loading Message
     6819ac29-167a-4d1e-960c-4e35b9e29e2c: Website # Website
@@ -110,7 +111,7 @@ meta:
     87278682-c4ad-4783-9262-b4ad2533f76b: Header # Header
     a3863cb8-ba1c-44f0-90bd-3df22d44535a: 'Not Found' # Not Found
     bb1c7b43-4c8a-4e94-aad9-aec8f4c1a9e1: Keywords # Keywords
-    bc2e72bc-09fb-4792-90eb-95db2a0f0d15: 'Contact Open' # Contact Open
+    bc2e72bc-09fb-4792-90eb-95db2a0f0d15: Dataprotection # Dataprotection
     c085eb9c-a4ad-42d4-8d8b-b1bb67a1be5e: 'Lighthouse Doc' # Lighthouse Doc
     c5b719bd-6f79-415b-92cb-9ec7d79dcfc3: Titel # Titel
     c95eed35-ff61-47b8-b7da-6575c6cb70bf: Lead # Lead

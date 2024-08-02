@@ -1,14 +1,11 @@
 .hero {
+    position: relative;
+
     @include xl-up {
-        margin-bottom: 12rem;
-    }
-
-    &__intro {
-        & .hero__title {
-			&::after {
-
-            }
-        }
+        margin-bottom: 22rem;
+        max-width: 144rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__title {
@@ -16,9 +13,9 @@
         font-size: 12.3rem;
         font-weight: 700;
         line-height: 1;
-        position: relative;
         margin-bottom: 4.8rem;
         margin-top: 0;
+        position: absolute;
 
         @include md-up {
             width: 50%;
@@ -29,13 +26,18 @@
             justify-content: space-between;
             width: 50%;
             transform: translateX(50%);
-            margin-top: 20rem;
         }
 
         @include xl-up {
+            top: 35rem;
+            width: 50%;
+            transform: translateX(50%);
+        }
+        
+        @include xxl-up {
             width: 35%;
             transform: translateX(100%);
-            margin-top: 43rem;
+            top: 50rem;
         }
         
         & span {
@@ -96,14 +98,9 @@
 
         &--1 {
             position: absolute;
-            top: 6.2rem;
-            right: 6.2rem;
+            top: 0;
+            right: 0;
             width: 20rem;
-
-            @include xl-up {
-                top: 4.8rem;
-                right: 4.8rem;
-            }
 
             @include xxl-up {
                 width: 30rem;
@@ -113,18 +110,18 @@
         &--2 {
             position: absolute;
             bottom: 0;
-            right: 17.2rem;
+            right: 10rem;
             width: 20rem;
             transform: rotate(90deg);
 
             @include xl-up {
-                right: 15rem;
-                top: 55rem;
+                top: 43rem;
                 bottom: unset;
             }
             
             @include xxl-up {
-                right: 20rem;
+                top: 53rem;
+                right: 15rem;
                 width: 30rem;
             }
         }
@@ -137,10 +134,11 @@
 
             @include xl-up {
                 bottom: unset;
-                top: 70rem;
+                top: 54rem;
             }
 
             @include xxl-up {
+                top: 75rem;
                 width: 30rem;
             }
         }
@@ -148,7 +146,7 @@
         &--4 {
             position: absolute;
             bottom: 10rem;
-            left: 6.2rem;
+            left: 0;
             width: 20rem;
 
             @include xl-up {
@@ -191,9 +189,13 @@
                 margin-top: 20rem;
             }
 
+            @include xl-up {
+                margin-top: 75rem;
+            }
+
             @include xxl-up {
                 width: 45%;
-                margin-top: 40rem;
+                margin-top: 100rem;
             }
         }
     }

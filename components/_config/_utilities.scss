@@ -5,6 +5,10 @@
   margin-right: auto;
 }
 
+hr {
+  margin: 9.2rem 0;
+}
+
 // Background colors
 .bg-primary {
   background-color: $primary !important;
@@ -94,10 +98,6 @@
     color: $secondary !important;
   }
   
-  & div {
-    border-color: $background-color !important;
-  }
-  
   & a {
     border-color: #3f3f3d !important;
     color: $background-color;
@@ -114,6 +114,25 @@
   .cursor-small {
     background-color: $primary;
   }
+
+  .contact {
+    & input, textarea, .contact__form__checkbox--checkbox, .contact__form__checkbox--checkmark::after {
+      border-color: $background-color;
+      color: $background-color;
+    }
+
+    & label {
+      color: $background-color;
+    }
+
+    & button {
+      color: $background-color;
+    }
+
+    & {
+      border: 0.1rem solid $secondary;
+    }
+  }
 }
 
 .border-radius-6 {
@@ -127,11 +146,6 @@
 
   @include md-up {
     padding: 4.8rem;
-  }
-  
-  @include xl-up {
-    max-width: 144rem;
-    margin: 0 auto;
   }
   
   @include xxl-up {

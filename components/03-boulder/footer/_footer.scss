@@ -6,6 +6,10 @@
         fill: $secondary !important;
     }
 
+    & a {
+        color: $secondary !important;
+    }
+
     & h3 {
         @include lg-up {
             font-size: 3.6rem;

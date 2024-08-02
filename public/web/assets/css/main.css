@@ -120,6 +120,10 @@ img {
   margin-right: auto;
 }
 
+hr {
+  margin: 9.2rem 0;
+}
+
 .bg-primary {
   background-color: #E5AC01 !important;
 }
@@ -203,9 +207,6 @@ img {
 .dark-theme .easteregg__herotext {
   color: #202020 !important;
 }
-.dark-theme div {
-  border-color: #FAF9F6 !important;
-}
 .dark-theme a {
   border-color: #3f3f3d !important;
   color: #FAF9F6;
@@ -218,6 +219,19 @@ img {
 }
 .dark-theme .cursor-small {
   background-color: #E5AC01;
+}
+.dark-theme .contact input, .dark-theme .contact textarea, .dark-theme .contact .contact__form__checkbox--checkbox, .dark-theme .contact .contact__form__checkbox--checkmark::after {
+  border-color: #FAF9F6;
+  color: #FAF9F6;
+}
+.dark-theme .contact label {
+  color: #FAF9F6;
+}
+.dark-theme .contact button {
+  color: #FAF9F6;
+}
+.dark-theme .contact {
+  border: 0.1rem solid #202020;
 }
 
 .border-radius-6 {
@@ -232,12 +246,6 @@ img {
 @media (min-width: 40em) {
   #main {
     padding: 4.8rem;
-  }
-}
-@media (min-width: 64em) {
-  #main {
-    max-width: 144rem;
-    margin: 0 auto;
   }
 }
 @media (min-width: 75em) {
@@ -5556,7 +5564,7 @@ swiper-container .swiper-notification {
 }
 
 body {
-  font-family: "Roboto", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto Mono", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
   font-style: normal;
 }
@@ -5612,7 +5620,7 @@ p {
   font-size: 1.8rem;
   line-height: 135%;
   margin-top: 0;
-  font-family: "Roboto", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto Mono", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-align: justify;
 }
 p .section-title {
@@ -5630,7 +5638,7 @@ a {
 }
 
 .text-lead {
-  font-family: "Roboto", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto Mono", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   font-size: 2.1rem;
@@ -5638,7 +5646,7 @@ a {
   text-align: justify;
 }
 .text-lead p {
-  font-family: "Roboto", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto Mono", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 2.1rem;
   text-align: justify;
 }
@@ -5674,9 +5682,15 @@ input, label {
   font-family: "Roboto Mono";
 }
 
+.hero {
+  position: relative;
+}
 @media (min-width: 64em) {
   .hero {
-    margin-bottom: 12rem;
+    margin-bottom: 22rem;
+    max-width: 144rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .hero__title {
@@ -5684,9 +5698,9 @@ input, label {
   font-size: 12.3rem;
   font-weight: 700;
   line-height: 1;
-  position: relative;
   margin-bottom: 4.8rem;
   margin-top: 0;
+  position: absolute;
 }
 @media (min-width: 40em) {
   .hero__title {
@@ -5699,14 +5713,20 @@ input, label {
     justify-content: space-between;
     width: 50%;
     transform: translateX(50%);
-    margin-top: 20rem;
   }
 }
 @media (min-width: 64em) {
   .hero__title {
+    top: 35rem;
+    width: 50%;
+    transform: translateX(50%);
+  }
+}
+@media (min-width: 75em) {
+  .hero__title {
     width: 35%;
     transform: translateX(100%);
-    margin-top: 43rem;
+    top: 50rem;
   }
 }
 .hero__title span {
@@ -5765,15 +5785,9 @@ input, label {
 }
 .hero__phone--1 {
   position: absolute;
-  top: 6.2rem;
-  right: 6.2rem;
+  top: 0;
+  right: 0;
   width: 20rem;
-}
-@media (min-width: 64em) {
-  .hero__phone--1 {
-    top: 4.8rem;
-    right: 4.8rem;
-  }
 }
 @media (min-width: 75em) {
   .hero__phone--1 {
@@ -5783,20 +5797,20 @@ input, label {
 .hero__phone--2 {
   position: absolute;
   bottom: 0;
-  right: 17.2rem;
+  right: 10rem;
   width: 20rem;
   transform: rotate(90deg);
 }
 @media (min-width: 64em) {
   .hero__phone--2 {
-    right: 15rem;
-    top: 55rem;
+    top: 43rem;
     bottom: unset;
   }
 }
 @media (min-width: 75em) {
   .hero__phone--2 {
-    right: 20rem;
+    top: 53rem;
+    right: 15rem;
     width: 30rem;
   }
 }
@@ -5809,18 +5823,19 @@ input, label {
 @media (min-width: 64em) {
   .hero__phone--3 {
     bottom: unset;
-    top: 70rem;
+    top: 54rem;
   }
 }
 @media (min-width: 75em) {
   .hero__phone--3 {
+    top: 75rem;
     width: 30rem;
   }
 }
 .hero__phone--4 {
   position: absolute;
   bottom: 10rem;
-  left: 6.2rem;
+  left: 0;
   width: 20rem;
 }
 @media (min-width: 64em) {
@@ -5865,10 +5880,15 @@ input, label {
     margin-top: 20rem;
   }
 }
+@media (min-width: 64em) {
+  .hero__lead__wrapper {
+    margin-top: 75rem;
+  }
+}
 @media (min-width: 75em) {
   .hero__lead__wrapper {
     width: 45%;
-    margin-top: 40rem;
+    margin-top: 100rem;
   }
 }
 
@@ -6314,6 +6334,39 @@ input, label {
 .contact__form {
   margin: 0 auto;
 }
+.contact__form__checkbox {
+  position: relative;
+}
+.contact__form__checkbox input {
+  opacity: 0;
+  position: absolute;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.contact__form__checkbox input:checked ~ .contact__form__checkbox--checkmark::after {
+  display: block;
+}
+.contact__form__checkbox input:checked ~ .contact__form--checkbox--checkbox {
+  background-color: #202020;
+}
+.contact__form__checkbox--checkbox {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 0.1rem solid #202020;
+}
+.contact__form__checkbox--checkmark::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1.7rem;
+  left: -1.2rem;
+  height: 1.4rem;
+  width: 0.7rem;
+  border-bottom: 0.2rem solid #202020;
+  border-right: 0.2rem solid #202020;
+  transform: rotate(45deg);
+  margin: 20px;
+}
 .contact__form__success {
   font-size: 5.2rem;
   margin: 0;
@@ -6363,7 +6416,7 @@ input, label {
   background: transparent;
   font-size: 2.2rem;
 }
-.contact__form__inputfield input:focus ~ label, .contact__form__inputfield input:valid ~ label, .contact__form__inputfield textarea:focus ~ label, .contact__form__inputfield textarea:valid ~ label {
+.contact__form__inputfield input:not(:placeholder-shown) ~ label, .contact__form__inputfield input:focus ~ label, .contact__form__inputfield input:valid ~ label, .contact__form__inputfield textarea:not(:placeholder-shown) ~ label, .contact__form__inputfield textarea:focus ~ label, .contact__form__inputfield textarea:valid ~ label {
   top: 0;
   font-size: 1.6rem;
 }
@@ -6380,12 +6433,23 @@ input, label {
   background: none;
 }
 
+.multitext {
+  font-family: "Roboto Mono";
+}
+.multitext li {
+  font-family: "Roboto Mono";
+  font-size: 1.8rem;
+}
+
 .footer {
   border-radius: 0.9rem 0.9rem 0 0;
   color: #202020 !important;
 }
 .footer svg path {
   fill: #202020 !important;
+}
+.footer a {
+  color: #202020 !important;
 }
 @media (min-width: 50em) {
   .footer h3 {
