@@ -7,9 +7,16 @@ name: Project
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 135870018
+  changedFieldIndicator: 1975541536
   columns:
     __assoc__:
+      -
+        - 4b0c469d-a3d8-458d-94ec-a4d75e7d5113 # Project Type
+        -
+          __assoc__:
+            -
+              - width
+              - ''
       -
         - e8fcf4aa-1cdc-49ad-8048-46bed34d2778 # Website
         -

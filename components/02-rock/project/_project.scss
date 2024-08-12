@@ -63,13 +63,43 @@
             opacity: 0;
             display: none;
             overflow: hidden;
+            font-size: 1.4rem;
             transition: .5s cubic-bezier(.34,1.56,.48,1.19);
-            text-wrap: nowrap;
+            width: 30%;
+            
+            @include lg-up {
+                width: 100%;
+                font-size: 1.6rem;
+                text-wrap: nowrap;
+            }
         }
     }
 
     &__company {
         font-size: 1.8rem;
+    }
+
+    &__keydetails {
+        margin-top: 10rem;
+
+        &__item {
+            padding: 1.8rem 0;
+            width: 100%;
+            transition: .5s cubic-bezier(.34,1.56,.48,1.19);
+            border-top: 0.1rem solid #00000000;
+            gap: 3.2rem;
+
+            &:first-child {
+                border-top: 0rem solid #00000000 !important;
+                padding-top: 0 !important;
+            }
+
+            // if not first child and last child
+            &:not(:last-child) {
+                border-bottom: 0.1rem solid #00000033;
+                padding: 1.8rem 0;
+            }
+        }
     }
 
     &__usp {

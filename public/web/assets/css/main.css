@@ -220,6 +220,9 @@ hr {
 .dark-theme .cursor-small {
   background-color: #E5AC01;
 }
+.dark-theme .project div {
+  border-color: #3f3f3d !important;
+}
 .dark-theme .contact input, .dark-theme .contact textarea, .dark-theme .contact .contact__form__checkbox--checkbox, .dark-theme .contact .contact__form__checkbox--checkmark::after {
   border-color: #FAF9F6;
   color: #FAF9F6;
@@ -236,6 +239,10 @@ hr {
 
 .border-radius-6 {
   border-radius: 0.6rem;
+}
+
+.body404 {
+  background-color: #FAF9F6;
 }
 
 #main {
@@ -5868,6 +5875,7 @@ input, label {
 }
 .hero__lead__wrapper {
   width: 100%;
+  margin-top: 25rem;
 }
 @media (min-width: 40em) {
   .hero__lead__wrapper {
@@ -6116,11 +6124,37 @@ input, label {
   opacity: 0;
   display: none;
   overflow: hidden;
+  font-size: 1.4rem;
   transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
-  text-wrap: nowrap;
+  width: 30%;
+}
+@media (min-width: 50em) {
+  .project__share--label {
+    width: 100%;
+    font-size: 1.6rem;
+    text-wrap: nowrap;
+  }
 }
 .project__company {
   font-size: 1.8rem;
+}
+.project__keydetails {
+  margin-top: 10rem;
+}
+.project__keydetails__item {
+  padding: 1.8rem 0;
+  width: 100%;
+  transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+  border-top: 0.1rem solid rgba(0, 0, 0, 0);
+  gap: 3.2rem;
+}
+.project__keydetails__item:first-child {
+  border-top: 0rem solid rgba(0, 0, 0, 0) !important;
+  padding-top: 0 !important;
+}
+.project__keydetails__item:not(:last-child) {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+  padding: 1.8rem 0;
 }
 @media (min-width: 50em) {
   .project__usp {
@@ -6666,6 +6700,14 @@ input, label {
   bottom: 13.6rem;
   font-style: italic;
   font-family: "Roboto Mono";
+  transform: translateX(-50%);
+}
+.loading__progressnumber {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 60%;
   transform: translateX(-50%);
 }
 .loading__frontlogo {

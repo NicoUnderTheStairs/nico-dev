@@ -19,7 +19,7 @@
                 {# project #}
                 <h1 class="project__website mono mb-0 mt-lg-0">{{project.website}}</h1>
                 <h2 class="project__company mono mt-0">{{project.company}}</h2>
-                <a class="project__share c-p d-flex gap-5 linkSmallCursor" data-shareTitle="Nico Fortino - {{entry.title}}" data-shareText="{% if project.lead is not null %}{{project.lead|striptags|slice(0, 93)}}...{% else %}Take a look at this project...{% endif %}">
+                <a class="project__share c-p d-flex justify-content-end align-items-center gap-5 linkSmallCursor" data-shareTitle="Nico Fortino - {{entry.title}}" data-shareText="{% if project.lead is not null %}{{project.lead|striptags|slice(0, 93)}}...{% else %}Take a look at this project...{% endif %}">
                     <span class="project__share--label">
                         {{systemTranslations.share}}
                     </span>
@@ -62,6 +62,21 @@
                 {% endif %}
             </div>
         </div>
+
+        {% if project.keyDetails|length != 0 %}
+            <div class="project__keydetails d-flex flex-column justify-content-lg-between flex-lg-row mb-6 mb-lg-0">
+                <h4 class="project__keydetails__title mono col-12 col-lg-3 mt-0">{{systemTranslations.keyDetails}}</h4>
+                <div class="col-12 col-lg-8 d-flex flex-row flex-wrap">
+                    {% for keydetail in project.keyDetails %}
+                        <div class="project__keydetails__item w-100 d-flex">
+                            <p class="project__keydetails__item--title mono artifact m-0">{% if countProjectDeveloped <= 9 %}0{% endif %}{{countProjectDeveloped}}{{ loop.index }}</p>
+                            <p class="project__keydetails__item--text mono m-0">{{keydetail.detail}}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
 
         {# galery #}
         {% if project.imagesDarkmode.one() is not null %}

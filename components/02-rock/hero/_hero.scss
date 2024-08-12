@@ -179,6 +179,7 @@
 
         &__wrapper {
             width: 100%;
+            margin-top: 25rem;
 
             @include md-up {
                 width: 75%;

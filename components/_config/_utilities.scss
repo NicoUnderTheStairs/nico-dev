@@ -115,6 +115,10 @@ hr {
     background-color: $primary;
   }
 
+  & .project div {
+    border-color: #3f3f3d !important;
+  }
+
   .contact {
     & input, textarea, .contact__form__checkbox--checkbox, .contact__form__checkbox--checkmark::after {
       border-color: $background-color;
@@ -139,6 +143,10 @@ hr {
   border-radius: 0.6rem;
 }
 
+.body404 {
+  background-color: $background-color;
+}
+
 #main {
   padding: 2.4rem;
   overflow: hidden;
@@ -152,3 +160,4 @@ hr {
     padding: 4.8rem 7.2rem;
   }  
 }
+

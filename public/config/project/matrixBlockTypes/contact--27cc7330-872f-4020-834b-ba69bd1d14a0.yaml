@@ -19,13 +19,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 888e7c4a-d544-4e74-816c-7c66f17111b2 # Subject
+            fieldUid: bc2e72bc-09fb-4792-90eb-95db2a0f0d15 # Subject
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 41a2eb98-161a-4e99-889a-95936b8249ea
+            uid: b430d4cc-ca4c-4955-bace-4e4f1a4c9acb
             userCondition: null
             warning: null
             width: 100
@@ -67,13 +67,13 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: bc2e72bc-09fb-4792-90eb-95db2a0f0d15 # Dataprotection
+            fieldUid: 128f1efd-9e3e-480d-8af3-53ec285156b1 # Dataprotection
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b430d4cc-ca4c-4955-bace-4e4f1a4c9acb
+            uid: f209ae68-3050-4856-b283-a68cee80b226
             userCondition: null
             warning: null
             width: 100
@@ -197,26 +197,34 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\PlainText
-  888e7c4a-d544-4e74-816c-7c66f17111b2: # Subject
-    columnSuffix: ksebrsuh
+  128f1efd-9e3e-480d-8af3-53ec285156b1: # Dataprotection
+    columnSuffix: okyglyqt
     contentColumnType: text
     fieldGroup: null
-    handle: subject
+    handle: dataprotection
     instructions: null
-    name: Subject
+    name: Dataprotection
     searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: null
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
     translationKeyFormat: null
     translationMethod: site
-    type: craft\fields\PlainText
+    type: craft\redactor\Field
   79561ee7-69e1-4376-9ff6-845290991754: # Error
     columnSuffix: ovdysdum
     contentColumnType: text
@@ -257,13 +265,13 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\PlainText
-  bc2e72bc-09fb-4792-90eb-95db2a0f0d15: # Dataprotection
+  bc2e72bc-09fb-4792-90eb-95db2a0f0d15: # Subject
     columnSuffix: suwbhhwy
     contentColumnType: text
     fieldGroup: null
-    handle: dataprotection
+    handle: subject
     instructions: null
-    name: Dataprotection
+    name: Subject
     searchable: false
     settings:
       byteLimit: null

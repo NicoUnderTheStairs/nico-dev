@@ -20,22 +20,22 @@
     </div>
     {% set shuffledMsg = shuffle(systemTranslations.loadingMessage) %}
     {# display first msg #}
-    <p class="loading__text">{{ shuffledMsg[0].loadingMessage }}</p>
+    <h4 class="loading__text mono">{{ shuffledMsg[0].loadingMessage }}</h4>
 </div>
 
 
 <script>
     const loading = document.querySelector('.loading');
+    const progress = document.querySelector('.loading__progress');
     const body = document.querySelector('body');
 
     if (localStorage.getItem('loaded') === 'true') {
         loading.classList.add('loading--hidden');
         body.classList.remove('overflow-hidden');
     } else {
-        const progress = document.querySelector('.loading__progress');
         let currentWidth = 0;
         // take random time, between 3s to 5s to simulate loading
-        const randomTime = Math.floor(Math.random() * (5000 - 3000 + 1)) + 3000;
+        const randomTime = Math.floor(Math.random() * (6000 - 3000 + 1)) + 3000;
         const interval = setInterval(() => {
             currentWidth += 1;
             progress.style.width = `${currentWidth}px`;

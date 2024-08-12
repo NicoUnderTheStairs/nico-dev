@@ -1,4 +1,4 @@
-changedFieldIndicator: 1474098728
+changedFieldIndicator: 1054109380
 field: ff043439-6dc6-4d85-ad23-1d430fd1d0ea # Project
 fieldLayouts:
   a7421637-2389-402d-a1a8-03d92b2d0bff:
@@ -75,6 +75,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ae11c3e3-12c4-4d7f-9006-23a55d18b9ed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8d04658c-7a80-49e4-a3d0-e13134345b73 # Key Details
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2ce287ee-a023-46d4-ac5e-c2caed92af12
             userCondition: null
             warning: null
             width: 100
@@ -263,6 +275,47 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Dropdown
+  8d04658c-7a80-49e4-a3d0-e13134345b73: # Key Details
+    columnSuffix: uybtfqhx
+    contentColumnType: text
+    fieldGroup: null
+    handle: keyDetails
+    instructions: null
+    name: 'Key Details'
+    searchable: false
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Detail
+                -
+                  - handle
+                  - detail
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+      maxRows: null
+      minRows: null
+      staticRows: false
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Table
   80a1b328-51fc-4279-b100-81fa2a22fb1c: # Company
     columnSuffix: hkmsiejb
     contentColumnType: text
