@@ -1,0 +1,14 @@
+columnSuffix: ahmenacb
+contentColumnType: char(7)
+fieldGroup: fe10ca1e-b9b0-4764-a8ce-9d11827b9828 # Common
+handle: projectColor
+instructions: null
+name: 'Project Color'
+searchable: false
+settings:
+  defaultColor: '#faf9f6'
+  presets:
+    - '#faf9f6'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Color

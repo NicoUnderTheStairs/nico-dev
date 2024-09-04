@@ -1,4 +1,4 @@
-dateModified: 1723210453
+dateModified: 1725442241
 elementSources:
   craft\elements\Entry:
     -
@@ -73,6 +73,7 @@ meta:
     4d9ad22a-71a4-486c-8a17-4aa06b7202fb: Work # Work
     5acbfce0-0c16-404d-bdf8-1b7185ed660a: Uploads # Uploads
     05b1c09b-200c-4d6b-bfdb-bc4300f1b579: 'Project Grid' # Project Grid
+    5cb1ee9e-5f24-409e-b6b4-1f27aaaf02d4: 'Project Color' # Project Color
     6f0a57bf-3450-4fb2-9512-a4e0eda1db1d: 'Meta Info' # Meta Info
     6feb5671-1f19-4004-bd05-df4d3a45f04a: Beschreibung # Beschreibung
     7d3a9466-67b6-48b0-aeb6-c83eec97c608: Inhaltsblöcke # Inhaltsblöcke
@@ -130,6 +131,7 @@ meta:
     e3e3947d-eb8b-4c62-8c1d-923a56951ef1: Share # Share
     e8fcf4aa-1cdc-49ad-8048-46bed34d2778: Website # Website
     e487c058-76a1-41cc-af91-743b411e146b: Text # Text
+    e99163f5-b2d2-4227-8e83-bdee821e3061: 'Visit Disclaimer' # Visit Disclaimer
     eb53d36d-66e7-4ac1-b4e8-61f7ec736021: ProjectsDeveloped # ProjectsDeveloped
     ee08378b-d81d-4a46-9a80-eb29a6a5e660: 'Lighthouse Report' # Lighthouse Report
     f0bb9251-9d2c-4024-a994-8354d1ff8003: Logo # Logo

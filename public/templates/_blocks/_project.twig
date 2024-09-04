@@ -58,25 +58,11 @@
                             </clipPath>
                             </defs>
                         </svg>
+                        {% if project.visitMsg is not null %}<span class="project__visit--msg text-small mono">{{project.visitMsg}}</span>{% endif %}
                     </a>
                 {% endif %}
             </div>
         </div>
-
-        {% if project.keyDetails|length != 0 %}
-            <div class="project__keydetails d-flex flex-column justify-content-lg-between flex-lg-row mb-6 mb-lg-0">
-                <h4 class="project__keydetails__title mono col-12 col-lg-3 mt-0">{{systemTranslations.keyDetails}}</h4>
-                <div class="col-12 col-lg-8 d-flex flex-row flex-wrap">
-                    {% for keydetail in project.keyDetails %}
-                        <div class="project__keydetails__item w-100 d-flex">
-                            <p class="project__keydetails__item--title mono artifact m-0">{% if countProjectDeveloped <= 9 %}0{% endif %}{{countProjectDeveloped}}{{ loop.index }}</p>
-                            <p class="project__keydetails__item--text mono m-0">{{keydetail.detail}}</p>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        {% endif %}
-
 
         {# galery #}
         {% if project.imagesDarkmode.one() is not null %}
@@ -92,6 +78,20 @@
                 <img src="{{img.url}}" alt="{{image.alt}}" class="project__galery__item">
             {% endfor %}
         </div>
+
+        {% if project.keyDetails|length != 0 %}
+            <div class="project__keydetails d-flex flex-column justify-content-lg-between flex-lg-row mb-6 mb-lg-0">
+                <h4 class="project__keydetails__title mono col-12 col-lg-3 mt-0">{{systemTranslations.keyDetails}}</h4>
+                <div class="col-12 col-lg-8 d-flex flex-row flex-wrap">
+                    {% for keydetail in project.keyDetails %}
+                        <div class="project__keydetails__item w-100 d-flex">
+                            <p class="project__keydetails__item--title mono artifact m-0">{% if countProjectDeveloped <= 9 %}0{% endif %}{{countProjectDeveloped}}{{ loop.index }}</p>
+                            <p class="project__keydetails__item--text mono m-0">{{keydetail.detail}}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
         
         {# lighthouse #}
         {% if project.lighthouseDoc.one().url is not null %}

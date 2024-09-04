@@ -30,7 +30,7 @@ fieldLayouts:
             uid: 75ed3c14-9134-460d-9b7c-8f8ebd842b71
             userCondition: null
             warning: null
-            width: 75
+            width: 50
           -
             elementCondition: null
             fieldUid: f4c476d5-c7ea-4540-8e96-6880d7382f5a # Project Number
@@ -40,6 +40,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c5fd129c-032c-428e-b3ef-a7c6a785df09
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            elementCondition: null
+            fieldUid: 5cb1ee9e-5f24-409e-b6b4-1f27aaaf02d4 # Project Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c8e0369b-19c0-4bce-bfea-131d6c0a08c3
             userCondition: null
             warning: null
             width: 25

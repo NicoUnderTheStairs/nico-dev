@@ -7,7 +7,7 @@ name: Project
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1975541536
+  changedFieldIndicator: 1154772211
   columns:
     __assoc__:
       -
@@ -47,6 +47,13 @@ settings:
               - ''
       -
         - c95eed35-ff61-47b8-b7da-6575c6cb70bf # Lead
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 8d04658c-7a80-49e4-a3d0-e13134345b73 # Key Details
         -
           __assoc__:
             -
