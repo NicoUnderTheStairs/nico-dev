@@ -64,6 +64,13 @@
             </div>
         </div>
 
+
+        {% if project.longText is not null %}
+            <div class="col-12 col-lg-10 mx-auto my-6">
+                {{project.longText}}
+            </div>
+        {% endif %}
+
         {# galery #}
         {% if project.imagesDarkmode.one() is not null %}
             <div class="project__galery imageToggles__dark mb-5">

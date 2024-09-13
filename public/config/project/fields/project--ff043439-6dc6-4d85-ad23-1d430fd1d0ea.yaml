@@ -7,7 +7,7 @@ name: Project
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1154772211
+  changedFieldIndicator: 563122384
   columns:
     __assoc__:
       -
@@ -39,6 +39,13 @@ settings:
               - width
               - ''
       -
+        - e99163f5-b2d2-4227-8e83-bdee821e3061 # Visit Disclaimer
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
         - 2c5af258-38c5-4f55-a53f-51bfd3e8c429 # USPS
         -
           __assoc__:
@@ -47,6 +54,13 @@ settings:
               - ''
       -
         - c95eed35-ff61-47b8-b7da-6575c6cb70bf # Lead
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 8ae77031-641a-4b54-9f48-559ac4d9787a # Long Text
         -
           __assoc__:
             -

@@ -1,4 +1,4 @@
-changedFieldIndicator: 1221276034
+changedFieldIndicator: 1095738172
 field: ff043439-6dc6-4d85-ad23-1d430fd1d0ea # Project
 fieldLayouts:
   a7421637-2389-402d-a1a8-03d92b2d0bff:
@@ -87,6 +87,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ae11c3e3-12c4-4d7f-9006-23a55d18b9ed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8ae77031-641a-4b54-9f48-559ac4d9787a # Long Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d1198a6d-9ce0-4567-ad6f-02c794bcc559
             userCondition: null
             warning: null
             width: 100
@@ -287,6 +299,34 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Dropdown
+  8ae77031-641a-4b54-9f48-559ac4d9787a: # Long Text
+    columnSuffix: avpnucfy
+    contentColumnType: text
+    fieldGroup: null
+    handle: longText
+    instructions: null
+    name: 'Long Text'
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
   8d04658c-7a80-49e4-a3d0-e13134345b73: # Key Details
     columnSuffix: uybtfqhx
     contentColumnType: text

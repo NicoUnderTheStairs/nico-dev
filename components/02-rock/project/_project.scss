@@ -28,9 +28,14 @@
 
     &__share {
         position: absolute;
-        top: 50%;
+        top: -1rem;
         right: 0;
         transform: translateY(-50%);
+        
+        @include lg-up {
+            top: 50%;
+            display: none;
+        }
 
         &--desktop {
             & span {

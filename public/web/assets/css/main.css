@@ -6093,9 +6093,15 @@ input, label {
 }
 .project__share {
   position: absolute;
-  top: 50%;
+  top: -1rem;
   right: 0;
   transform: translateY(-50%);
+}
+@media (min-width: 50em) {
+  .project__share {
+    top: 50%;
+    display: none;
+  }
 }
 .project__share--desktop span {
   display: unset;

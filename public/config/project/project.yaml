@@ -1,4 +1,4 @@
-dateModified: 1725442241
+dateModified: 1726228393
 elementSources:
   craft\elements\Entry:
     -
@@ -77,6 +77,7 @@ meta:
     6f0a57bf-3450-4fb2-9512-a4e0eda1db1d: 'Meta Info' # Meta Info
     6feb5671-1f19-4004-bd05-df4d3a45f04a: Beschreibung # Beschreibung
     7d3a9466-67b6-48b0-aeb6-c83eec97c608: Inhaltsblöcke # Inhaltsblöcke
+    8ae77031-641a-4b54-9f48-559ac4d9787a: 'Long Text' # Long Text
     8d04658c-7a80-49e4-a3d0-e13134345b73: 'Key Details' # Key Details
     8f9812d2-2102-43ac-8ef1-21923dc442e7: Default # Default
     09f0f218-7f4b-43e5-8430-79e3f9cfdb4c: Legal # Legal
