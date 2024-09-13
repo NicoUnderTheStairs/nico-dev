@@ -19,7 +19,7 @@
                 {# project #}
                 <h1 class="project__website mono mb-0 mt-lg-0">{{project.website}}</h1>
                 <h2 class="project__company mono mt-0">{{project.company}}</h2>
-                <a class="project__share c-p d-flex justify-content-end align-items-center gap-5 linkSmallCursor" data-shareTitle="Nico Fortino - {{entry.title}}" data-shareText="{% if project.lead is not null %}{{project.lead|striptags|slice(0, 93)}}...{% else %}Take a look at this project...{% endif %}">
+                <a class="project__share c-p d-flex justify-content-end align-items-center gap-5 linkSmallCursor" data-shareTitle="Nico Fortino - {{entry.title}}" data-shareText="Check out this project I found...{% endif %}">
                     <span class="project__share--label">
                         {{systemTranslations.share}}
                     </span>
