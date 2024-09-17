@@ -1,4 +1,4 @@
-changedFieldIndicator: 1095738172
+changedFieldIndicator: 88028468
 field: ff043439-6dc6-4d85-ad23-1d430fd1d0ea # Project
 fieldLayouts:
   a7421637-2389-402d-a1a8-03d92b2d0bff:
@@ -63,6 +63,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: fee6e713-e1bf-43c7-a685-099ea8944d17
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e94a5430-0995-4134-9a2a-6f5a93e071a8 # Github Repo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6aa11316-6a88-40b8-a50a-c63a10b7e629
             userCondition: null
             warning: null
             width: 100
@@ -610,6 +622,26 @@ fields:
     handle: website
     instructions: null
     name: Website
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  e94a5430-0995-4134-9a2a-6f5a93e071a8: # Github Repo
+    columnSuffix: gptadinf
+    contentColumnType: text
+    fieldGroup: null
+    handle: githubRepo
+    instructions: null
+    name: 'Github Repo'
     searchable: false
     settings:
       byteLimit: null

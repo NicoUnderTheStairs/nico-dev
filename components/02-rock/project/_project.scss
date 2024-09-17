@@ -1,270 +1,311 @@
 .project {
-    margin-top: 2.4rem;
-    
-    @include xl-up {
-        max-width: 144rem;
-        margin: 0 auto;
+  margin-top: 2.4rem;
+
+  @include xl-up {
+    max-width: 144rem;
+    margin: 0 auto;
+  }
+
+  @include lg-up {
+    margin-top: 12.4rem;
+  }
+
+  &__back {
+    color: $secondary;
+    transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+
+    &:hover {
+      cursor: pointer;
+      transform: translateX(-0.8rem);
     }
 
     @include lg-up {
-        margin-top: 12.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__github {
+    @include lg-up {
+      position: absolute;
+      bottom: 3.2rem;
+      left: -0.8rem;
+      transform: translateY(-50%);
     }
 
-    &__back {
-        color: $secondary;
-        transition: .5s cubic-bezier(.34,1.56,.48,1.19);
+    & svg {
+      transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+    }
 
-        &:hover {
-            cursor: pointer;
-            transform: translateX(-0.8rem);
-        }
+    &--msg {
+      transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+      opacity: 0;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      & svg {
+        transform: scale(1.1);
+      }
+
+      & .project__github--msg {
+        opacity: 1;
+        margin-left: 0;
+      }
+    }
+
+    &--disabled {
+      & svg {
+        opacity: 0.5;
+      }
+
+      cursor: not-allowed;
+    }
+  }
+
+  &__share {
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    transform: translateY(-50%);
+
+    @include lg-up {
+      top: 50%;
+      display: none;
+    }
+
+    &--desktop {
+      & span {
+        display: unset;
+        animation: desktopAnim 4s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+      }
+    }
+
+    @keyframes desktopAnim {
+      0% {
+        opacity: 0;
+        margin-left: 1rem;
+      }
+      10% {
+        margin-left: 1rem;
+        opacity: 1;
+      }
+      90% {
+        margin-left: 1rem;
+        opacity: 1;
+      }
+      100% {
+        margin-left: 0;
+        opacity: 0;
+      }
+    }
+
+    &--label {
+      font-family: $font-family-monospace;
+      opacity: 0;
+      display: none;
+      overflow: hidden;
+      font-size: 1.4rem;
+      transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+      width: 30%;
+
+      @include lg-up {
+        width: 100%;
+        font-size: 1.6rem;
+        text-wrap: nowrap;
+      }
+    }
+  }
+
+  &__company {
+    font-size: 1.8rem;
+  }
+
+  &__keydetails {
+    margin-top: 5rem;
+
+    @include lg-up {
+      margin-top: 10rem;
+    }
+
+    &__title {
+      font-weight: 500;
+
+      @include lg-up {
+        font-size: 3rem;
+      }
+    }
+
+    &__item {
+      padding: 1.8rem 0;
+      width: 100%;
+      transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+      border-top: 0.1rem solid #00000000;
+      gap: 3.2rem;
+
+      &--title {
+        font-weight: 500;
+      }
+
+      &--text {
+        text-align: start;
 
         @include lg-up {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+          text-align: justify;
         }
+      }
+
+      &:first-child {
+        border-top: 0rem solid #00000000 !important;
+        padding-top: 0 !important;
+      }
+
+      // if not first child and last child
+      &:not(:last-child) {
+        border-bottom: 0.1rem solid #00000033;
+        padding: 1.8rem 0;
+      }
+    }
+  }
+
+  &__usp {
+    @include lg-up {
+      width: 30%;
     }
 
-    &__share {
-        position: absolute;
-        top: -1rem;
-        right: 0;
-        transform: translateY(-50%);
-        
-        @include lg-up {
-            top: 50%;
-            display: none;
-        }
+    &__item {
+      padding: 0.8rem 0;
+      border-bottom: 0.1rem solid #00000033;
 
-        &--desktop {
-            & span {
-                display: unset;
-                animation: desktopAnim 4s cubic-bezier(.34,1.56,.48,1.19);
-            }
-        }
+      // if not first and last child, have border
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+    &__title {
+      font-size: 1.6rem;
+    }
+    &__text {
+      @include lg-up {
+        font-size: 2.1rem;
+      }
+    }
+  }
 
-        @keyframes desktopAnim {
-            0% {
-                opacity: 0;
-                margin-left: 1rem;
-            }
-            10% {
-                margin-left: 1rem;
-                opacity: 1;
-            }
-            90% {
-                margin-left: 1rem;
-                opacity: 1;
-            }
-            100% {
-                margin-left: 0;
-                opacity: 0;
-            }
-        }
+  &__lead {
+    font-size: 1.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 
-        &--label {
-            font-family: $font-family-monospace;
-            opacity: 0;
-            display: none;
-            overflow: hidden;
-            font-size: 1.4rem;
-            transition: .5s cubic-bezier(.34,1.56,.48,1.19);
-            width: 30%;
-            
-            @include lg-up {
-                width: 100%;
-                font-size: 1.6rem;
-                text-wrap: nowrap;
-            }
-        }
+    @include lg-up {
+      min-height: 30rem;
+      width: 50%;
+    }
+  }
+
+  &__visit {
+    font-size: 1.8rem;
+
+    & svg path {
+      transition: all 0.3s ease;
     }
 
-    &__company {
-        font-size: 1.8rem;
+    &--msg {
+      transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+      opacity: 0;
+      margin-left: 1rem;
     }
 
-    &__keydetails {
-        margin-top: 5rem;
+    &:hover {
+      cursor: pointer;
 
-        @include lg-up {
-            margin-top: 10rem;
-        }
+      & svg path {
+        transform: translate(2.2rem, -2rem);
+      }
 
-        &__title {
-            font-weight: 500;
+      & .project__visit--msg {
+        opacity: 1;
+        margin-left: 0;
+      }
+    }
+  }
 
-            @include lg-up {
-                font-size: 3rem;
-            }
-        }
+  &__galery {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1.8rem;
 
-        &__item {
-            padding: 1.8rem 0;
-            width: 100%;
-            transition: .5s cubic-bezier(.34,1.56,.48,1.19);
-            border-top: 0.1rem solid #00000000;
-            gap: 3.2rem;
-
-            &--title {
-                font-weight: 500;
-            }
-
-            &--text {
-                text-align: start;
-
-                @include lg-up {
-                    text-align: justify;
-                }
-            }
-
-            &:first-child {
-                border-top: 0rem solid #00000000 !important;
-                padding-top: 0 !important;
-            }
-
-            // if not first child and last child
-            &:not(:last-child) {
-                border-bottom: 0.1rem solid #00000033;
-                padding: 1.8rem 0;
-            }
-        }
+    @include lg-up {
+      gap: 4.8rem;
+      margin-top: 12.4rem;
     }
 
-    &__usp {
-        @include lg-up {
-            width: 30%;
-        }
-
-        &__item {
-            padding: 0.8rem 0;
-            border-bottom: 0.1rem solid #00000033;
-
-            // if not first and last child, have border
-            &:last-child {
-                border-bottom: 0;
-            }
-        }
-        &__title {
-            font-size: 1.6rem;
-        }
-        &__text {
-            @include lg-up {
-                font-size: 2.1rem;
-            }
-        }
+    &__dark {
+      display: none;
     }
 
-    &__lead {
-        font-size: 1.8em;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        
-        @include lg-up {
-            min-height: 30rem;
-            width: 50%;
-        }
+    &__item {
+      object-fit: contain;
+      object-position: top;
+      border-radius: 0.6rem;
+      width: 100%;
+      transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+
+      &:nth-child(4n + 1) {
+        grid-area: 1 / 1 / 2 / 4;
+      }
+
+      &:nth-child(4n + 2) {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+
+      &:nth-child(4n + 3) {
+        grid-area: 2 / 3 / 4 / 4;
+      }
+
+      &:nth-child(4n + 4) {
+        grid-area: 3 / 1 / 4 / 3;
+      }
+    }
+  }
+
+  &__lighthouse {
+    @include lg-up {
+      margin-top: 12.4rem;
     }
 
-    &__visit {
-        font-size: 1.8rem;
-        
-        & svg path {
-            transition: all 0.3s ease;
-        }
+    &__stat {
+      width: 50%;
+      text-align: center !important;
 
-        &--msg {
-            transition: .5s cubic-bezier(.34,1.56,.48,1.19);
-            opacity: 0;
-            margin-left: 1rem;
-        }
+      @include lg-up {
+        width: fit-content;
+      }
 
-        &:hover {
-            cursor: pointer;
+      &--title {
+        font-size: 7.8rem;
+      }
 
-            & svg path {
-                transform: translate(2.2rem, -2rem);
-            }
+      &--description {
+        text-align: center !important;
+        font-size: 1.6rem;
+      }
+    }
+  }
 
-            & .project__visit--msg {
-                opacity: 1;
-                margin-left: 0;
-            }
-        }
+  &__moreProjects {
+    @include lg-up {
+      margin-top: 12.4rem;
     }
 
-    &__galery {
-        display: grid;
-        grid-template-rows: auto 1fr;
-        gap: 1.8rem;
-
-        @include lg-up {
-            gap: 4.8rem;
-            margin-top: 12.4rem;
-        }
-
-        &__dark {
-            display: none;
-        }
-
-        &__item {
-            object-fit: contain;
-            object-position: top;
-            border-radius: 0.6rem;
-            width: 100%;
-            transition: .5s cubic-bezier(.34,1.56,.48,1.19);
-
-            &:nth-child(4n+1) {
-                grid-area: 1 / 1 / 2 / 4;
-            }
-
-            &:nth-child(4n+2) {
-                grid-area: 2 / 1 / 3 / 3;
-            }
-
-            &:nth-child(4n+3) {
-                grid-area: 2 / 3 / 4 / 4;
-            }
-
-            &:nth-child(4n+4) {
-                grid-area: 3 / 1 / 4 / 3;
-            }
-        }
+    & .projectGrid__project {
+      transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
     }
-
-    &__lighthouse {
-        @include lg-up {
-            margin-top: 12.4rem;
-        }
-
-        &__stat {
-            width: 50%;
-            text-align: center !important;
-
-            @include lg-up {
-                width: fit-content;
-            }
-            
-            &--title {
-                font-size: 7.8rem;
-            }
-            
-            &--description {
-                text-align: center !important;
-                font-size: 1.6rem;
-            }
-        }
-    }
-
-    &__moreProjects {
-        @include lg-up {
-            margin-top: 12.4rem;
-        }
-
-        & .projectGrid__project {
-            transition: .5s cubic-bezier(.34,1.56,.48,1.19);
-        }
-    }
+  }
 }

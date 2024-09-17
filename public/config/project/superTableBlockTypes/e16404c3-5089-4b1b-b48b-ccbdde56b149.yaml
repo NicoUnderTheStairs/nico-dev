@@ -1,4 +1,4 @@
-changedFieldIndicator: 1959858493
+changedFieldIndicator: 1527565461
 field: 0fe360b3-6a5c-40b5-82ad-1a7b95e24bb1 # System Translations
 fieldLayouts:
   4fb9ed76-d895-4b61-9e44-627f3408197f:
@@ -162,6 +162,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 5364899e-5761-4c2f-b657-586e0ac81151 # Github Repo not Found
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0df64b44-8675-42dd-a38e-c73f0042f7a6
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: a6c75cce-f9d8-43a1-82e4-44928c35600d
         userCondition: null
@@ -294,6 +306,26 @@ fields:
     handle: accesability
     instructions: null
     name: Accesability
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  5364899e-5761-4c2f-b657-586e0ac81151: # Github Repo not Found
+    columnSuffix: fyychpee
+    contentColumnType: text
+    fieldGroup: null
+    handle: githubreponotfound
+    instructions: null
+    name: 'Github Repo not Found'
     searchable: false
     settings:
       byteLimit: null

@@ -6091,6 +6091,39 @@ input, label {
     align-items: center;
   }
 }
+@media (min-width: 50em) {
+  .project__github {
+    position: absolute;
+    bottom: 3.2rem;
+    left: -0.8rem;
+    transform: translateY(-50%);
+  }
+}
+.project__github svg {
+  transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+}
+.project__github--msg {
+  transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+.project__github:hover {
+  cursor: pointer;
+}
+.project__github:hover svg {
+  transform: scale(1.1);
+}
+.project__github:hover .project__github--msg {
+  opacity: 1;
+  margin-left: 0;
+}
+.project__github--disabled {
+  cursor: not-allowed;
+}
+.project__github--disabled svg {
+  opacity: 0.5;
+}
 .project__share {
   position: absolute;
   top: -1rem;
