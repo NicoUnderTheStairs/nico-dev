@@ -94,7 +94,7 @@
 
         {% if project.keyDetails|length != 0 %}
             <div class="project__keydetails d-flex flex-column justify-content-lg-between flex-lg-row mb-6 mb-lg-0">
-                <h4 class="project__keydetails__title mono col-12 col-lg-3 mt-0">{{systemTranslations.keyDetails}}</h4>
+                <h4 class="project__keydetails__title mono col-12 col-lg-3 mt-0">{{systemTranslations.keyDetails}}<span class="text-small mono"> // tl;dr</span></h4>
                 <div class="col-12 col-lg-8 d-flex flex-row flex-wrap">
                     {% for keydetail in project.keyDetails %}
                         <div class="project__keydetails__item w-100 d-flex">
