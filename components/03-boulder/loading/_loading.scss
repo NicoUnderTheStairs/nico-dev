@@ -56,3 +56,13 @@
         transition: width 0.4s ease;
     }
 }
+
+.loading__text {
+    transition: opacity 250ms ease-in-out;
+}
+.loading__text.fade-out {
+    opacity: 0;
+}
+.loading__text.fade-in {
+    opacity: 1;
+}

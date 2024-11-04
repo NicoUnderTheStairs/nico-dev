@@ -10,8 +10,6 @@
     {% endif %}
 {% endfor %}
 
-
-
 <div class="projectGrid projectGrid__mobile imageToggles__wrapper">
     <div class="projectGrid__inner">
         <div class="projectGrid__wrapper d-flex justify-content-between flex-direction-lg-row flex-wrap flex-lg-nowrap">
@@ -25,11 +23,11 @@
                     <div class="projectGrid__project">
                         <a href="{{ project.url }}" class="projectGrid__project__link">
                             <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__dark{% else %}imageToggles__dark-unavilable{% endif %}">
-                                <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}">
+                                <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}" loading="lazy">
                             </div>
 
                             <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %}">
-                                <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}">
+                                <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}" loading="lazy">
                             </div>
 
                             <div class="projectGrid__project__content">
@@ -50,11 +48,11 @@
                     <div class="projectGrid__project">
                         <a href="{{ project.url }}" class="projectGrid__project__link">
                             <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__dark{% else %}imageToggles__dark-unavilable{% endif %}">
-                                <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}">
+                                <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}" loading="lazy">
                             </div>
 
                             <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %}">
-                                <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}">
+                                <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}" loading="lazy">
                             </div>
 
                             <div class="projectGrid__project__content">

@@ -43,7 +43,7 @@ class Easteregg extends Base {
     if (easterEgg !== null) {
       easterEgg.onclick = () => {
         // eslint-disable-next-line no-alert
-        alert('So, you finally found my easteregg. I hope you enjoyed the journey and I hopefully also inspired you to also create and be creative in your own ways. I made myself a promise, that the first person to find my easteregg, will be rewarded with a special gift. Write me an email, try your luck and find out if you were the first person to have solved the mystery (nico+easteregg@fortino.ch). I will be waiting for your email.');
+        alert('You find a shining white egg, laying there. After picking it up you find two small holes in the bottom. You try the two keys you have found and they fit! The Egg opens and you find a shinging golden egg! On there, in golden text is a small text: "So, you finally found my easteregg. I hope you enjoyed the journey and I hopefully also inspired you to also create and be creative in your own ways. I made myself a promise, that the first person to find my easteregg, will be rewarded with a special gift. Write me an email, try your luck and find out if you were the first person to have solved the mystery (nico+easteregg@fortino.ch). I will be waiting for your email."');
         playerScoreUpdate(1000000000);
       };
     }

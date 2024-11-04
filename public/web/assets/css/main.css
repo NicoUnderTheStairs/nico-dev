@@ -6062,6 +6062,21 @@ input, label {
   hyphens: auto;
 }
 
+.projectGridImgAnimation {
+  animation: projectGridImgAnimation 5s ease infinite;
+}
+
+@keyframes projectGridImgAnimation {
+  0% {
+    margin-top: 0rem;
+  }
+  50% {
+    margin-top: 1rem;
+  }
+  100% {
+    margin-top: 0rem;
+  }
+}
 .project {
   margin-top: 2.4rem;
 }
@@ -6432,6 +6447,7 @@ input, label {
 @media (min-width: 50em) {
   .contact__talk h2 {
     font-size: 20.2rem;
+    letter-spacing: -20px;
   }
 }
 .contact__open a {
@@ -6786,4 +6802,16 @@ input, label {
 }
 .loading__progress {
   transition: width 0.4s ease;
+}
+
+.loading__text {
+  transition: opacity 250ms ease-in-out;
+}
+
+.loading__text.fade-out {
+  opacity: 0;
+}
+
+.loading__text.fade-in {
+  opacity: 1;
 }

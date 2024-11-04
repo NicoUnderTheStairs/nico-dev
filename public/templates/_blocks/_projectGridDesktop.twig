@@ -10,7 +10,6 @@
     {% endif %}
 {% endfor %}
 
-
 <div class="projectGrid js-projectgrid projectGrid__desktop">
     <div class="projectGrid__desktop__inner">
         <div class="projectGrid__desktop__wrapper">
@@ -20,15 +19,15 @@
                         {% if project.project.imagesDarkmode.one() is not null %}
                             {% for img in project.project.imagesDarkmode.all() %}
                                 {% if loop.index <= 3 %}
-                                    <img class="border-radius-6 imageToggles__dark" src="{{img.url}}">                                    
+                                    <img class="border-radius-6 imageToggles__dark" src="{{img.url}}" loading="lazy">                                    
                                 {% endif %}
                             {% endfor %}
-                            <img class="border-radius-6 imageToggles__dark">                                    
+                            <img class="border-radius-6 imageToggles__dark" loading="lazy">                                    
                         {% endif %}
 
                         {% for img in project.project.images.all() %}
                             {% if loop.index <= 3 %}
-                                <img class="{% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %} border-radius-6" src="{{img.url}}">
+                                <img class="{% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %} border-radius-6" src="{{img.url}}" loading="lazy">
                             {% endif %}
                         {% endfor %}
                     </div>

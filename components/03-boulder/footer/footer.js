@@ -40,7 +40,7 @@ class Footer extends Base {
         } else {
           localStorage.setItem('dark-theme', 'false');
         }
-        if (localStorage.getItem('heroHint') === 'true' && currentPage === '/projects/itsec4kmu' && document.querySelector('body').classList.contains('dark-theme')) {
+        if (localStorage.getItem('heroHint') === 'true' && currentPage === '/projects/statistic.vbclimmattal.com' && document.querySelector('body').classList.contains('dark-theme')) {
           easterEgg.classList.remove('d-none');
         }
       });
@@ -56,7 +56,7 @@ class Footer extends Base {
             imageToggle.classList.add('imageToggles-dark');
           });
         }
-        if (localStorage.getItem('heroHint') === 'true' && currentPage === '/projects/itsec4kmu' && document.querySelector('body').classList.contains('dark-theme')) {
+        if (localStorage.getItem('heroHint') === 'true' && currentPage === '/projects/statistic.vbclimmattal.com' && document.querySelector('body').classList.contains('dark-theme')) {
           easterEgg.classList.remove('d-none');
         }
       } else {

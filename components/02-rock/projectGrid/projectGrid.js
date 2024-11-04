@@ -40,7 +40,12 @@ class ProjectGrid extends Base {
       });
     }
 
+    let mouseMoveTimeout;
+
     window.onmousemove = (e) => {
+      // Clear the previous timeout
+      clearTimeout(mouseMoveTimeout);
+
       // based on mouseposition relative to the image, change perspective of img
       const x = e.clientX;
       const y = e.clientY;
@@ -49,8 +54,16 @@ class ProjectGrid extends Base {
       const offsetX = 0.5 - (x / w);
       const offsetY = 0.5 - (y / h);
       allProjectsImg.forEach((item) => {
+        item.classList.remove('projectGridImgAnimation');
         item.style.transform = `perspective(1000px) rotateX(${offsetY * 25}deg) rotateY(${offsetX * 25}deg) translateZ(10px)`;
       });
+
+      // Set a timeout to detect when the mouse stops moving
+      mouseMoveTimeout = setTimeout(() => {
+        allProjectsImg.forEach((item) => {
+          item.classList.add('projectGridImgAnimation');
+        });
+      }, 200); // Adjust the timeout duration as needed
     };
   }
 }

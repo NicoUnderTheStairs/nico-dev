@@ -19,35 +19,50 @@
         </svg>
     </div>
     {% set shuffledMsg = shuffle(systemTranslations.loadingMessage) %}
-    {# display first msg #}
     <h4 class="loading__text mono">{{ shuffledMsg[0].loadingMessage }}</h4>
+    <h4 class="loading__text loadedText d-none mono">*Ready, now just click somewhere*</h4>
 </div>
-
 
 <script>
     const loading = document.querySelector('.loading');
     const progress = document.querySelector('.loading__progress');
     const body = document.querySelector('body');
+    const loadingText = document.querySelector('.loading__text');
+    const messages = {{ shuffledMsg|json_encode|raw }};
+    let messageIndex = 0;
+    let swapMessageInterval;
+
+    function swapMessage() {
+        loadingText.classList.add('fade-out');
+        setTimeout(() => {
+            messageIndex = (messageIndex + 1) % messages.length;
+            loadingText.textContent = messages[messageIndex].loadingMessage;
+            loadingText.classList.remove('fade-out');
+            loadingText.classList.add('fade-in');
+        }, 250); // Match this duration with the CSS transition duration
+    }
 
     if (localStorage.getItem('loaded') === 'true') {
         loading.classList.add('loading--hidden');
         body.classList.remove('overflow-hidden');
     } else {
         let currentWidth = 0;
-        // take random time, between 3s to 5s to simulate loading
-        const randomTime = Math.floor(Math.random() * (6000 - 3000 + 1)) + 3000;
+        const randomTime = Math.floor(Math.random() * (6000 - 3000 + 1)) + 3500;
         const interval = setInterval(() => {
             currentWidth += 1;
             progress.style.width = `${currentWidth}px`;
             if (currentWidth >= 447) {
                 clearInterval(interval);
-                setTimeout(() => {
+                loadingText.classList.add('d-none');
+                document.querySelector('.loadedText').classList.remove('d-none');
+                loading.addEventListener('click', () => {
                     body.classList.remove('overflow-hidden');
                     loading.classList.add('loading--hidden');
-                }, 1000);
+                });
             }
         }, randomTime / 447);
 
+        swapMessageInterval = setInterval(swapMessage, 1500); // Change message every 2 seconds
         localStorage.setItem('loaded', 'true');
     }
 </script>

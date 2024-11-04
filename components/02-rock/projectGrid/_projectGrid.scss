@@ -194,3 +194,19 @@
         }
     }
 }
+
+.projectGridImgAnimation {
+    animation: projectGridImgAnimation 5s ease infinite;
+}
+
+@keyframes projectGridImgAnimation {
+    0% {
+        margin-top: 0rem;
+    }
+    50% {
+        margin-top: 1rem;
+    }
+    100% {
+        margin-top: 0rem;
+    }
+}
