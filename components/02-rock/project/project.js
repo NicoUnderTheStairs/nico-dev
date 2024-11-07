@@ -15,7 +15,7 @@ class Project extends Base {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // if lighthouse numbers are in view, let numbers count up
+    // If lighthouse numbers are in view, let numbers count up with color transition
     allLighthouseNumbers.forEach((number) => {
       ScrollTrigger.create({
         trigger: number,
@@ -26,13 +26,40 @@ class Project extends Base {
           const numberValue = number.textContent;
           const numberValueInt = parseInt(numberValue, 10);
           const counter = { var: 10 };
-          // random duration between 0.5 and 3 seconds
+
+          // Random duration between 0.5 and 3 seconds
           const duration = Math.random() * 2.5 + 0.5;
+
           gsap.to(counter, {
             var: numberValueInt,
             duration,
             onUpdate: () => {
-              number.textContent = Math.ceil(counter.var);
+              const currentValue = Math.ceil(counter.var);
+              number.textContent = currentValue;
+
+              // Adjust color dynamically as it counts up
+              if (currentValue < 50) {
+                const redShade = Math.min(255, currentValue * 5);
+                number.style.color = `rgb(${redShade}, 0, 0)`; // Shading up to red
+              } else if (currentValue < 75) {
+                const greenShade = Math.min(165, (currentValue - 50) * 6.6);
+                number.style.color = `rgb(255, ${greenShade}, 0)`; // Shading red to orange
+              } else {
+                const redShade = 255 - ((currentValue - 75) * 10);
+                // transition to #008000
+                const greenShade = Math.min(128, (currentValue - 50) * 2.56);
+                number.style.color = `rgb(${Math.max(0, redShade)}, ${greenShade}, 0)`; // Orange to target green
+              }
+            },
+            onComplete: () => {
+              // Set final color based on the ending value
+              if (numberValueInt < 50) {
+                number.style.color = 'rgb(255, 0, 0)'; // Red
+              } else if (numberValueInt < 75) {
+                number.style.color = 'rgb(255, 165, 0)'; // Orange
+              } else {
+                number.style.color = '#008000'; // Final green color
+              }
             },
           });
         },
