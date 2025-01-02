@@ -6,8 +6,8 @@
 
 {% if entry.url == 'https://nicofortino.ch/' %}
   <title>Hi, I am Nico</title>
-{% else %}
-  <title>{{entry.title}} by Nico</title>
+{% elseif entry.section == 'Projects' %}
+  <title>{{entry.title}} - developed by Nico Fortino</title>
 {% endif %}
 
 <link rel="home" href="{{ siteUrl }}"/>
