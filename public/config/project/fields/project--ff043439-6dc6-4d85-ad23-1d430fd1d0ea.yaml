@@ -7,7 +7,7 @@ name: Project
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 908194822
+  changedFieldIndicator: 1429168114
   columns:
     __assoc__:
       -
@@ -40,6 +40,13 @@ settings:
               - ''
       -
         - e99163f5-b2d2-4227-8e83-bdee821e3061 # Visit Disclaimer
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - e94a5430-0995-4134-9a2a-6f5a93e071a8 # Github Repo
         -
           __assoc__:
             -

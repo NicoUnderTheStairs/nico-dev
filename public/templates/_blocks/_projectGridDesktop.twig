@@ -38,7 +38,7 @@
                 <h2 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsdeveloped}}<span class="text-small mono"> // {% if countProjectDeveloped <= 9 %}0{% endif %}{{countProjectDeveloped}} Projects</span></h2>
                 {% for project in craft.entries.section('projects').all() %}
                     {% if project.project.projectType == 'developed' %}
-                        <a href="{{project.url}}" class="projectGrid__desktop__item d-flex position-relative linkBigCursor">
+                        <a href="{{project.url}}" class="projectGrid__desktop__item {% if project.project.tag is not null %}projectGrid__project__tag--wrapper{% endif %} d-flex position-relative linkBigCursor">
                             <p class="artifact me-3">{{ project.projectNumber }}</p>
                             <div>
                                 <h4 class="projectGrid__desktop__item--website mono m-0">{{ project.project.website }}</h4>
@@ -49,13 +49,14 @@
                                     <path d="M32.175 9H0L0 7H32.175L26.575 1.4L28 0L36 8L28 16L26.575 14.6L32.175 9Z" fill="#202020"/>
                                 </svg>
                             </div>
+                            {% if project.project.tag is not null %}<p class="projectGrid__project__tag">{{ project.project.tag }}</p>{% endif %}
                         </a>
                     {% endif %}
                 {% endfor %}
                 <h2 class="projectGrid__title mb-4 mt-6 mono">{{systemTranslations.projectsmaintained}}<span class="text-small mono"> // {% if countProjectImprovedMaintained <= 9 %}0{% endif %}{{countProjectImprovedMaintained}} Projects</span></h2>
                 {% for project in craft.entries.section('projects').all() %}
                     {% if project.project.projectType == 'improvedMaintained' %}
-                        <a href="{{project.url}}" class="projectGrid__desktop__item d-flex position-relative linkBigCursor">
+                        <a href="{{project.url}}" class="projectGrid__desktop__item {% if project.project.tag is not null %}projectGrid__project__tag--wrapper{% endif %} d-flex position-relative linkBigCursor">
                             <p class="artifact me-3">{{ project.projectNumber }}</p>
                             <div>
                                 <h4 class="projectGrid__desktop__item--website mono m-0">{{ project.project.website }}</h4>
@@ -66,6 +67,7 @@
                                     <path d="M32.175 9H0L0 7H32.175L26.575 1.4L28 0L36 8L28 16L26.575 14.6L32.175 9Z" fill="#202020"/>
                                 </svg>
                             </div>
+                            {% if project.project.tag is not null %}<p class="projectGrid__project__tag">{{ project.project.tag }}</p>{% endif %}
                         </a>
                     {% endif %}
                 {% endfor %}

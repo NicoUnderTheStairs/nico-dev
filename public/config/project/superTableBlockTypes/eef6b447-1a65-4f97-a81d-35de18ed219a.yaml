@@ -1,4 +1,4 @@
-changedFieldIndicator: 88028468
+changedFieldIndicator: 989029678
 field: ff043439-6dc6-4d85-ad23-1d430fd1d0ea # Project
 fieldLayouts:
   a7421637-2389-402d-a1a8-03d92b2d0bff:
@@ -6,6 +6,18 @@ fieldLayouts:
       -
         elementCondition: null
         elements:
+          -
+            elementCondition: null
+            fieldUid: ffac0529-8eb0-464d-8d79-934e03f12147 # Tag
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0e1e844e-2a5f-46a4-9471-e4cce127ecf2
+            userCondition: null
+            warning: null
+            width: 100
           -
             elementCondition: null
             fieldUid: 4b0c469d-a3d8-458d-94ec-a4d75e7d5113 # Project Type
@@ -662,6 +674,26 @@ fields:
     handle: visitMsg
     instructions: null
     name: 'Visit Disclaimer'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  ffac0529-8eb0-464d-8d79-934e03f12147: # Tag
+    columnSuffix: szlkysgy
+    contentColumnType: text
+    fieldGroup: null
+    handle: tag
+    instructions: null
+    name: Tag
     searchable: false
     settings:
       byteLimit: null

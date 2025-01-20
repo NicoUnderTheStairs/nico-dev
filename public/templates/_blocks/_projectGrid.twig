@@ -21,7 +21,7 @@
             {% for project in craft.entries.section('projects').all() %}
                 {% if project.project.projectType == 'developed' %}
                     <div class="projectGrid__project">
-                        <a href="{{ project.url }}" class="projectGrid__project__link">
+                        <a href="{{ project.url }}" class="projectGrid__project__link position-relative">
                             <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__dark{% else %}imageToggles__dark-unavilable{% endif %}">
                                 <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}" loading="lazy">
                             </div>
@@ -30,10 +30,11 @@
                                 <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}" loading="lazy">
                             </div>
 
-                            <div class="projectGrid__project__content">
+                            <div class="projectGrid__project__content {% if project.project.tag is not null %}projectGrid__project__tag--wrapper{% endif %}">
                                 <p class="artifact">{{ project.projectNumber }}</p>
                                 <h3 class="projectGrid__project__title mono">{{ project.project.website }}</h3>
                             </div>
+                            {% if project.project.tag is not null %}<p class="projectGrid__project__tag">{{ project.project.tag }}</p>{% endif %}
                         </a>
                     </div>
                 {% endif %}
@@ -46,7 +47,7 @@
             {% for project in craft.entries.section('projects').all() %}
                 {% if project.project.projectType == 'improvedMaintained' %}
                     <div class="projectGrid__project">
-                        <a href="{{ project.url }}" class="projectGrid__project__link">
+                        <a href="{{ project.url }}" class="projectGrid__project__link position-relative">
                             <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__dark{% else %}imageToggles__dark-unavilable{% endif %}">
                                 <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}" loading="lazy">
                             </div>
@@ -55,10 +56,11 @@
                                 <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}" loading="lazy">
                             </div>
 
-                            <div class="projectGrid__project__content">
+                            <div class="projectGrid__project__content {% if project.project.tag is not null %}projectGrid__project__tag--wrapper{% endif %}">
                                 <p class="artifact">{{ project.projectNumber }}</p>
                                 <h3 class="projectGrid__project__title mono">{{ project.project.website }}</h3>
                             </div>
+                            {% if project.project.tag is not null %}<p class="projectGrid__project__tag">{{ project.project.tag }}</p>{% endif %}
                         </a>
                     </div>
                 {% endif %}

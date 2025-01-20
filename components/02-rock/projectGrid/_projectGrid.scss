@@ -192,6 +192,29 @@
                 hyphens: auto;
             }
         }
+
+        &__tag {
+            padding: 1.2rem;
+            background: $black;
+            color: $white;
+            border-radius: 5rem;
+            position: absolute;
+            bottom: 0;
+            font-size: 1.6rem;
+            
+            @include lg-up {
+                margin-left: 4.2rem;
+            }
+            
+            &--wrapper {
+                padding-bottom: 6.5rem !important;
+                position: relative;
+                
+                @include lg-up {
+                    padding-bottom: 8.5rem !important;
+                }
+            }
+        }
     }
 }
 
