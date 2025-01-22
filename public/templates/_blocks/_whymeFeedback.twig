@@ -1,0 +1,93 @@
+{% set clientId = craft.app.request.get('id', NULL, true) %}
+{% set idInJson = false %}
+
+{% for whymeTable in entry.whymeTable %}
+    {% if whymeTable.companyId == clientId %}
+        {% set idInJson = true %}
+    {% endif %}
+{% endfor %}
+
+
+{% if idInJson %}
+<div class="whymefeedback mt-lg-6 pt-6">
+  <div class="col-12 col-lg-10 mx-auto">
+    <h2 class="col-12 col-lg-8 mx-auto mb-0 mt-0 mono whyme__title">{{block.titel}}</h2>
+    <div class="col-12 col-lg-8 mx-auto py-4">
+      {{ block.text }}
+    </div>
+
+    {% if craft.app.session.hasFlash('success') %}
+      <h2 class="contact__form__success">Vielen Dank für Ihr Feedback!</h2>
+    {% elseif craft.app.session.hasFlash('error') %}
+      <h2 class="contact__form__success">Das hat leider nicht geklappt, versuchen Sie es erneut!</h2>
+    {% endif %}
+
+    <div class="whymefeedback__feedbackbtn c-p linkBigCursor col-12 col-lg-6 mx-auto d-flex justify-content-between px-0 pb-1 pt-2 mb-6 {% if craft.app.session.hasFlash('success') %}d-none{% elseif craft.app.session.hasFlash('error') %}d-none{% endif %}">
+        <div class="d-flex align-items-center">Feedback geben<div class="ms-2 mt-0 text-small mono">// ca. 2min</div></div>
+        <div class="">
+            <svg width="24" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.175 9H0L0 7H32.175L26.575 1.4L28 0L36 8L28 16L26.575 14.6L32.175 9Z" fill="#202020"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="contact__form d-none mt-lg-6 col-12 col-lg-8 {% if craft.app.session.hasFlash('success') %}d-none{% elseif craft.app.session.hasFlash('error') %}d-none{% endif %}">
+        {% macro errorList(errors) %}
+            {% if errors %}
+                {{ ul(errors, {class: 'errors'}) }}
+            {% endif %}
+        {% endmacro %}
+
+        {% set submission = submission ?? null %}
+
+        <form method="post" action="" accept-charset="UTF-8" id="form">
+            {{ csrfInput() }}
+            {{ actionInput('contact-form/send') }}
+            {{ redirectInput('#form') }}
+            
+            <div class="contact__form__wrapper d-flex flex-wrap">
+                <input type="hidden" name="fromEmail" value="{{ 'nico@fortino.ch'|hash }}">
+                <input type="hidden" name="fromName" value="{{ 'Feedback - Bewerbung'|hash }}">
+                <input type="hidden" name="subject" value="{{ 'feedback-bewerbung'|hash }}">
+
+                {% for feedbackset in block.feedbackset.all() %}
+                    <div class="mb-4 mb-lg-6">
+                        <p class="text-strong">{{feedbackset.titel}}</p>
+
+                        {% for checkboxes in feedbackset.checkboxes %}
+                            {# checkbox #}
+                            <div class="contact__form__checkbox mt-3 d-flex flex-row justify-content-between align-items-center gap-2 c-p linkSmallCursor">
+                                <input type="checkbox" id="{{checkboxes.titel}}" name="message[Feedback][]" value="{{checkboxes.titel}}">
+                                <div class="contact__form__checkbox--checkbox c-p"></div>
+                                <div class="whymefeedback__checkmark contact__form__checkbox--checkmark position-relative c-p"></div>
+                                <label class="w-100 c-p" for="{{checkboxes.titel}}">{{checkboxes.titel}}</label>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+
+                <div class="contact__form__inputfield w-100 mt-3">
+                    {{ tag('textarea', {
+                        text: submission.message ?? '',
+                        id: block.message,
+                        name: 'message',
+                        rows: 10,
+                        cols: 10,
+                        placeholder: ' ',
+                        required: true,
+                    }) }}
+                    {{ submission ? _self.errorList(submission.getErrors('message')) }}
+                    <label for="{{block.textfield}}">{{block.textfield}}*</label>
+                </div>
+
+            </div>
+
+            <div class="contact__open w-100 d-flex justify-content-end mt-2">
+                <button type="submit" class="btn btn--default bg-transparent p-0 c-p">{{block.send}}</button>
+            </div>
+
+        </form>
+    </div>
+  </div>
+</div>
+{% endif %}

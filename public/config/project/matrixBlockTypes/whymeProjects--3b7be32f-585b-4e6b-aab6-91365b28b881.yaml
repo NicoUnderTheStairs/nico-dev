@@ -1,0 +1,123 @@
+field: 7d3a9466-67b6-48b0-aeb6-c83eec97c608 # Inhaltsblöcke
+fieldLayouts:
+  6088c2aa-ea56-438d-a30d-39bfc324ee7b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ae8c300f-4295-491c-9ee6-ba4fc520ecff # Titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 056a3df7-e237-4e23-8bdd-10aace4d984b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2fb531a6-ab83-4d7b-b4e2-81d5e2c53538 # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 44176fc5-a623-4eeb-92d0-05576950002e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8abc142f-873f-4a19-8a90-30e41602f4e2 # Projects
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 271ff12e-47c4-4ca3-9fa6-a5aae02548a2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b381618d-f411-42d2-8a5f-0aeff279110c
+        userCondition: null
+fields:
+  2fb531a6-ab83-4d7b-b4e2-81d5e2c53538: # Text
+    columnSuffix: vklfywld
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  8abc142f-873f-4a19-8a90-30e41602f4e2: # Projects
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: projects
+    instructions: null
+    name: Projects
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: null
+      minRelations: 1
+      selectionLabel: null
+      showSiteMenu: false
+      sources:
+        - 'section:1c5bd7ca-883b-4808-b311-7425ff5d9b00' # Projects
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  ae8c300f-4295-491c-9ee6-ba4fc520ecff: # Titel
+    columnSuffix: tmnalvoj
+    contentColumnType: text
+    fieldGroup: null
+    handle: titel
+    instructions: null
+    name: Titel
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: whymeProjects
+name: 'Whyme Projects'
+sortOrder: 8

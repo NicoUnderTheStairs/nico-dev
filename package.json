@@ -29,7 +29,7 @@
     "element-closest": "^3.0.2",
     "eslint-config-airbnb": "^19.0.4",
     "gh-pages": "^5.0.0",
-    "gsap": "file:../../../../Downloads/gsap-premium 2/npm-install-this/package",
+    "gsap": "npm:@gsap/shockingly@^3.12.7",
     "imagemin": "^8.0.1",
     "lazysizes": "^5.3.2",
     "locomotive-scroll": "^4.1.4",

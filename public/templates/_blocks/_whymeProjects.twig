@@ -1,0 +1,33 @@
+{% set systemTranslations = systemTranslations.systemTranslations %}
+
+<div class="projectGrid pt-6 mt-6">
+    <div class="projectGrid__inner">
+        <div class="projectGrid__wrapper d-flex justify-content-between justify-content-lg-center flex-direction-lg-column flex-wrap gap-0 gap-lg-4">
+            <div class="col-12 col-lg-10">
+              <h2 class="mb-4 mt-0 mono whyme__title">{{block.titel}}</h2>
+            </div>
+            {% for project in block.projects.all() %}
+              <div class="projectGrid__project col-12 col-lg-5">
+                  <a href="{{ project.url }}" class="projectGrid__project__link position-relative">
+                      <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__dark{% else %}imageToggles__dark-unavilable{% endif %}">
+                          <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}" loading="lazy">
+                      </div>
+
+                      <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %}">
+                          <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}" loading="lazy">
+                      </div>
+
+                      <div class="projectGrid__project__content {% if project.project.tag is not null %}projectGrid__project__tag--wrapper{% endif %}">
+                          <p class="artifact">0{{ loop.index }}</p>
+                          <h3 class="projectGrid__project__title mono">{{ project.project.website }}</h3>
+                      </div>
+                      {% if project.project.tag is not null %}<p class="projectGrid__project__tag">{{ project.project.tag }}</p>{% endif %}
+                  </a>
+              </div>
+            {% endfor %}
+        </div>
+        <div class="col-12 col-lg-10 mx-auto d-flex justify-content-end mt-2"> 
+          <a href="{{siteUrl}}" class="btn btn--default">Alle ansehen</a>
+        </div>
+    </div>
+</div>

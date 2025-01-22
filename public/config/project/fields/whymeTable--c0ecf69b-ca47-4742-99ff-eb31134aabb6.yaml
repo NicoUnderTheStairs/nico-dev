@@ -1,0 +1,44 @@
+columnSuffix: lxpqdimn
+contentColumnType: string
+fieldGroup: fe10ca1e-b9b0-4764-a8ce-9d11827b9828 # Common
+handle: whymeTable
+instructions: null
+name: 'Whyme Table'
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 808851640
+  columns:
+    __assoc__:
+      -
+        - 73c45582-f13a-4798-9369-3cbbd3cdf022 # Company ID
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2be97e32-03c7-4302-ac10-ead9b3bcff0d # Company
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 00a75be5-ae54-4ef7-9884-0769fc4b9ea0 # Compay Person Name
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_whymetable}}'
+  fieldLayout: table
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: null
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

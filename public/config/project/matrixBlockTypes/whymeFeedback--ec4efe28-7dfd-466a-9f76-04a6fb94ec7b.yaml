@@ -1,0 +1,184 @@
+field: 7d3a9466-67b6-48b0-aeb6-c83eec97c608 # Inhaltsblöcke
+fieldLayouts:
+  36b09562-aeb3-462a-83d6-e678323fcc76:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b1df1d43-c25c-48c7-b4f0-f15efae5be56 # Titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c25f49d1-6883-4770-8d4a-fe5e2c7fae52
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 275730ff-455d-4337-a450-e3d206580f0d # Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 75465f45-205e-4857-be79-bf8072846ab4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 70e71cb8-9ff8-49f7-935e-c5f6bc4a40ff # Feedbackset
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 20463b67-532a-43ec-bf23-18f6e570a8e5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 80f1914b-ac07-4f16-868c-7c0a467e9175 # Textfield
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dce933d5-1246-432c-b705-393f04de59d9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7d4fce12-e807-4d16-91ec-2d969dda882b # Send
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 014cbb80-a087-4a35-b3d6-5377cfcc3b6c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 36f3daf4-5793-445d-9e70-45bbb6806862
+        userCondition: null
+fields:
+  7d4fce12-e807-4d16-91ec-2d969dda882b: # Send
+    columnSuffix: emeyvfde
+    contentColumnType: text
+    fieldGroup: null
+    handle: send
+    instructions: null
+    name: Send
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  70e71cb8-9ff8-49f7-935e-c5f6bc4a40ff: # Feedbackset
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: feedbackset
+    instructions: null
+    name: Feedbackset
+    searchable: false
+    settings:
+      blockTypeFields: 0
+      changedFieldIndicator: 191934513
+      contentTable: '{{%stc_feedbackset}}'
+      fieldLayout: row
+      maxRows: null
+      minRows: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: null
+      staticField: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: verbb\supertable\fields\SuperTableField
+  80f1914b-ac07-4f16-868c-7c0a467e9175: # Textfield
+    columnSuffix: qoyenrdi
+    contentColumnType: text
+    fieldGroup: null
+    handle: textfield
+    instructions: null
+    name: Textfield
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  275730ff-455d-4337-a450-e3d206580f0d: # Text
+    columnSuffix: zgnijddh
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: null
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  b1df1d43-c25c-48c7-b4f0-f15efae5be56: # Titel
+    columnSuffix: ccwojway
+    contentColumnType: text
+    fieldGroup: null
+    handle: titel
+    instructions: null
+    name: Titel
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: whymeFeedback
+name: 'Whyme Feedback'
+sortOrder: 9

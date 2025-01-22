@@ -59,7 +59,7 @@ p {
   line-height: 135%;
   margin-top: 0;
   font-family: $font-family-sans-serif;
-  text-align: justify;
+  // text-align: justify;
 
   & .section-title {
     font-size: 2.1rem;
@@ -83,12 +83,12 @@ a {
     font-weight: 400;
     font-size: $lead-font-size;
     line-height: 135%;
-    text-align: justify;
+    // text-align: justify;
 
     & p {
       font-family: $font-family-sans-serif;
       font-size: $lead-font-size;
-      text-align: justify;
+      // text-align: justify;
     }
   }
 

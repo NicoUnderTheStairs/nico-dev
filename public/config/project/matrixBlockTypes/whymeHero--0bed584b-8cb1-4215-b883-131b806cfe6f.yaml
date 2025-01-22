@@ -1,0 +1,54 @@
+field: 7d3a9466-67b6-48b0-aeb6-c83eec97c608 # Inhaltsblöcke
+fieldLayouts:
+  3fe45fb6-a29b-4196-8214-1adb1f007e84:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: e263b7b0-7549-4a8d-b333-4684bff8c9e4 # Lead
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 096740de-bd91-4648-9a7f-98ecf66db5a7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: afd62d25-4cab-4dc9-a99b-ca275096835a
+        userCondition: null
+fields:
+  e263b7b0-7549-4a8d-b333-4684bff8c9e4: # Lead
+    columnSuffix: dsfwgeda
+    contentColumnType: text
+    fieldGroup: null
+    handle: lead
+    instructions: null
+    name: Lead
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+handle: whymeHero
+name: 'Whyme Hero'
+sortOrder: 6

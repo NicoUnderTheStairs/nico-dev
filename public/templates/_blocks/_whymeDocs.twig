@@ -1,0 +1,82 @@
+{% set clientId = craft.app.request.get('id', NULL, true) %}
+{% set clientId = craft.app.request.get('id', NULL, true) %}
+{% set idInJson = false %}
+
+{% for whymeTable in entry.whymeTable %}
+    {% if whymeTable.companyId == clientId %}
+        {% set idInJson = true %}
+    {% endif %}
+{% endfor %}
+
+
+{% if idInJson %}
+  <div class="whymedocs mt-xl-6 pt-6 js-whyme">
+    <div class="row flex-column col-12 col-lg-10 mx-auto">
+      <h2 class="mb-0 mt-0 mono whyme__title col-12 col-lg-8 mx-auto">{{block.titel}}</h2>
+      <div>
+        <div class="col-12 col-xl-8 py-4 mx-auto">
+          {{ block.text }}
+        </div>
+      </div>
+
+      <div class="whymedocs__btns__wrapper col-12 col-lg-6 mx-auto d-flex align-items-center p-0">
+        <div class="whymedocs__btns whymedocs__btns--1 text-strong me-2 me-xl-0 c-p">
+          an E-Mail senden
+        </div>
+        <div class="whymedocs__btns--active whymedocs__btns--active--1"></div>
+        <div class="whymedocs__btns whymedocs__btns--2 text-strong c-p">
+          Download
+        </div>
+      </div>
+
+      <div class="whymedocs__email__wrapper whymedocs__content--active col-12 col-xl-6 mx-auto">
+        {% macro errorList(errors) %}
+            {% if errors %}
+                {{ ul(errors, {class: 'errors'}) }}
+            {% endif %}
+        {% endmacro %}
+
+        {% set submission = submission ?? null %}
+
+        <form method="post" action="" accept-charset="UTF-8" id="form">
+          {{ csrfInput() }}
+          {{ actionInput('contact-form/send') }}
+          {{ redirectInput('#form') }}
+
+          <input type="hidden" name="fromName" value="{{ 'Nico Fortino Docs'|hash }}">
+          <input type="hidden" name="subject" value="{{ 'Nico Fortino Docs'|hash }}">
+
+          <div class="contact__form__inputfield mt-3 w-100">
+            {{ input('email', 'fromEmail', submission.fromEmail ?? '', {
+              id: 'e-mail',
+              autocomplete: 'name',
+              placeholder: ' ',
+              required: true,
+              autocomplete: 'email',
+            }) }}
+            {{ submission ? _self.errorList(submission.getErrors('fromEmail')) }}
+            <label for="e-mail">e-mail</label>
+          </div>
+
+          <div class="contact__open w-100 d-flex justify-content-end mt-2">
+            <button type="submit" class="btn btn--default bg-transparent p-0 c-p">{{block.send}}</button>
+          </div>
+
+        </form>
+      </div>
+
+      {% set bytes = block.docsDownload.one().size %}
+      {% set kiloBytes = (bytes / 1024)|round(2) %}
+      {% set megaBytes = (kiloBytes / 1024)|round(2) %}
+      {% set gigaBytes = (megaBytes / 1024)|round(2) %}
+      <a class="whymedocs__download__wrapper whymedocs__content--deactive col-12 col-xl-6 mx-auto d-flex justify-content-between px-0 pb-1 pt-2 mt-4 c-p linkBigCursor" download href="{{block.docsDownload.one().url}}">
+        <div class="d-flex align-items-center">Bewerbungsunterlagen.zip<div class="ms-2 mt-0 text-small mono">// {{gigaBytes}} GB</div></div>
+        <div class="">
+          <svg width="16" height="18" viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 18V16H16V18H0ZM8 14L3 9L4.4 7.6L7 10.2V0H9V10.2L11.6 7.6L13 9L8 14Z"/>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </div>
+{% endif %}

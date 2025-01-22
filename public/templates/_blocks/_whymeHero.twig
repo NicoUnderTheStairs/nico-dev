@@ -1,0 +1,52 @@
+{% set systemTranslations = systemTranslations.systemTranslations %}
+{% set clientId = craft.app.request.get('id', NULL, true) %}
+{% set idInJson = false %}
+{% set companyInfo = '' %}
+{% set currentTime = 'now'|date('H') %}
+
+{% for whymeTable in entry.whymeTable %}
+    {% if whymeTable.companyId == clientId %}
+        {% set idInJson = true %}
+        {% set companyInfo = whymeTable %}
+    {% endif %}
+{% endfor %}
+
+
+<div class="hero whymehero col-12 col-xl-10 mx-auto">
+    <div class="hero__inner mb-3">
+        {% if companyInfo.compayPersonName is not null %}
+            <h1 class="hero__title whymehero__title whymehero__title--customized dynamic-text mono flex-column">
+                <span class="d-flex flex-column">
+                    {% if currentTime <= '11' %}
+                        <span>Guten Morgen,</span>
+                    {% elseif currentTime <= '15' %}
+                        <span>Guten Tag,</span>
+                    {% elseif currentTime <= '17' %}
+                        <span>Guten Nachmittag,</span>
+                    {% elseif currentTime <= '23' %}
+                        <span>Guten Abend,</span>
+                    {% endif %}
+                </span>
+                {{companyInfo.compayPersonName}}
+            </h1>
+        {% else %}
+            <h1 class="hero__title whymehero__title mono">
+                <span class="d-flex flex-column">
+                    <span>Hi,</span>
+                    <span>{{systemTranslations.hiIAm}}</span>
+                </span>
+                Nico
+            </h1>
+        {% endif %}
+
+        <div class="hero__lead text-lead py-4 pb-0">
+            <div class="hero__lead__wrapper whymehero__lead__wrapper">
+                {% if companyInfo.compayPersonName is not null %}
+                    <p>{{ block.lead | replace({'Ihre Firma': companyInfo.company, '<p>': '', '</p>': ''}) }}</p>
+                {% else %}
+                    {{ block.lead }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

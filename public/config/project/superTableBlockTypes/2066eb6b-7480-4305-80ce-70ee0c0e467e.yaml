@@ -1,0 +1,97 @@
+changedFieldIndicator: 989838758
+field: 70e71cb8-9ff8-49f7-935e-c5f6bc4a40ff # Feedbackset
+fieldLayouts:
+  84628fc1-bbc9-4603-adba-16489ddc4ab7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d0d8c2a6-f2cb-47de-bcd5-072c3879b5cf # Titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 00aa11c3-4843-47b1-b455-73853b0740d8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 95effa97-a97a-46fa-9d89-34600e0e7896 # Checkboxes
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eaa3c012-72bd-4b7a-8c39-f329949cabf5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0d97f7cc-82e0-4c0c-b8f4-d63ccb0a24cd
+        userCondition: null
+fields:
+  95effa97-a97a-46fa-9d89-34600e0e7896: # Checkboxes
+    columnSuffix: qpajtbxx
+    contentColumnType: text
+    fieldGroup: null
+    handle: checkboxes
+    instructions: null
+    name: Checkboxes
+    searchable: false
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Titel
+                -
+                  - handle
+                  - titel
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+      maxRows: null
+      minRows: 1
+      staticRows: false
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Table
+  d0d8c2a6-f2cb-47de-bcd5-072c3879b5cf: # Titel
+    columnSuffix: tbuqsmpv
+    contentColumnType: text
+    fieldGroup: null
+    handle: titel
+    instructions: null
+    name: Titel
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
