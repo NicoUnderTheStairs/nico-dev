@@ -1,10 +1,11 @@
 {% set clientId = craft.app.request.get('id', NULL, true) %}
-{% set clientId = craft.app.request.get('id', NULL, true) %}
 {% set idInJson = false %}
+{% set companyInfo = '' %}
 
 {% for whymeTable in entry.whymeTable %}
     {% if whymeTable.companyId == clientId %}
         {% set idInJson = true %}
+        {% set companyInfo = whymeTable %}
     {% endif %}
 {% endfor %}
 
@@ -65,11 +66,11 @@
         </form>
       </div>
 
-      {% set bytes = block.docsDownload.one().size %}
+      {% set bytes = companyInfo.companyDocuments.one().size %}
       {% set kiloBytes = (bytes / 1024)|round(2) %}
       {% set megaBytes = (kiloBytes / 1024)|round(2) %}
       {% set gigaBytes = (megaBytes / 1024)|round(2) %}
-      <a class="whymedocs__download__wrapper whymedocs__content--deactive col-12 col-xl-6 mx-auto d-flex justify-content-between px-0 pb-1 pt-2 mt-4 c-p linkBigCursor" download href="{{block.docsDownload.one().url}}">
+      <a class="whymedocs__download__wrapper whymedocs__content--deactive col-12 col-xl-6 mx-auto d-flex justify-content-between px-0 pb-1 pt-2 mt-4 c-p linkBigCursor" download href="{{companyInfo.companyDocuments.one().url}}">
         <div class="d-flex align-items-center">Bewerbungsunterlagen.zip<div class="ms-2 mt-0 text-small mono">// {{gigaBytes}} GB</div></div>
         <div class="">
           <svg width="16" height="18" viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg">

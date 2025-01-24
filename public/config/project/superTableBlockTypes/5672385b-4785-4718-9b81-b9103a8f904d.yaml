@@ -1,4 +1,4 @@
-changedFieldIndicator: 1301023239
+changedFieldIndicator: 44943254
 field: c0ecf69b-ca47-4742-99ff-eb31134aabb6 # Whyme Table
 fieldLayouts:
   67a8b75c-021d-40e6-8481-443ff563f950:
@@ -39,6 +39,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 4c5246f3-27d6-4522-80f8-1ced67cbc33a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 11622e7c-3802-44c4-a67d-53c2ae3641b3 # Company Documents
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2df4f022-bd86-42ca-ae8b-5ff3cc56fcf4
             userCondition: null
             warning: null
             width: 100
@@ -106,3 +118,40 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
+  11622e7c-3802-44c4-a67d-53c2ae3641b3: # Company Documents
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: companyDocuments
+    instructions: null
+    name: 'Company Documents'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds: null
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:5acbfce0-0c16-404d-bdf8-1b7185ed660a' # Uploads
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: false
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:5acbfce0-0c16-404d-bdf8-1b7185ed660a' # Uploads
+      restrictedLocationSubpath: null
+      selectionLabel: null
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets

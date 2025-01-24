@@ -99,8 +99,24 @@ fields:
     searchable: false
     settings:
       blockTypeFields: 0
-      changedFieldIndicator: 191934513
-      contentTable: '{{%stc_feedbackset}}'
+      changedFieldIndicator: 65058478
+      columns:
+        __assoc__:
+          -
+            - d0d8c2a6-f2cb-47de-bcd5-072c3879b5cf # Titel
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 95effa97-a97a-46fa-9d89-34600e0e7896 # Checkboxes
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_9_feedbackset}}'
       fieldLayout: row
       maxRows: null
       minRows: null
@@ -109,7 +125,7 @@ fields:
       selectionLabel: null
       staticField: null
     translationKeyFormat: null
-    translationMethod: none
+    translationMethod: site
     type: verbb\supertable\fields\SuperTableField
   80f1914b-ac07-4f16-868c-7c0a467e9175: # Textfield
     columnSuffix: qoyenrdi
