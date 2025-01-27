@@ -1,0 +1,92 @@
+{% header "X-Robots-Tag: none" %}
+
+<div class="hero whymehero col-12 col-xl-10 mx-auto">
+    <div class="hero__inner mb-3">
+        <h1 class="hero__title whymehero__title mono">
+            <span class="d-flex flex-column">
+                <span>Hi,</span>
+                <span>I am</span>
+            </span>
+            Nico
+        </h1>
+
+        <div class="hero__lead text-lead py-4 pb-0">
+            <div class="hero__lead__wrapper whymehero__lead__wrapper pt-5">
+                {{ entry.vCard.lead }}
+            </div>
+        </div>
+    </div>
+</div>
+{# {% set vcard = craft.app.request.get('id', NULL, true) %} #}
+
+
+{# {% if clientId is not null %} #}
+  <div class="whymedocs mt-xl-6 pt-6 js-whyme">
+    <div class="row flex-column col-12 col-lg-10 mx-auto p-0">
+      <h2 class="mb-0 mt-0 mono whyme__title col-12 col-lg-8 mx-auto p-0">{{entry.vCard.titel2}}</h2>
+      <div>
+        <div class="col-12 col-xl-8 py-4 mx-auto">
+          {{ entry.vCard.lead2 }}
+        </div>
+      </div>
+
+      <div class="whymedocs__btns__wrapper col-12 col-lg-6 mx-auto d-flex align-items-center p-0">
+        <div class="whymedocs__btns whymedocs__btns--1 text-strong me-2 me-xl-0 c-p">
+          download contact
+        </div>
+        <div class="whymedocs__btns--active whymedocs__btns--active--1"></div>
+        <div class="whymedocs__btns whymedocs__btns--2 text-strong c-p">
+          e-mail me
+        </div>
+      </div>
+
+      <a class="whymedocs__download__wrapper whymedocs__content--active col-12 col-xl-6 mx-auto d-flex justify-content-between px-0 pb-1 pt-2 mt-1 c-p linkBigCursor" download href="{{entry.vCard.vcardFile}}">
+        <div class="d-flex align-items-center">Nico Fortino</div>
+        <div class="">
+          <svg width="16" height="18" viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 18V16H16V18H0ZM8 14L3 9L4.4 7.6L7 10.2V0H9V10.2L11.6 7.6L13 9L8 14Z"/>
+          </svg>
+        </div>
+      </a>
+
+      <div class="whymedocs__email__wrapper whymedocs__content--deactive h-100 col-12 col-xl-6 mx-auto p-0">
+        <a class="c-p linkBigCursor" href="mailto:nico@fortino.ch">
+          <h2 class="d-flex align-items-center m-0">nico@fortino.ch</h2>
+        </a>
+      </div>
+
+    </div>
+  </div>
+{# {% endif %} #}
+
+<div class="projectGrid mt-6 pt-xl-6">
+    <div class="projectGrid__inner">
+        <div class="projectGrid__wrapper d-flex justify-content-between justify-content-lg-center flex-direction-lg-column flex-wrap gap-0 gap-lg-4">
+            <div class="col-12 col-lg-10">
+              <h2 class="mb-4 mt-0 mono whyme__title">{{entry.vCard.titel3}}</h2>
+            </div>
+            {% for project in entry.vCard.projects.all() %}
+              <div class="projectGrid__project col-12 col-lg-5">
+                  <a href="{{ project.url }}" class="projectGrid__project__link position-relative">
+                      <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__dark{% else %}imageToggles__dark-unavilable{% endif %}">
+                          <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}" loading="lazy">
+                      </div>
+
+                      <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %}">
+                          <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}" loading="lazy">
+                      </div>
+
+                      <div class="projectGrid__project__content {% if project.project.tag is not null %}projectGrid__project__tag--wrapper{% endif %}">
+                          <p class="artifact">0{{ loop.index }}</p>
+                          <h3 class="projectGrid__project__title mono">{{ project.project.website }}</h3>
+                      </div>
+                      {% if project.project.tag is not null %}<p class="projectGrid__project__tag">{{ project.project.tag }}</p>{% endif %}
+                  </a>
+              </div>
+            {% endfor %}
+        </div>
+        <div class="col-12 col-lg-10 mx-auto d-flex justify-content-end mt-2"> 
+          <a href="{{siteUrl}}" class="btn btn--default">all projects</a>
+        </div>
+    </div>
+</div>

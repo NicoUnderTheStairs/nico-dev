@@ -41,7 +41,7 @@
         {% endif %}
 
         <div class="hero__lead text-lead py-4 pb-0">
-            <div class="hero__lead__wrapper whymehero__lead__wrapper">
+            <div class="hero__lead__wrapper whymehero__lead__wrapper pt-5">
                 {% if companyInfo.compayPersonName is not null %}
                     <p>{{ block.lead | replace({'Ihre Firma': companyInfo.company, '<p>': '', '</p>': ''}) }}</p>
                 {% else %}

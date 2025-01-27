@@ -6961,6 +6961,7 @@ input, label {
   .whymehero__title {
     top: 15rem;
     left: -13rem;
+    width: 43rem;
   }
 }
 .whymehero__title::after {

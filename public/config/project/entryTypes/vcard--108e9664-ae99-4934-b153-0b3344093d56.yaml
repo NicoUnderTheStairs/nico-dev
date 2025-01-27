@@ -1,0 +1,59 @@
+fieldLayouts:
+  443890fe-d8d5-4bef-9e54-1259784ea6cd:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d85b7425-dd1c-4238-83a4-2da9d8aee172
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e91ba2f0-fcb5-4faa-9793-80ba7701b1b6 # V-Card
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd31d0ae-71d5-48a4-b650-c6eebf647f47
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8998b7c0-4c5d-437f-a319-f76935309cd2
+        userCondition: null
+handle: vcard
+hasTitleField: true
+name: vCard
+section: b3f04e87-1f2e-4af8-b26a-34b9f4741c01 # vCard
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,65 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: fe10ca1e-b9b0-4764-a8ce-9d11827b9828 # Common
+handle: vCard
+instructions: null
+name: V-Card
+searchable: false
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 261647945
+  columns:
+    __assoc__:
+      -
+        - b1dd71f9-807b-443d-b3c9-27145f15e080 # VCard File
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 84bc30dc-f84f-4aa7-9c00-163514f8ce89 # Lead
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2ee54c87-988b-4546-bd69-419027d96dc2 # Titel2
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2c1a0ce7-6b1a-4bfa-b04e-341f5b28fa78 # Lead2
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 65675aae-84e7-458d-9bd3-b6685beb2d36 # Titel 3
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - a6f26db1-a0ed-43d7-8d19-e47690efa35f # Projects
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_vcard}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

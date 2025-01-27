@@ -1,0 +1,225 @@
+changedFieldIndicator: 2091078352
+field: e91ba2f0-fcb5-4faa-9793-80ba7701b1b6 # V-Card
+fieldLayouts:
+  79b98893-61ae-4548-bb15-a1060e2abe73:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b1dd71f9-807b-443d-b3c9-27145f15e080 # VCard File
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1b0b8a9e-1a85-4f26-b2b9-e4e9fb429a28
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 84bc30dc-f84f-4aa7-9c00-163514f8ce89 # Lead
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c5492290-1d93-4e97-bb48-db503043ee06
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2ee54c87-988b-4546-bd69-419027d96dc2 # Titel2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6e0d8481-2b84-4ae0-be16-9626d18fcc2a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2c1a0ce7-6b1a-4bfa-b04e-341f5b28fa78 # Lead2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0ef97a8a-e421-4843-8f3c-8f151b804004
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 65675aae-84e7-458d-9bd3-b6685beb2d36 # Titel 3
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c7e2bcc-8a0b-41b4-98d4-1aeeba22d5f0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a6f26db1-a0ed-43d7-8d19-e47690efa35f # Projects
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fb506078-db1b-4f40-9da5-bfa3741cc25a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b13a713d-2b2f-410f-97e5-587aed589268
+        userCondition: null
+fields:
+  2c1a0ce7-6b1a-4bfa-b04e-341f5b28fa78: # Lead2
+    columnSuffix: qigiyvzz
+    contentColumnType: text
+    fieldGroup: null
+    handle: lead2
+    instructions: null
+    name: Lead2
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  2ee54c87-988b-4546-bd69-419027d96dc2: # Titel2
+    columnSuffix: cugodzvb
+    contentColumnType: text
+    fieldGroup: null
+    handle: titel2
+    instructions: null
+    name: Titel2
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  84bc30dc-f84f-4aa7-9c00-163514f8ce89: # Lead
+    columnSuffix: naukvdce
+    contentColumnType: text
+    fieldGroup: null
+    handle: lead
+    instructions: null
+    name: Lead
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  65675aae-84e7-458d-9bd3-b6685beb2d36: # Titel 3
+    columnSuffix: avnxyozp
+    contentColumnType: text
+    fieldGroup: null
+    handle: titel3
+    instructions: null
+    name: 'Titel 3'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a6f26db1-a0ed-43d7-8d19-e47690efa35f: # Projects
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: projects
+    instructions: null
+    name: Projects
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 2
+      minRelations: 2
+      selectionLabel: null
+      showSiteMenu: false
+      sources:
+        - 'section:1c5bd7ca-883b-4808-b311-7425ff5d9b00' # Projects
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  b1dd71f9-807b-443d-b3c9-27145f15e080: # VCard File
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: vcardFile
+    instructions: .vcf
+    name: 'VCard File'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

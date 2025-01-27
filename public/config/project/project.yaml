@@ -1,4 +1,4 @@
-dateModified: 1737629575
+dateModified: 1737992433
 elementSources:
   craft\elements\Entry:
     -
@@ -64,8 +64,10 @@ meta:
     2a4e471b-0a46-4344-91b4-8f8ea1f2d816: Message # Message
     2ad51318-063a-4905-a994-0bc1fb82d356: 'Public Schema' # Public Schema
     2be97e32-03c7-4302-ac10-ead9b3bcff0d: Company # Company
+    2c1a0ce7-6b1a-4bfa-b04e-341f5b28fa78: Lead2 # Lead2
     2c2e56d1-e9c7-44fd-ab6a-3d2fe9755ac9: Success # Success
     2c5af258-38c5-4f55-a53f-51bfd3e8c429: USPS # USPS
+    2ee54c87-988b-4546-bd69-419027d96dc2: Titel2 # Titel2
     2fb531a6-ab83-4d7b-b4e2-81d5e2c53538: Text # Text
     3b7be32f-585b-4e6b-aab6-91365b28b881: 'Whyme Projects' # Whyme Projects
     3d5edf3c-eda8-498e-ac75-94245e775112: Footer # Footer
@@ -105,9 +107,11 @@ meta:
     80a1b328-51fc-4279-b100-81fa2a22fb1c: Company # Company
     80a5d7e1-bfd1-4615-bbb3-8b7b66687b39: Titel # Titel
     80f1914b-ac07-4f16-868c-7c0a467e9175: Textfield # Textfield
+    84bc30dc-f84f-4aa7-9c00-163514f8ce89: Lead # Lead
     86c14da8-48a5-4bc6-b2ba-be14d39644ea: 'More Button' # More Button
     88b62b4d-d59b-44dd-a2ce-01633ea93cb9: Socials # Socials
     95effa97-a97a-46fa-9d89-34600e0e7896: Checkboxes # Checkboxes
+    108e9664-ae99-4934-b153-0b3344093d56: vCard # vCard
     128f1efd-9e3e-480d-8af3-53ec285156b1: Dataprotection # Dataprotection
     144bff5e-94b1-4971-a645-14a75b6c17ac: Slogan # Slogan
     218d8979-17f4-4679-b012-92e6ef852553: Memes # Memes
@@ -117,6 +121,7 @@ meta:
     6819ac29-167a-4d1e-960c-4e35b9e29e2c: Website # Website
     11622e7c-3802-44c4-a67d-53c2ae3641b3: 'Company Documents' # Company Documents
     43177c04-ef38-4ad1-9145-e7f6846de1ad: Textblock # Textblock
+    65675aae-84e7-458d-9bd3-b6685beb2d36: 'Titel 3' # Titel 3
     0066189a-4042-4e22-bfd6-6886d33fb469: 'Key Details' # Key Details
     79561ee7-69e1-4376-9ff6-845290991754: Error # Error
     96634e98-38ff-4af4-be4d-a8239d1aed6b: Accesability # Accesability
@@ -128,9 +133,12 @@ meta:
     24595093-d773-46cb-8e2d-94fa3047e696: Name # Name
     78334100-b3bd-4b9f-aa08-b3b24f027447: 'More Projects' # More Projects
     87278682-c4ad-4783-9262-b4ad2533f76b: Header # Header
+    a6f26db1-a0ed-43d7-8d19-e47690efa35f: Projects # Projects
     a3863cb8-ba1c-44f0-90bd-3df22d44535a: 'Not Found' # Not Found
     ae8c300f-4295-491c-9ee6-ba4fc520ecff: Titel # Titel
+    b1dd71f9-807b-443d-b3c9-27145f15e080: 'VCard File' # VCard File
     b1df1d43-c25c-48c7-b4f0-f15efae5be56: Titel # Titel
+    b3f04e87-1f2e-4af8-b26a-34b9f4741c01: vCard # vCard
     bb1c7b43-4c8a-4e94-aad9-aec8f4c1a9e1: Keywords # Keywords
     bc2e72bc-09fb-4792-90eb-95db2a0f0d15: Subject # Subject
     c0ecf69b-ca47-4742-99ff-eb31134aabb6: 'Whyme Table' # Whyme Table
@@ -151,6 +159,7 @@ meta:
     e3af7e87-51b6-40d5-abc7-360c475923ee: 'Visit Project' # Visit Project
     e3e3947d-eb8b-4c62-8c1d-923a56951ef1: Share # Share
     e8fcf4aa-1cdc-49ad-8048-46bed34d2778: Website # Website
+    e91ba2f0-fcb5-4faa-9793-80ba7701b1b6: V-Card # V-Card
     e94a5430-0995-4134-9a2a-6f5a93e071a8: 'Github Repo' # Github Repo
     e263b7b0-7549-4a8d-b333-4684bff8c9e4: Lead # Lead
     e487c058-76a1-41cc-af91-743b411e146b: Text # Text

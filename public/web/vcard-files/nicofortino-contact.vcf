@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Fortino;Nico;;;
+FN:Nico Fortino
+ORG:Switzerland
+TITLE:Developer
+TEL;TYPE=MOBILE,VOICE:+41796167045
+EMAIL;TYPE=PREF,INTERNET:nico@fortino.ch
+URL:https://nicofortino.ch
+END:VCARD
