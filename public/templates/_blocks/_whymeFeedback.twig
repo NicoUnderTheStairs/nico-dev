@@ -7,22 +7,15 @@
     {% endif %}
 {% endfor %}
 
-
-{% if idInJson %}
-<div class="whymefeedback mt-lg-6 pt-6">
-  <div class="col-12 col-lg-10 mx-auto">
-    <h2 class="col-12 col-lg-8 mx-auto mb-0 mt-0 mono whyme__title">{{block.titel}}</h2>
-    <div class="col-12 col-lg-8 mx-auto py-4">
+{% if idInJson or entry.slug == 'negative-feedback' %}
+<div class="whymefeedback mt-lg-6 pt-6 js-whyme" id="feedback">
+  <div class="col-12 col-lg-10 mx-auto px-0">
+    <h2 class="col-12 col-lg-8 mx-auto mb-0 mt-0 mono whyme__title px-0">{{block.titel}}</h2>
+    <div class="col-12 col-lg-8 mx-auto py-4 px-0">
       {{ block.text }}
     </div>
 
-    {% if craft.app.session.hasFlash('success') %}
-      <h2 class="contact__form__success">Vielen Dank für Ihr Feedback!</h2>
-    {% elseif craft.app.session.hasFlash('error') %}
-      <h2 class="contact__form__success">Das hat leider nicht geklappt, versuchen Sie es erneut!</h2>
-    {% endif %}
-
-    <div class="whymefeedback__feedbackbtn c-p linkBigCursor col-12 col-lg-6 mx-auto d-flex justify-content-between px-0 pb-1 pt-2 mb-6 {% if craft.app.session.hasFlash('success') %}d-none{% elseif craft.app.session.hasFlash('error') %}d-none{% endif %}">
+    <div class="whymefeedback__feedbackbtn c-p linkBigCursor col-12 col-lg-8 mx-auto d-flex justify-content-between px-0 pb-1 pt-2 mb-6">
         <div class="d-flex align-items-center">Feedback geben<div class="ms-2 mt-0 text-small mono">// ca. 2min</div></div>
         <div class="">
             <svg width="24" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +24,7 @@
         </div>
     </div>
 
-    <div class="contact__form d-none mt-lg-6 col-12 col-lg-8 {% if craft.app.session.hasFlash('success') %}d-none{% elseif craft.app.session.hasFlash('error') %}d-none{% endif %}">
+    <div class="contact__form d-none mt-lg-6 col-12 col-lg-8" id="feedbackform">
         {% macro errorList(errors) %}
             {% if errors %}
                 {{ ul(errors, {class: 'errors'}) }}
@@ -40,24 +33,29 @@
 
         {% set submission = submission ?? null %}
 
-        <form method="post" action="" accept-charset="UTF-8" id="form">
+
+        <form method="post" action="" accept-charset="UTF-8" id="feedbackform">
             {{ csrfInput() }}
             {{ actionInput('contact-form/send') }}
-            {{ redirectInput('#form') }}
-            
-            <div class="contact__form__wrapper d-flex flex-wrap">
-                <input type="hidden" name="fromEmail" value="{{ 'nico@fortino.ch'|hash }}">
-                <input type="hidden" name="fromName" value="{{ 'Feedback - Bewerbung'|hash }}">
-                <input type="hidden" name="subject" value="{{ 'feedback-bewerbung'|hash }}">
+            {{ redirectInput(block.successpage.one().url) }}
 
+            {{ craft.contactFormExtensions.recaptcha | raw }}
+            
+            <input type="hidden" name="message[disableConfirmation]" value="true">
+
+            <input type="hidden" name="message[formName]" value="Feedback">
+            <input class="d-none" type="text" name="subject" autocomplete="name" value="Feedback">
+
+            <input type="email" id="e-mail" class="d-none" name="fromEmail" value="noreply@nicofortino.ch">
+    
+            <div class="contact__form__wrapper d-flex flex-wrap">
                 {% for feedbackset in block.feedbackset.all() %}
                     <div class="mb-4 mb-lg-6">
                         <p class="text-strong">{{feedbackset.titel}}</p>
 
                         {% for checkboxes in feedbackset.checkboxes %}
-                            {# checkbox #}
                             <div class="contact__form__checkbox mt-3 d-flex flex-row justify-content-between align-items-center gap-2 c-p linkSmallCursor">
-                                <input type="checkbox" id="{{checkboxes.titel}}" name="message[Feedback][]" value="{{checkboxes.titel}}">
+                                <input type="checkbox" id="{{checkboxes.titel}}" name="message[{{feedbackset.titel}}][]" value="{{loop.index}}">
                                 <div class="contact__form__checkbox--checkbox c-p"></div>
                                 <div class="whymefeedback__checkmark contact__form__checkbox--checkmark position-relative c-p"></div>
                                 <label class="w-100 c-p" for="{{checkboxes.titel}}">{{checkboxes.titel}}</label>
@@ -67,24 +65,16 @@
                 {% endfor %}
 
                 <div class="contact__form__inputfield w-100 mt-3">
-                    {{ tag('textarea', {
-                        text: submission.message ?? '',
-                        id: block.message,
-                        name: 'message',
-                        rows: 10,
-                        cols: 10,
-                        placeholder: ' ',
-                        required: true,
-                    }) }}
-                    {{ submission ? _self.errorList(submission.getErrors('message')) }}
-                    <label for="{{block.textfield}}">{{block.textfield}}*</label>
+                    <textarea name="message[body]" rows="10" cols="10" placeholder=" "></textarea>
+                    <label for="{{block.textfield}}">{{block.textfield}}</label>
                 </div>
 
             </div>
 
-            <div class="contact__open w-100 d-flex justify-content-end mt-2">
-                <button type="submit" class="btn btn--default bg-transparent p-0 c-p">{{block.send}}</button>
-            </div>
+          <div class="contact__open w-100 d-flex justify-content-between mt-4">
+              <p class="text-small my-2">Geschützt durch <a class="text-small text-decoration" href="https://policies.google.com/privacy?hl=de-CH">reCAPTCHA</a></p>
+              <button type="submit" class="btn btn--default bg-transparent p-0 c-p">{{block.send}}</button>
+          </div>
 
         </form>
     </div>

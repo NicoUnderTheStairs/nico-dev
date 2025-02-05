@@ -107,9 +107,13 @@ a {
     }
   }
 
+  &-decoration {
+    text-decoration: underline;
+  }
+
   &-small {
     font-weight: 300;
-    font-size: 1.44rem;
+    font-size: 1.44rem !important;
     line-height: 135%;
     margin-bottom: 0;
     margin-top: 0.4rem;

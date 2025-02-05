@@ -41,10 +41,46 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 31e077af-18ee-4383-957c-7a37e0f27e19 # Successpage
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f7d50623-b846-4acc-9ccb-3001f5c63e89
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 3d8a1d1b-92f9-4fdf-94e5-b570de06f2aa
         userCondition: null
 fields:
+  31e077af-18ee-4383-957c-7a37e0f27e19: # Successpage
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: successpage
+    instructions: null
+    name: Successpage
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionLabel: null
+      showSiteMenu: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
   80a5d7e1-bfd1-4615-bbb3-8b7b66687b39: # Titel
     columnSuffix: wcnqbbax
     contentColumnType: text

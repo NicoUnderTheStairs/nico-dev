@@ -13,14 +13,12 @@
 {% if idInJson %}
   <div class="whymedocs mt-xl-6 pt-6 js-whyme">
     <div class="row flex-column col-12 col-lg-10 mx-auto">
-      <h2 class="mb-0 mt-0 mono whyme__title col-12 col-lg-8 mx-auto">{{block.titel}}</h2>
-      <div>
-        <div class="col-12 col-xl-8 py-4 mx-auto">
-          {{ block.text }}
-        </div>
+      <h2 class="mb-0 mt-0 mono whyme__title col-12 col-lg-8 mx-auto px-0">{{block.titel}}</h2>
+      <div class="col-12 col-xl-8 py-4 mx-auto px-0">
+        {{ block.text }}
       </div>
 
-      <div class="whymedocs__btns__wrapper col-12 col-lg-6 mx-auto d-flex align-items-center p-0">
+      <div class="whymedocs__btns__wrapper col-12 col-lg-8 mx-auto d-flex align-items-center p-0">
         <div class="whymedocs__btns whymedocs__btns--1 text-strong me-2 me-xl-0 c-p">
           an E-Mail senden
         </div>
@@ -30,7 +28,7 @@
         </div>
       </div>
 
-      <div class="whymedocs__email__wrapper whymedocs__content--active col-12 col-xl-6 mx-auto">
+      <div class="whymedocs__email__wrapper whymedocs__content--active col-12 col-xl-6 mx-auto" id="formwhyme">
         {% macro errorList(errors) %}
             {% if errors %}
                 {{ ul(errors, {class: 'errors'}) }}
@@ -39,13 +37,19 @@
 
         {% set submission = submission ?? null %}
 
-        <form method="post" action="" accept-charset="UTF-8" id="form">
+
+        <form method="post" action="" accept-charset="UTF-8">
           {{ csrfInput() }}
           {{ actionInput('contact-form/send') }}
-          {{ redirectInput('#form') }}
+          {{ redirectInput(block.successpage.one().url) }}
 
-          <input type="hidden" name="fromName" value="{{ 'Nico Fortino Docs'|hash }}">
-          <input type="hidden" name="subject" value="{{ 'Nico Fortino Docs'|hash }}">
+          {{ craft.contactFormExtensions.recaptcha | raw }}
+
+          <textarea class="d-none" rows="10" cols="40" id="message" name="message[body]">New Client Data Request: {{companyInfo.company}}, {{clientId}}</textarea>
+
+          <input type="hidden" name="message[formName]" value="whymeDocsRequest">
+          <input class="d-none" type="text" name="subject" autocomplete="name" value="Doc Request">
+          <input type="hidden" name="formClientId" value="{{clientId}}">
 
           <div class="contact__form__inputfield mt-3 w-100">
             {{ input('email', 'fromEmail', submission.fromEmail ?? '', {
@@ -59,8 +63,9 @@
             <label for="e-mail">e-mail</label>
           </div>
 
-          <div class="contact__open w-100 d-flex justify-content-end mt-2">
-            <button type="submit" class="btn btn--default bg-transparent p-0 c-p">{{block.send}}</button>
+          <div class="contact__open w-100 d-flex justify-content-between mt-4">
+              <p class="text-small my-2">Geschützt durch <a class="text-small text-decoration" href="https://policies.google.com/privacy?hl=de-CH">reCAPTCHA</a></p>
+              <button type="submit" class="btn btn--default bg-transparent p-0 c-p">{{block.send}}</button>
           </div>
 
         </form>

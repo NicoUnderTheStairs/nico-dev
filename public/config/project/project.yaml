@@ -1,4 +1,4 @@
-dateModified: 1737992433
+dateModified: 1738769044
 elementSources:
   craft\elements\Entry:
     -
@@ -41,9 +41,17 @@ elementSources:
       key: 'section:09f0f218-7f4b-43e5-8430-79e3f9cfdb4c' # Legal
       type: native
 email:
-  fromEmail: nico@fortino.ch
-  fromName: Nico
-  transportType: craft\mail\transportadapters\Sendmail
+  fromEmail: noreply@nicofortino.ch
+  fromName: 'Nico Fortino'
+  replyToEmail: nico@fortino.ch
+  template: null
+  transportSettings:
+    host: mail.cyon.ch
+    password: '(B,YZtqbMf?G6('
+    port: '465'
+    useAuthentication: '1'
+    username: noreply@nicofortino.ch
+  transportType: craft\mail\transportadapters\Smtp
 fs:
   uploads:
     hasUrls: true
@@ -60,6 +68,7 @@ meta:
     0e3e5e64-bdfa-44a3-9ba6-e67c212ccb70: Images # Images
     0fe360b3-6a5c-40b5-82ad-1a7b95e24bb1: 'System Translations' # System Translations
     1b87bb8c-7437-45cd-ba6c-dda757010806: E-Mail # E-Mail
+    1ba1185a-1454-4140-ad60-9a8d0de7bdd1: Default # Default
     1c5bd7ca-883b-4808-b311-7425ff5d9b00: Projects # Projects
     2a4e471b-0a46-4344-91b4-8f8ea1f2d816: Message # Message
     2ad51318-063a-4905-a994-0bc1fb82d356: 'Public Schema' # Public Schema
@@ -85,6 +94,7 @@ meta:
     6feb5671-1f19-4004-bd05-df4d3a45f04a: Beschreibung # Beschreibung
     7d3a9466-67b6-48b0-aeb6-c83eec97c608: Inhaltsblöcke # Inhaltsblöcke
     7d4fce12-e807-4d16-91ec-2d969dda882b: Send # Send
+    7d7834cd-5148-44ee-a839-4071ddb06fb6: Back # Back
     8abc142f-873f-4a19-8a90-30e41602f4e2: Projects # Projects
     8ae77031-641a-4b54-9f48-559ac4d9787a: 'Long Text' # Long Text
     8d04658c-7a80-49e4-a3d0-e13134345b73: 'Key Details' # Key Details
@@ -95,6 +105,7 @@ meta:
     20e41d9d-a586-4d1a-b5ad-ce3572aa2fa5: Globals # Globals
     27cc7330-872f-4020-834b-ba69bd1d14a0: Contact # Contact
     028c7152-a72a-4eeb-9873-2a588c93ac15: Performance # Performance
+    31e077af-18ee-4383-957c-7a37e0f27e19: Successpage # Successpage
     36bcb1ac-1912-493b-bdfc-3ea2c89e5567: Send # Send
     39beb36f-cf9a-4ac5-8eb5-17da62ed4cfa: 'Nico Fortino' # Nico Fortino
     47fe1798-f313-486b-b362-d2d3687bb528: Footer # Footer
@@ -132,6 +143,7 @@ meta:
     5364899e-5761-4c2f-b657-586e0ac81151: 'Github Repo not Found' # Github Repo not Found
     24595093-d773-46cb-8e2d-94fa3047e696: Name # Name
     78334100-b3bd-4b9f-aa08-b3b24f027447: 'More Projects' # More Projects
+    82632312-e15a-4ac3-a31b-2f450c25eac5: Successpages # Successpages
     87278682-c4ad-4783-9262-b4ad2533f76b: Header # Header
     a6f26db1-a0ed-43d7-8d19-e47690efa35f: Projects # Projects
     a3863cb8-ba1c-44f0-90bd-3df22d44535a: 'Not Found' # Not Found
@@ -151,6 +163,7 @@ meta:
     d32f8599-4ed4-4a93-b822-1634f69b79fb: Titel # Titel
     d36d8b9e-25bd-4ad0-b272-3f6a873eae3f: ProjectsMaintained # ProjectsMaintained
     d417dac4-c9bd-468c-a793-615fd214ef64: Legallinks # Legallinks
+    d145653d-40ab-46ca-b2eb-4eed75100e52: Successpage # Successpage
     d548142e-cce6-4a62-af0e-119193fd33be: 'System Translations' # System Translations
     de9cfe41-aa6d-4251-93ad-a66f676b856b: Send # Send
     df5a9729-4d8c-4f3a-9c5e-e71e9a2b52d0: Lighthouse # Lighthouse
@@ -186,8 +199,8 @@ plugins:
     settings:
       allowAttachments: ''
       allowedMessageFields: null
-      prependSender: 'On behalf of'
-      prependSubject: 'New message from nicofortino.ch'
+      prependSender: ''
+      prependSubject: ''
       successFlashMessage: 'Your message has been sent.'
       toEmail: nico@fortino.ch
   contact-form-extensions:
@@ -195,24 +208,24 @@ plugins:
     enabled: true
     schemaVersion: 1.0.1
     settings:
-      confirmationSubject: ''
-      confirmationTemplate: ''
-      enableConfirmationEmail: ''
+      confirmationSubject: 'Alle Bewerbungsunterlagen von Nico Fortino'
+      confirmationTemplate: _emails/_whymeDocsRequest
+      enableConfirmationEmail: '1'
       enableDatabase: '1'
       enableRecaptchaOverride: ''
       enableTemplateOverwrite: ''
       notificationTemplate: ''
-      recaptcha: ''
+      recaptcha: '1'
       recaptchaDataBadge: bottomright
       recaptchaDebug: ''
-      recaptchaHideBadge: ''
-      recaptchaSecretKey: ''
-      recaptchaSiteKey: ''
+      recaptchaHideBadge: '1'
+      recaptchaSecretKey: 6LeP7M0qAAAAADPTpgSi1bnOrWju5dXuDirROnva
+      recaptchaSiteKey: 6LeP7M0qAAAAAMJ6EfwgZnb_yvCmpQ3UUBECDOvR
       recaptchaThreshold: '0.5'
       recaptchaTimeout: '5'
       recaptchaUrl: ''
       recaptchaVerificationUrl: ''
-      recaptchaVersion: ''
+      recaptchaVersion: '3'
   knock-knock:
     edition: standard
     enabled: true

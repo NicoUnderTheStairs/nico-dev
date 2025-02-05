@@ -1,6 +1,13 @@
 .video {
   position: relative;
 
+  &:hover {
+    & .video__play {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+
+  
   &__play {
     position: absolute;
     top: 50%;
@@ -8,5 +15,6 @@
     transform: translate(-50%,-50%);
     width: 8rem;
     height: 8rem;
+    transition: all 0.8s cubic-bezier(0.02, 0.71, 0.21, 0.99);
   }
 }

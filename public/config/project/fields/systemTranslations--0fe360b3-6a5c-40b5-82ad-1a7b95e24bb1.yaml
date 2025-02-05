@@ -7,7 +7,7 @@ name: 'System Translations'
 searchable: false
 settings:
   blockTypeFields: 0
-  changedFieldIndicator: 1399227479
+  changedFieldIndicator: 1821580453
   columns:
     __assoc__:
       -
@@ -96,6 +96,13 @@ settings:
               - ''
       -
         - 0066189a-4042-4e22-bfd6-6886d33fb469 # Key Details
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 5364899e-5761-4c2f-b657-586e0ac81151 # Github Repo not Found
         -
           __assoc__:
             -

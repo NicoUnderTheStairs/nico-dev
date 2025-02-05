@@ -5668,9 +5668,12 @@ a {
     font-size: 3.6rem;
   }
 }
+.text-decoration {
+  text-decoration: underline;
+}
 .text-small {
   font-weight: 300;
-  font-size: 1.44rem;
+  font-size: 1.44rem !important;
   line-height: 135%;
   margin-bottom: 0;
   margin-top: 0.4rem;
@@ -6586,6 +6589,9 @@ input, label {
 .video {
   position: relative;
 }
+.video:hover .video__play {
+  transform: translate(-50%, -50%) scale(1.1);
+}
 .video__play {
   position: absolute;
   top: 50%;
@@ -6593,6 +6599,7 @@ input, label {
   transform: translate(-50%, -50%);
   width: 8rem;
   height: 8rem;
+  transition: all 0.8s cubic-bezier(0.02, 0.71, 0.21, 0.99);
 }
 
 .footer {
@@ -6848,6 +6855,11 @@ input, label {
   opacity: 1;
 }
 
+@media (min-width: 50em) {
+  .whymedocs {
+    padding: 11rem 0 !important;
+  }
+}
 .whymedocs__btns {
   border-radius: 10rem;
   text-align: center;
