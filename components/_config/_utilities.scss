@@ -107,6 +107,10 @@ hr {
     fill: $background-color !important;
   }
 
+  & .svg--darkmode {
+    fill: $primary !important;
+  }
+
   .cursor-big {
     background-color: $secondary;
   }
@@ -119,23 +123,21 @@ hr {
     border-color: #3f3f3d !important;
   }
 
-  .contact {
-    & input, textarea, .contact__form__checkbox--checkbox, .contact__form__checkbox--checkmark::after {
-      border-color: $background-color;
-      color: $background-color;
-    }
+  & input, textarea, .contact__form__checkbox--checkbox, .contact__form__checkbox--checkmark::after {
+    border-color: $background-color !important;
+    color: $background-color !important;
+  }
 
-    & label {
-      color: $background-color;
-    }
+  & label {
+    color: $background-color !important;
+  }
 
-    & button {
-      color: $background-color;
-    }
+  & button {
+    color: $background-color !important;
+  }
 
-    & {
-      border: 0.1rem solid $secondary;
-    }
+  & * {
+    border-color: $background-color !important;
   }
 }
 

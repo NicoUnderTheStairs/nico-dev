@@ -214,6 +214,9 @@ hr {
 .dark-theme svg path {
   fill: #FAF9F6 !important;
 }
+.dark-theme .svg--darkmode {
+  fill: #E5AC01 !important;
+}
 .dark-theme .cursor-big {
   background-color: #202020;
 }
@@ -223,18 +226,18 @@ hr {
 .dark-theme .project div {
   border-color: #3f3f3d !important;
 }
-.dark-theme .contact input, .dark-theme .contact textarea, .dark-theme .contact .contact__form__checkbox--checkbox, .dark-theme .contact .contact__form__checkbox--checkmark::after {
-  border-color: #FAF9F6;
-  color: #FAF9F6;
+.dark-theme input, .dark-theme textarea, .dark-theme .contact__form__checkbox--checkbox, .dark-theme .contact__form__checkbox--checkmark::after {
+  border-color: #FAF9F6 !important;
+  color: #FAF9F6 !important;
 }
-.dark-theme .contact label {
-  color: #FAF9F6;
+.dark-theme label {
+  color: #FAF9F6 !important;
 }
-.dark-theme .contact button {
-  color: #FAF9F6;
+.dark-theme button {
+  color: #FAF9F6 !important;
 }
-.dark-theme .contact {
-  border: 0.1rem solid #202020;
+.dark-theme * {
+  border-color: #FAF9F6 !important;
 }
 
 .border-radius-6 {
