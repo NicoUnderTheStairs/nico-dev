@@ -1,3 +1,4 @@
+import { getCookie, setCookie } from '../../_config/utils';
 import Base from '../../_config/base';
 
 class Whyme extends Base {
@@ -7,6 +8,20 @@ class Whyme extends Base {
     const emailWrapper = document.querySelector('.whymedocs__email__wrapper');
     const downloadBtn = document.querySelector('.whymedocs__btns--2');
     const downloadWrapper = document.querySelector('.whymedocs__download__wrapper');
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const clientId = urlParams.has('id') ? urlParams.get('id') : null;
+
+    if (clientId !== null) {
+      setCookie('clientId', clientId, 86400000);
+    }
+
+    if (getCookie('clientId') !== null && getCookie('clientId') !== clientId) {
+      const newId = getCookie('clientId');
+      urlParams.set('id', newId);
+      window.history.replaceState(null, '', `${window.location.pathname}?${urlParams.toString()}`);
+      window.location.reload(true);
+    }
 
     const feedbackBtn = document.querySelector('.whymefeedback__feedbackbtn');
     if (emailBtn !== null && downloadBtn !== null) {
@@ -27,11 +42,12 @@ class Whyme extends Base {
         toggleBtnWrapper();
       };
     }
-
-    feedbackBtn.onclick = () => {
-      document.querySelector('.contact__form').classList.remove('d-none');
-      feedbackBtn.classList.add('d-none');
-    };
+    if (feedbackBtn !== null) {
+      feedbackBtn.onclick = () => {
+        document.querySelector('.contact__form').classList.remove('d-none');
+        feedbackBtn.classList.add('d-none');
+      };
+    }
     if (emailBtn !== null && downloadBtn !== null) {
       // eslint-disable-next-line no-inner-declarations
       function adjustFontSize() {
