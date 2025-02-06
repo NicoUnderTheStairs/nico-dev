@@ -7,9 +7,6 @@ class Contact extends Base {
     super(el);
     gsap.registerPlugin(ScrollTrigger);
 
-    const contactOpen = el.querySelector('.contact__open');
-    const formWrapper = el.querySelector('.contact__form__wrapper');
-
     gsap.set(el.querySelector('.contact__talk--1'), {
       x: '-100%',
     });
@@ -41,14 +38,6 @@ class Contact extends Base {
         end: 'bottom top',
       },
     });
-
-    contactOpen.onclick = () => {
-      if (formWrapper.classList.contains('d-none')) {
-        formWrapper.classList.remove('d-none');
-        // focus on first input
-        formWrapper.querySelector('input').focus();
-      }
-    };
   }
 }
 

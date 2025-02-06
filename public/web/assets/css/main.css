@@ -6549,11 +6549,15 @@ input, label {
   }
 }
 .contact__form__inputfield textarea {
-  height: 10.5rem;
+  height: 5.5rem;
   min-width: 100%;
   max-width: 100%;
   max-height: 40rem;
   min-height: 5.5rem;
+  transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+}
+.contact__form__inputfield textarea:not(:placeholder-shown) {
+  height: 15.5rem;
 }
 .contact__form__inputfield input, .contact__form__inputfield textarea {
   width: 100%;
@@ -6951,11 +6955,13 @@ input, label {
   opacity: 1;
   transform: translateY(0);
   height: 5rem;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.48, 1.19);
 }
 .whymedocs__content--deactive {
   z-index: -3;
-  height: 0;
+  height: 0 !important;
   opacity: 0;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.48, 1.19);
   transform: translateY(5rem);
 }
 

@@ -102,12 +102,14 @@
       opacity: 1;
       transform: translateY(0);
       height: 5rem;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.48, 1.19);
     }
     
     &--deactive {
       z-index: -3;
-      height: 0;
+      height: 0 !important;
       opacity: 0;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.48, 1.19);
       transform: translateY(5rem);
     }
   }

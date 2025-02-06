@@ -36,7 +36,7 @@
         </div>
         <div class="whymedocs__btns--active whymedocs__btns--active--1"></div>
         <div class="whymedocs__btns whymedocs__btns--2 text-strong c-p">
-          e-mail me
+          contact me
         </div>
       </div>
 
@@ -57,19 +57,90 @@
       </a>
 
       <div class="whymedocs__email__wrapper whymedocs__content--deactive h-100 col-12 col-xl-6 mx-auto p-0">
-        <a class="c-p linkBigCursor" href="mailto:nico@fortino.ch">
-          <div class="d-flex align-items-center">
-            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196 15.021 0 14.55 0 14V2C0 1.45 0.196 0.979333 0.588 0.588C0.979333 0.196 1.45 0 2 0H18C18.55 0 19.021 0.196 19.413 0.588C19.8043 0.979333 20 1.45 20 2V14C20 14.55 19.8043 15.021 19.413 15.413C19.021 15.8043 18.55 16 18 16H2ZM10 9L2 4V14H18V4L10 9ZM10 7L18 2H2L10 7ZM2 4V2V14V4Z" fill="black"/>
-            </svg>
-            <h4 class="d-flex align-items-center ms-2 m-0">nico@fortino.ch</h4>
-          </div>
-          {# <div class="">
-            <svg width="16" height="18" viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 18V16H16V18H0ZM8 14L3 9L4.4 7.6L7 10.2V0H9V10.2L11.6 7.6L13 9L8 14Z"/>
-            </svg>
-          </div> #}
-        </a>
+        {% macro errorList(errors) %}
+            {% if errors %}
+                {{ ul(errors, {class: 'errors'}) }}
+            {% endif %}
+        {% endmacro %}
+
+        {% set submission = submission ?? null %}
+
+        <form method="post" action="" accept-charset="UTF-8" id="form">
+            {{ csrfInput() }}
+            {{ actionInput('contact-form/send') }}
+            {{ redirectInput('https://nicofortino.ch/successpages/contactrequest') }}
+
+            {{ craft.contactFormExtensions.recaptcha | raw }}
+
+            <input type="hidden" name="message[disableConfirmation]" value="true">
+            <input type="hidden" name="message[formName]" value="Contact Request">
+            
+            <div class="contact__form__wrapper d-flex flex-wrap">
+                {# subject field #}
+                <div class="contact__form__inputfield w-100 mt-3">
+                    {{ input('text', 'subject', submission.subject ?? '', {
+                        id: 'subject',
+                        autocomplete: 'name',
+                        placeholder: ' ',
+                        required: true,
+                    }) }}
+                    {{ submission ? _self.errorList(submission.getErrors('subject')) }}
+                    <label for="subject">subject*</label>
+                </div>
+
+                <div class="contact__form__inputfield mt-3">
+                    {{ input('text', 'fromName', submission.fromName ?? '', {
+                        id: 'name',
+                        autocomplete: 'name',
+                        placeholder: ' ',
+                        required: true,
+                    }) }}
+                    {{ submission ? _self.errorList(submission.getErrors('fromName')) }}
+                    <label for="name">name*</label>
+                </div>
+
+                <div class="contact__form__inputfield mt-3">
+                    {{ input('email', 'fromEmail', submission.fromEmail ?? '', {
+                        id: 'e-mail',
+                        autocomplete: 'name',
+                        placeholder: ' ',
+                        required: true,
+                        autocomplete: 'email',
+                    }) }}
+                    {{ submission ? _self.errorList(submission.getErrors('fromEmail')) }}
+                    <label for="e-mail">e-mail*</label>
+                </div>
+
+                <div class="contact__form__inputfield w-100 mt-3">
+                    {# {{ tag('textarea', {
+                        text: submission.message ?? '',
+                        id: block.message,
+                        name: 'message',
+                        rows: 10,
+                        cols: 10,
+                        placeholder: ' ',
+                        required: true,
+                    }) }}
+                    {{ submission ? _self.errorList(submission.getErrors('message')) }} #}
+                    <textarea id="message" name="message[body]" rows="10" cols="10" placeholder=" " required=""></textarea>
+                    <label for="message">message*</label>
+                </div>
+
+                {# checkbox #}
+                <div class="contact__form__checkbox mt-3 d-flex flex-row justify-content-between align-items-center gap-2 c-p linkSmallCursor">
+                    <input type="checkbox" id="checkbox" name="checkbox" required>
+                    <div class="contact__form__checkbox--checkbox c-p"></div>
+                    <div class="whymefeedback__checkmark contact__form__checkbox--checkmark position-relative c-p"></div>
+                    <label class="w-100 c-p" for="checkbox"><p>I accept the<em>&nbsp;<a href="https://nicofortino.ch/privacy-policy">Privacy Policy</a>&nbsp;</em>and agree to the use of my provided data for this request.<br></p></label>
+                </div>
+            </div>
+
+            <div class="contact__open w-100 d-flex justify-content-between mt-4">
+                <p class="text-small my-2">Protected by <a class="text-small text-decoration" href="https://policies.google.com/privacy?hl=de-CH">reCAPTCHA</a></p>
+                <button type="submit" class="btn btn--default bg-transparent p-0 c-p">send</button>
+            </div>
+
+        </form>
       </div>
 
     </div>

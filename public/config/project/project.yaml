@@ -1,4 +1,4 @@
-dateModified: 1738769044
+dateModified: 1738859325
 elementSources:
   craft\elements\Entry:
     -
@@ -74,7 +74,6 @@ meta:
     2ad51318-063a-4905-a994-0bc1fb82d356: 'Public Schema' # Public Schema
     2be97e32-03c7-4302-ac10-ead9b3bcff0d: Company # Company
     2c1a0ce7-6b1a-4bfa-b04e-341f5b28fa78: Lead2 # Lead2
-    2c2e56d1-e9c7-44fd-ab6a-3d2fe9755ac9: Success # Success
     2c5af258-38c5-4f55-a53f-51bfd3e8c429: USPS # USPS
     2ee54c87-988b-4546-bd69-419027d96dc2: Titel2 # Titel2
     2fb531a6-ab83-4d7b-b4e2-81d5e2c53538: Text # Text
@@ -128,13 +127,13 @@ meta:
     218d8979-17f4-4679-b012-92e6ef852553: Memes # Memes
     227a9ae2-cd4d-4643-897f-d4ac6d783162: Nav # Nav
     2823bcc1-a5ed-4a7e-9701-93851c22fc89: Copyright # Copyright
+    3024c011-3482-4695-9a1b-43bee27b39e3: Successpage # Successpage
     5480a795-1e8a-4a68-bdcc-1828da84ac66: 'Loading Message' # Loading Message
     6819ac29-167a-4d1e-960c-4e35b9e29e2c: Website # Website
     11622e7c-3802-44c4-a67d-53c2ae3641b3: 'Company Documents' # Company Documents
     43177c04-ef38-4ad1-9145-e7f6846de1ad: Textblock # Textblock
     65675aae-84e7-458d-9bd3-b6685beb2d36: 'Titel 3' # Titel 3
     0066189a-4042-4e22-bfd6-6886d33fb469: 'Key Details' # Key Details
-    79561ee7-69e1-4376-9ff6-845290991754: Error # Error
     96634e98-38ff-4af4-be4d-a8239d1aed6b: Accesability # Accesability
     275730ff-455d-4337-a450-e3d206580f0d: Text # Text
     710978b0-e1c7-4e88-8836-01d9d5e1545b: Standard # Standard
