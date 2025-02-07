@@ -5650,12 +5650,22 @@ a {
   font-family: "Roboto Mono", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   line-height: 135%;
+}
+@media (min-width: 50em) {
+  .text-lead {
+    font-size: 2.1rem;
+  }
 }
 .text-lead p {
   font-family: "Roboto Mono", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 2.1rem;
+  font-size: 1.8rem;
+}
+@media (min-width: 50em) {
+  .text-lead p {
+    font-size: 2.1rem;
+  }
 }
 .text-strong {
   font-weight: 500;
@@ -6331,9 +6341,14 @@ input, label {
 .project__galery__item {
   object-fit: contain;
   object-position: top;
-  border-radius: 2rem;
   width: 100%;
   transition: 0.5s cubic-bezier(0.34, 1.56, 0.48, 1.19);
+  border-radius: 0.5rem;
+}
+@media (min-width: 50em) {
+  .project__galery__item {
+    border-radius: 2rem;
+  }
 }
 .project__galery__item:nth-child(4n+1) {
   grid-area: 1/1/2/4;
@@ -6722,10 +6737,12 @@ input, label {
   width: 100%;
 }
 .header__title {
-  font-size: 1.8rem !important;
+  font-size: 2.4rem !important;
+  line-height: 0.9;
   font-weight: 700 !important;
   z-index: 100;
   padding: 2.2rem;
+  padding-left: 2.3rem;
   position: absolute;
   left: 0;
   top: 0;
@@ -6736,13 +6753,13 @@ input, label {
   width: 75%;
   height: 2rem;
   position: absolute;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
   left: 50%;
-  top: 50%;
+  top: 52%;
   z-index: -2;
   transform: translate(-50%, -50%) skew(-15deg) rotate(-15deg);
-  transition: all 0.3s ease;
-  opacity: 0.5;
+  transition: all 0.3sease;
+  opacity: 0.6;
 }
 .header__title:hover::after {
   opacity: 1;

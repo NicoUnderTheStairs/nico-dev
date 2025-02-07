@@ -10,27 +10,29 @@
     }
     
     &__title {
-        font-size: 1.8rem !important;
+        font-size: 2.4rem !important;
+        line-height: 0.9;
         font-weight: 700 !important;
         z-index: 100;
         padding: 2.2rem;
+        padding-left: 2.3rem;
         position: absolute;
         left: 0;
         top: 0;
 
         &::after {
             content: "";
-            background: #E5AC01;
+            background: $primary;
             width: 75%;
             height: 2rem;
             position: absolute;
-            border-radius: 0.2rem;
+            border-radius: 0.3rem;
             left: 50%;
-            top: 50%;
+            top: 52%;
             z-index: -2;
             transform: translate(-50%, -50%) skew(-15deg) rotate(-15deg);
-            transition: all 0.3s ease;
-            opacity: 0.5;
+            transition: all 0.3sease;
+            opacity: 0.6;
 		}
 
 		&:hover {
