@@ -1,4 +1,4 @@
-dateModified: 1738859325
+dateModified: 1746437476
 elementSources:
   craft\elements\Entry:
     -
@@ -285,7 +285,7 @@ system:
   live: true
   name: Nico
   retryDuration: null
-  schemaVersion: 4.5.3.0
+  schemaVersion: 4.15.0.0
   timeZone: Europe/Zurich
 users:
   allowPublicRegistration: false

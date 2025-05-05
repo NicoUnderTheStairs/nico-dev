@@ -1,6 +1,6 @@
 {
   "require": {
-    "craftcms/cms": "4.13.8",
+    "craftcms/cms": "4.15.2",
     "craftcms/contact-form": "3.1.0",
     "craftcms/redactor": "3.1.0",
     "ether/seo": "4.2.4",

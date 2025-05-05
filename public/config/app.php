@@ -24,4 +24,8 @@ use craft\helpers\App;
 
 return [
     'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
+    'aliases' => [
+        // ensure @cpresources points at web/cpresources
+        '@cpresources' => dirname(__DIR__) . '/web/cpresources',
+    ],
 ];
