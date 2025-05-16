@@ -22,19 +22,27 @@
                 {% if project.project.projectType == 'developed' %}
                     <div class="projectGrid__project">
                         <a href="{{ project.url }}" class="projectGrid__project__link position-relative">
-                            <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__dark{% else %}imageToggles__dark-unavilable{% endif %}">
-                                <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}" loading="lazy">
+                            {% set darkImage = project.project.imagesDarkmode.one() %}
+                            {% set lightImage = project.project.images.one() %}
+                            <div class="projectGrid__project__img {% if darkImage is not null %}imageToggles__dark{% else %}imageToggles__dark-unavilable{% endif %}">
+                                {% if darkImage is not null %}
+                                    <img class="border-radius-6" src="{{ darkImage.url }}" alt="{{ darkImage.title }}" loading="lazy">
+                                {% endif %}
                             </div>
 
-                            <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %}">
-                                <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}" loading="lazy">
+                            <div class="projectGrid__project__img {% if darkImage is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %}">
+                                {% if lightImage is not null %}
+                                    <img class="border-radius-6" src="{{ lightImage.url }}" alt="{{ lightImage.title }}" loading="lazy">
+                                {% endif %}
                             </div>
 
                             <div class="projectGrid__project__content {% if project.project.tag is not null %}projectGrid__project__tag--wrapper{% endif %}">
                                 <p class="artifact">{{ project.projectNumber }}</p>
                                 <h3 class="projectGrid__project__title mono">{{ project.project.website }}</h3>
                             </div>
-                            {% if project.project.tag is not null %}<p class="projectGrid__project__tag">{{ project.project.tag }}</p>{% endif %}
+                            {% if project.project.tag is not null %}
+                                <p class="projectGrid__project__tag">{{ project.project.tag }}</p>
+                            {% endif %}
                         </a>
                     </div>
                 {% endif %}
@@ -48,19 +56,27 @@
                 {% if project.project.projectType == 'improvedMaintained' %}
                     <div class="projectGrid__project">
                         <a href="{{ project.url }}" class="projectGrid__project__link position-relative">
-                            <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__dark{% else %}imageToggles__dark-unavilable{% endif %}">
-                                <img class="border-radius-6" src="{{ project.project.imagesDarkmode.one().url }}" alt="{{ project.project.imagesDarkmode.one().title }}" loading="lazy">
+                            {% set darkImage = project.project.imagesDarkmode.one() %}
+                            {% set lightImage = project.project.images.one() %}
+                            <div class="projectGrid__project__img {% if darkImage is not null %}imageToggles__dark{% else %}imageToggles__dark-unavilable{% endif %}">
+                                {% if darkImage is not null %}
+                                    <img class="border-radius-6" src="{{ darkImage.url }}" alt="{{ darkImage.title }}" loading="lazy">
+                                {% endif %}
                             </div>
 
-                            <div class="projectGrid__project__img {% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %}">
-                                <img class="border-radius-6" src="{{ project.project.images.one().url }}" alt="{{ project.project.images.title }}" loading="lazy">
+                            <div class="projectGrid__project__img {% if darkImage is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %}">
+                                {% if lightImage is not null %}
+                                    <img class="border-radius-6" src="{{ lightImage.url }}" alt="{{ lightImage.title }}" loading="lazy">
+                                {% endif %}
                             </div>
 
                             <div class="projectGrid__project__content {% if project.project.tag is not null %}projectGrid__project__tag--wrapper{% endif %}">
                                 <p class="artifact">{{ project.projectNumber }}</p>
                                 <h3 class="projectGrid__project__title mono">{{ project.project.website }}</h3>
                             </div>
-                            {% if project.project.tag is not null %}<p class="projectGrid__project__tag">{{ project.project.tag }}</p>{% endif %}
+                            {% if project.project.tag is not null %}
+                                <p class="projectGrid__project__tag">{{ project.project.tag }}</p>
+                            {% endif %}
                         </a>
                     </div>
                 {% endif %}

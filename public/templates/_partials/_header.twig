@@ -1,7 +1,7 @@
 {% set header = header.header %}
 
 <header class="header js-header p-3 d-flex justify-content-between">
-    <a href="{{siteUrl}}" class="header__title mono m-0 linkSmallCursor ufo__suckable">Nico<br>Fortino</a>
+    <a href="{{ siteUrl('') }}" class="header__title mono m-0 linkSmallCursor ufo__suckable">Nico<br>Fortino</a>
 
     {% if header.nav|length >= 1 %}
         <a class="header__hamburger">

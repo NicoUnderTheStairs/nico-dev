@@ -12,9 +12,9 @@
   <title>{{entry.title}} - Nico Fortino</title>
 {% endif %}
 
-<link rel="home" href="{{ siteUrl }}"/>
+<link rel="home" href="{{ siteUrl('') }}"/>
 <link rel="canonical" href="{{ seo.canonical }}">
-<meta property="og:url" content="{{ siteUrl }}">
+<meta property="og:url" content="{{ siteUrl('') }}">
 <meta property="og:type" content="website">
 
 {% if seo.robots %}<meta name="robots" content="{{ seo.robots }}"/>{% endif %}

@@ -19,15 +19,14 @@
                         {% if project.project.imagesDarkmode.one() is not null %}
                             {% for img in project.project.imagesDarkmode.all() %}
                                 {% if loop.index <= 3 %}
-                                    <img class="border-radius-6 imageToggles__dark" src="{{img.url}}" loading="lazy">                                    
+                                    <img class="border-radius-6 imageToggles__dark" src="{{ img.url }}" loading="lazy">
                                 {% endif %}
                             {% endfor %}
-                            <img class="border-radius-6 imageToggles__dark" loading="lazy">                                    
                         {% endif %}
 
                         {% for img in project.project.images.all() %}
                             {% if loop.index <= 3 %}
-                                <img class="{% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %} border-radius-6" src="{{img.url}}" loading="lazy">
+                                <img class="{% if project.project.imagesDarkmode.one() is not null %}imageToggles__light{% else %}imageToggles__light-unavilable{% endif %} border-radius-6" src="{{ img.url }}" loading="lazy">
                             {% endif %}
                         {% endfor %}
                     </div>
@@ -35,14 +34,14 @@
             </div>
 
             <div class="projectGrid__desktop__list">
-                <h2 class="projectGrid__title mb-4 mt-0 mono">{{systemTranslations.projectsdeveloped}}<span class="text-small mono"> // {% if countProjectDeveloped <= 9 %}0{% endif %}{{countProjectDeveloped}} Projects</span></h2>
+                <h2 class="projectGrid__title mb-4 mt-0 mono">{{ systemTranslations.projectsdeveloped }}<span class="text-small mono"> // {% if countProjectDeveloped <= 9 %}0{% endif %}{{ countProjectDeveloped }} Projects</span></h2>
                 {% for project in craft.entries.section('projects').all() %}
                     {% if project.project.projectType == 'developed' %}
-                        <a href="{{project.url}}" class="projectGrid__desktop__item {% if project.project.tag is not null %}projectGrid__project__tag--wrapper{% endif %} d-flex position-relative linkBigCursor">
+                        <a href="{{ project.url }}" class="projectGrid__desktop__item {% if project.project.tag is not null %}projectGrid__project__tag--wrapper{% endif %} d-flex position-relative linkBigCursor">
                             <p class="artifact me-3">{{ project.projectNumber }}</p>
                             <div>
                                 <h4 class="projectGrid__desktop__item--website mono m-0">{{ project.project.website }}</h4>
-                                <p class="projectGrid__desktop__item--company mono m-0">{{project.project.company}}</p>
+                                <p class="projectGrid__desktop__item--company mono m-0">{{ project.project.company }}</p>
                             </div>
                             <div class="projectGrid__desktop__item--arrow d-flex align-items-center position-absolute">
                                 <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,14 +52,14 @@
                         </a>
                     {% endif %}
                 {% endfor %}
-                <h2 class="projectGrid__title mb-4 mt-6 mono">{{systemTranslations.projectsmaintained}}<span class="text-small mono"> // {% if countProjectImprovedMaintained <= 9 %}0{% endif %}{{countProjectImprovedMaintained}} Projects</span></h2>
+                <h2 class="projectGrid__title mb-4 mt-6 mono">{{ systemTranslations.projectsmaintained }}<span class="text-small mono"> // {% if countProjectImprovedMaintained <= 9 %}0{% endif %}{{ countProjectImprovedMaintained }} Projects</span></h2>
                 {% for project in craft.entries.section('projects').all() %}
                     {% if project.project.projectType == 'improvedMaintained' %}
-                        <a href="{{project.url}}" class="projectGrid__desktop__item {% if project.project.tag is not null %}projectGrid__project__tag--wrapper{% endif %} d-flex position-relative linkBigCursor">
+                        <a href="{{ project.url }}" class="projectGrid__desktop__item {% if project.project.tag is not null %}projectGrid__project__tag--wrapper{% endif %} d-flex position-relative linkBigCursor">
                             <p class="artifact me-3">{{ project.projectNumber }}</p>
                             <div>
                                 <h4 class="projectGrid__desktop__item--website mono m-0">{{ project.project.website }}</h4>
-                                <p class="projectGrid__desktop__item--company mono m-0">{{project.project.company}}</p>
+                                <p class="projectGrid__desktop__item--company mono m-0">{{ project.project.company }}</p>
                             </div>
                             <div class="projectGrid__desktop__item--arrow d-flex align-items-center position-absolute">
                                 <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
