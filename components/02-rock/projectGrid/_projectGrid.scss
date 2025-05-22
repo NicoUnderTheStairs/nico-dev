@@ -200,7 +200,9 @@
             border-radius: 5rem;
             position: absolute;
             bottom: 0;
+            height: 4.8rem;
             font-size: 1.6rem;
+            text-wrap: nowrap;
             
             @include lg-up {
                 margin-left: 4.2rem;

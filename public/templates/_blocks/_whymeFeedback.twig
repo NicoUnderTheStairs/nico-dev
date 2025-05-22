@@ -50,7 +50,7 @@
     
             <div class="contact__form__wrapper d-flex flex-wrap">
                 {% for feedbackset in block.feedbackset.all() %}
-                    <div class="mb-4 mb-lg-6">
+                    <div class="w-100 mb-4 mb-lg-6">
                         <p class="text-strong">{{feedbackset.titel}}</p>
 
                         {% for checkboxes in feedbackset.checkboxes %}

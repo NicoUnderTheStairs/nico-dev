@@ -28,7 +28,7 @@
         </div>
       </div>
 
-      <div class="whymedocs__email__wrapper whymedocs__content--active col-12 col-xl-6 mx-auto" id="formwhyme">
+      <div class="whymedocs__email__wrapper whymedocs__content--active col-12 col-xl-8 mx-auto" id="formwhyme">
         {% macro errorList(errors) %}
             {% if errors %}
                 {{ ul(errors, {class: 'errors'}) }}
@@ -74,9 +74,8 @@
       {% set bytes = companyInfo.companyDocuments.one().size %}
       {% set kiloBytes = (bytes / 1024)|round(2) %}
       {% set megaBytes = (kiloBytes / 1024)|round(2) %}
-      {% set gigaBytes = (megaBytes / 1024)|round(2) %}
-      <a class="whymedocs__download__wrapper whymedocs__content--deactive col-12 col-xl-6 mx-auto d-flex justify-content-between px-0 pb-1 pt-2 mt-4 c-p linkBigCursor" download href="{{companyInfo.companyDocuments.one().url}}">
-        <div class="d-flex align-items-center">Bewerbungsunterlagen.zip<div class="ms-2 mt-0 text-small mono">// {{gigaBytes}} GB</div></div>
+      <a class="whymedocs__download__wrapper whymedocs__content--deactive col-12 col-xl-8 mx-auto d-flex justify-content-between px-0 pb-1 pt-2 mt-4 c-p linkBigCursor" download href="{{companyInfo.companyDocuments.one().url}}">
+        <div class="d-flex align-items-center">Bewerbungsunterlagen.pdf<div class="ms-2 mt-0 text-small mono">// {{megaBytes}} MB</div></div>
         <div class="">
           <svg width="16" height="18" viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 18V16H16V18H0ZM8 14L3 9L4.4 7.6L7 10.2V0H9V10.2L11.6 7.6L13 9L8 14Z"/>
