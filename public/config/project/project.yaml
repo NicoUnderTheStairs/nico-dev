@@ -1,4 +1,4 @@
-dateModified: 1746437476
+dateModified: 1747996367
 elementSources:
   craft\elements\Entry:
     -
@@ -137,6 +137,7 @@ meta:
     96634e98-38ff-4af4-be4d-a8239d1aed6b: Accesability # Accesability
     275730ff-455d-4337-a450-e3d206580f0d: Text # Text
     710978b0-e1c7-4e88-8836-01d9d5e1545b: Standard # Standard
+    884679ed-a5bd-40e3-9100-2f3a3d57c0a6: Titel # Titel
     929529d1-d267-49c7-84d4-aae762b8d3ce: 'Social Image' # Social Image
     03256383-6fd4-4177-8a2f-21f8ed132eaf: 'Visit Project Toggle' # Visit Project Toggle
     5364899e-5761-4c2f-b657-586e0ac81151: 'Github Repo not Found' # Github Repo not Found
@@ -157,6 +158,7 @@ meta:
     c5b719bd-6f79-415b-92cb-9ec7d79dcfc3: Titel # Titel
     c95eed35-ff61-47b8-b7da-6575c6cb70bf: Lead # Lead
     c65316b9-b426-4343-ac32-6a571787a8c9: 'Best Practices' # Best Practices
+    cc240eca-f153-4660-a8b2-1f4ed4d7a9ac: Image # Image
     d0d8c2a6-f2cb-47de-bcd5-072c3879b5cf: Titel # Titel
     d24a29e6-d389-4d74-a3e9-0d4ea6c70f79: Default # Default
     d32f8599-4ed4-4a93-b822-1634f69b79fb: Titel # Titel
@@ -176,6 +178,7 @@ meta:
     e263b7b0-7549-4a8d-b333-4684bff8c9e4: Lead # Lead
     e487c058-76a1-41cc-af91-743b411e146b: Text # Text
     e99163f5-b2d2-4227-8e83-bdee821e3061: 'Visit Disclaimer' # Visit Disclaimer
+    e758549b-f375-4ef4-b9ea-df2a02a06a19: 'Whyme Teaser' # Whyme Teaser
     eb53d36d-66e7-4ac1-b4e8-61f7ec736021: ProjectsDeveloped # ProjectsDeveloped
     ec4efe28-7dfd-466a-9f76-04a6fb94ec7b: 'Whyme Feedback' # Whyme Feedback
     ec27a81a-8c42-4df9-9abb-86aa060987dd: 'Whyme Docs' # Whyme Docs

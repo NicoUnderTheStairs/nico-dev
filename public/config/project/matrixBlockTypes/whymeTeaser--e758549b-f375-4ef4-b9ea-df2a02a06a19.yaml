@@ -1,0 +1,96 @@
+field: 7d3a9466-67b6-48b0-aeb6-c83eec97c608 # Inhaltsblöcke
+fieldLayouts:
+  ebc06e77-6596-4e00-b4f4-99516baa4760:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 884679ed-a5bd-40e3-9100-2f3a3d57c0a6 # Titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7b83c014-ee3b-4c2e-b0e1-2b132b7c0440
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cc240eca-f153-4660-a8b2-1f4ed4d7a9ac # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62e31bf4-dc51-46ad-aea1-0f6f7f82fe68
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9d4b1f82-7890-4423-88ee-1869f37a35e8
+        userCondition: null
+fields:
+  884679ed-a5bd-40e3-9100-2f3a3d57c0a6: # Titel
+    columnSuffix: iqdudqhn
+    contentColumnType: text
+    fieldGroup: null
+    handle: titel
+    instructions: null
+    name: Titel
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  cc240eca-f153-4660-a8b2-1f4ed4d7a9ac: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:5acbfce0-0c16-404d-bdf8-1b7185ed660a' # Uploads
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:5acbfce0-0c16-404d-bdf8-1b7185ed660a' # Uploads
+      restrictedLocationSubpath: null
+      selectionLabel: null
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: whymeTeaser
+name: 'Whyme Teaser'
+sortOrder: 10

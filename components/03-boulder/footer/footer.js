@@ -56,7 +56,7 @@ class Footer extends Base {
             imageToggle.classList.add('imageToggles-dark');
           });
         }
-        if (localStorage.getItem('heroHint') === 'true' && currentPage === '/projects/statistic.vbclimmattal.com' && document.querySelector('body').classList.contains('dark-theme')) {
+        if (localStorage.getItem('heroHint') === 'true' && currentPage === '/projects/brackalltron' && document.querySelector('body').classList.contains('dark-theme')) {
           easterEgg.classList.remove('d-none');
         }
       } else {
